@@ -9,8 +9,7 @@ language: de
 
 narrator: Stina Schäfer, Lennart Rosseburg
 
-comment:  Eine Selbstlerneinheit mit interaktiven Programmieraufgaben
-          für die gängigsten Sortieralgorithmen.
+comment:  Eine Selbstlerneinheit mit interaktiven Programmieraufgaben für die gängigsten Sortieralgorithmen.
 
 link:     https://de.wikiversity.org/wiki/Kurs:Algorithmen_und_Datenstrukturen/Vorlesung/Sortieren
 
@@ -19,135 +18,131 @@ script:
 
 # Testing Interactive Code Blocks
 
-This is your **course** initialization stub.
+## InsertionSort
 
-Please see the [Docs](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md)
-to find out what is possible in [LiaScript](https://liascript.github.io).
+- normal code block
 
-If you want to use instant help in your Atom IDE, please type **lia** to see all available shortcuts.
+``` js
+function insertionSort(array) {
+  for (let i = 1; i < array.length; i++) {
+    let j = i;
+    while (j > 0 && array[j] < array[j - 1]) {
+      [array[j - 1], array[j]] = [array[j], array[j - 1]];
+      j--;
+    }
+  }
+return array;
+}
 
-## Markdown
+//testing above code
+var unsortedList = [12, 11, 13, 5, 6];
+var sortedList = insertionSort(unsortedList);
 
-You can use common [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) syntax to create your course, such as:
-
-1. Lists
-2. ordered or
-
-   * unordered
-   * ones ...
-
-
-| Header 1   | Header 2   |
-| :--------- | :--------- |
-| Item 1     | Item 2     |
-
-
-Images:
-
-![images](https://farm2.static.flickr.com/1618/26701766821_7bea494826.jpg)
-
-
-### Extensions
-
-     --{{0}}--
-But you can also include other features such as spoken text.
-
-      --{{1}}--
-Insert any kind of audio file:
-
-       {{1}}
-?[audio](https://bigsoundbank.com/UPLOAD/mp3/1068.mp3)
-
-
-     --{{2}}--
-Even videos or change the language completely.
-
-       {{2-3}}
-!?[video](https://www.youtube.com/watch?v=bICfKRyKTwE)
-
-
-      --{{3 Russian Female}}--
-Первоначально создан в 2004 году Джоном Грубером (англ. John Gruber) и Аароном
-Шварцем. Многие идеи языка были позаимствованы из существующих соглашений по
-разметке текста в электронных письмах...
-
-
-    {{3}}
-Type "voice" to see a list of all available languages.
-
-
-### Styling
-
-<!-- class = "animated rollIn" style = "animation-delay: 2s; color: purple" -->
-The whole text-block should appear in purple color and with a wobbling effect.
-Which is a **bad** example, please use it with caution ...
-~~ only this is red ;-) ~~ <!-- class = "animated infinite bounce" style = "color: red;" -->
-
-## Charts
-
-Use ASCII-Art to draw diagrams:
-
-                                    Multiline
-    1.9 |    DOTS
-        |                 ***
-      y |               *     *
-      - | r r r r r r r*r r r r*r r r r r r r
-      a |             *         *
-      x |            *           *
-      i | B B B B B * B B B B B B * B B B B B
-      s |         *                 *
-        | *  * *                       * *  *
-     -1 +------------------------------------
-        0              x-axis               1
-
-## Quizzes
-
-### A Textquiz
-
-What did the **fish** say when he hit a **concrete wall**?
-
-    [[dam]]
-
-### Multiple Choice
-
-Just add as many points as you wish:
-
-    [[X]] Only the **X** marks the correct point.
-    [[ ]] Empty ones are wrong.
-    [[X]] ...
-
-### Single Choice
-
-Just add as many points as you wish:
-
-    [( )] ...
-    [(X)] <-- Only the **X** is allowed.
-    [( )] ...
-
-## Executable Code
-
-A drawing example, for demonstrating that any JavaScript library can be used, also for drawing.
-
-```javascript
-// Initialize a Line chart in the container with the ID chart1
-new Chartist.Line('#chart1', {
-  labels: [1, 2, 3, 4],
-  series: [[100, 120, 180, 200]]
-});
-
-// Initialize a Line chart in the container with the ID chart2
-new Chartist.Bar('#chart2', {
-  labels: [1, 2, 3, 4],
-  series: [[5, 2, 8, 3]]
-});
+//return
+send.lia("Sortierte Liste: " + sortedList);
+"LIA: stop";
 ```
 <script>@input</script>
 
-<div class="ct-chart ct-golden-section" id="chart1"></div>
-<div class="ct-chart ct-golden-section" id="chart2"></div>
+---
 
+- multiple code blocks (aka Project)
 
-### Projects
+``` js -insertionSort.js
+function insertionSort(array) {
+  for (let i = 1; i < array.length; i++) {
+    let j = i;
+    while (j > 0 && array[j] < array[j - 1]) {
+      [array[j - 1], array[j]] = [array[j], array[j - 1]];
+      j--;
+    }
+  }
+return array;
+}
+```
+``` js -main.js
+//testing above code
+var unsortedList = [12, 11, 13, 5, 6];
+var sortedList = insertionSort(unsortedList);
+
+//return
+send.lia("Sortierte Liste: " + sortedList);
+"LIA: stop";
+```
+<script>
+  @input(0);
+  @input(1);
+</script>
+
+### Testing input query's
+
+``` js
+var tmp = [];
+send.handle("input", input => {
+  try{
+    tmp = input;
+    send.dispatch("input", tmp);
+    send.lia("LIA: stop");
+  } catch (e) {
+    console.error(e);
+  }
+});
+
+"LIA: terminal";
+```
+<script>@input;</script>
+
+``` js
+function insertionSort(array) {
+  for (let i = 1; i < array.length; i++) {
+    let j = i;
+    while (j > 0 && array[j] < array[j - 1]) {
+      [array[j - 1], array[j]] = [array[j], array[j - 1]];
+      j--;
+    }
+  }
+return array;
+}
+```
+```js
+send.register("input", function(e){
+  console.warn("stop", e);
+});
+```
+<script>
+  @input(0);
+  @input(1);
+</script>
+
+## Ping Pong
+
+```
+send.register("ping", function(e){
+  console.warn("ping", e)
+})
+
+send.handle("input", input => {
+  send.dispatch("pong", input)
+})
+
+"LIA: terminal" // execute the code and
+```
+<script>@input</script>
+
+```
+send.register("pong", function(e){
+  console.warn("pong", e)
+})
+
+send.handle("input", input => {
+  send.dispatch("ping", input)
+})
+
+"LIA: terminal" // execute the code and
+```
+<script>@input</script>
+
+## Executable Code
 
 You can make your code executable and define projects:
 
@@ -173,9 +168,3 @@ else {
   // eval the script that uses this dataset
   eval(`@input(0)`);
 </script>
-
-## More
-
-Find out what you can even do more with quizzes:
-
-https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md
