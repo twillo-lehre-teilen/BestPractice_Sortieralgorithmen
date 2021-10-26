@@ -16,6 +16,18 @@ link:     https://de.wikiversity.org/wiki/Kurs:Algorithmen_und_Datenstrukturen/V
 script:   
 -->
 
+# Sortieralgorithmen
+
+## InsertionSort
+
+## SelectionSort
+
+## BubbleSort
+
+## MergeSort
+
+## QuickSort
+
 # Testing Interactive Code Blocks
 
 ## InsertionSort
