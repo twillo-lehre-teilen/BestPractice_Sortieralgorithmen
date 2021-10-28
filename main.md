@@ -18,6 +18,8 @@ script:
 
 # Sortieralgorithmen
 
+## Grundlagen
+
 ## InsertionSort
 
 ## SelectionSort
