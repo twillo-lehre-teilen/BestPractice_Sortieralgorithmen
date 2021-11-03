@@ -24,9 +24,25 @@ Diese Selbstlerneinheit konzentriert sich auf die Funktionsweise grundlegender S
 
 ## Grundlagen
 
-
-### Sortieren
 Diese Lektion gibt eine grundlegende Einführung in das Thema Sortieren und Sortieralgorithmen. Sortieren ist ein grundlegendes Problem in der Informatik. Es beinhaltet das Ordnen von Dateien mit Datensätzen, die Schlüssel enthalten und das Umordnen der Datensätze, so, dass eine klar definierte Ordnung der Schlüssel (numerisch/alphabetisch) besteht. Eine Vereinfachung ist die Betrachtung der Schlüssel, z.B. ein Feld von int-Werten.
+
+Zunächst wollen wir den grundlegenden Begriffe der Ordnung definieren.
+
+#### Definition Ordnung
+**Partielle Ordnung**
+
+Sei M eine Menge und $\leq$ $\subseteq (M\times M)$ eine binäre Relation.
+
+Es gilt:
+
+- Reflexivität: $x \leq x$ $\forall x \in M$
+- Transitivität $x \leq y \land y \leq z \to x \leq z$ $ \forall x,y,z \in M$
+- Antisymmetrie $x \leq y \land y \leq x \to x = y$ $ \forall x,y \in M $
+
+**Strikter Anteil einer Ordnungsrelation $\leq$**
+
+**Totale Ordnung**
+
 
 ## InsertionSort
 
