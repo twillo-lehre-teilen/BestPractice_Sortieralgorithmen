@@ -9,7 +9,7 @@ language: de
 
 narrator: Stina Schäfer, Lennart Rosseburg
 
-comment:  Eine Selbstlerneinheit mit interaktiven Programmieraufgaben für die gängigsten Sortieralgorithmen.
+comment:  Eine Selbstlerneinheit mit interaktiven Programmieraufgaben für die gängigsten Sortieralgorithmen. Lizenziert unter der [Lizenz CC-BY-SA (3.0)](https://creativecommons.org/licenses/by-sa/3.0/legalcode)
 
 link:     https://de.wikiversity.org/wiki/Kurs:Algorithmen_und_Datenstrukturen/Vorlesung/Sortieren
 
@@ -30,9 +30,31 @@ script:
 
 ## QuickSort
 
-# Testing Interactive Code Blocks
+# For test purposes
 
 ## InsertionSort
+
+![InsertionSort Step1](docs/InsertionSort_Step1.svg)
+![InsertionSort Step2](docs/InsertionSort_Step2.svg)
+![InsertionSort Step3](docs/InsertionSort_Step3.svg)
+![InsertionSort Step4](docs/InsertionSort_Step4.svg)
+![InsertionSort Step5](docs/InsertionSort_Step5.svg)
+![InsertionSort Step6](docs/InsertionSort_Step6.svg)
+![InsertionSort Step7](docs/InsertionSort_Step7.svg)
+![InsertionSort Step8](docs/InsertionSort_Step8.svg)
+![InsertionSort Step9](docs/InsertionSort_Step9.svg)
+![InsertionSort Step10](docs/InsertionSort_Step10.svg)
+![InsertionSort Step11](docs/InsertionSort_Step11.svg)
+![InsertionSort Step12](docs/InsertionSort_Step12.svg)
+![InsertionSort Step13](docs/InsertionSort_Step13.svg)
+![InsertionSort Step14](docs/InsertionSort_Step14.svg)
+![InsertionSort Step15](docs/InsertionSort_Step15.svg)
+![InsertionSort Step16](docs/InsertionSort_Step16.svg)
+![InsertionSort Step17](docs/InsertionSort_Step17.svg)
+![InsertionSort Step18](docs/InsertionSort_Step18.svg)
+![InsertionSort Step19](docs/InsertionSort_Step19.svg)
+
+## Testing Interactive Code Blocks
 
 - normal code block
 
