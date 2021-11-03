@@ -41,8 +41,16 @@ Es gilt:
 
 **Strikter Anteil einer Ordnungsrelation $\leq$**
 
+$x \le y := x \leq y \land x \neq y$
+
 **Totale Ordnung**
 
+- Partielle Ordnung $(M,\leq)$
+- Trichotomie ("Dreiteilung") $x \le y$  $\lor$  $x = y$  $\lor$  $x \le y$ $\forall x,y \in M$
+
+**Problembeschreibung**
+
+Als Eingabe haben wir eine Folge von Zahlen $\langle a_1,. . . , a_n\rangle$ {\displaystyle \langle a_{1},...,a_{n}\rangle } {\displaystyle \langle a_{1},...,a_{n}\rangle }. Als Ausgabe haben wir die Permutation ⟨ a 1 ′ , . . . , a n ′ ⟩ {\displaystyle \langle a'_{1},...,a'_{n}\rangle } {\displaystyle \langle a'_{1},...,a'_{n}\rangle } der Zahlen mit der Eigenschaft a 1 ′ ≤ a 2 ′ ≤ , . . . , a n ′ {\displaystyle a'_{1}\leq a'_{2}\leq ,...,a'_{n}} {\displaystyle a'_{1}\leq a'_{2}\leq ,...,a'_{n}}. Die Sortierung erfolgt nach einem Schlüssel, z.B. Zahlen. In Programmen ist es übertragbar auf beliebige Datenstrukturen mit Schlüssel. 
 
 ## InsertionSort
 
