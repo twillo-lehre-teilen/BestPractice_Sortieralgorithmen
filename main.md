@@ -56,6 +56,70 @@ Die Sortierung erfolgt anhand eines Schlüssels, z.B. Zahlen. Jedes zu sortieren
 
 ## InsertionSort
 
+Dieses Kapitel behandelt die Sortiermethode InsertionSort oder auch Sortieren durch Einfügen genannt. Die Idee des Algorithmus ist, die typische menschliche Vorgehensweise, etwa beim Sortieren eines Stapels von Karten umzusetzen. Das heißt es wird mit der ersten Karte ein neuer Stapel gestartet. Anschließend nimmt man jeweils die nächste Karte des Originalstapels und fügt diese an der richtigen Stelle im neuen Stapel ein.
+
+Schauen wir uns den Algorithmus einmal Schritt für Schritt an folgendem Beispiel an:
+
+Sei dies eine Reihe zu sortierender Elemente, die Zahlen die zugehörigen Schlüssel, nach denen aufsteigend sortiert werden soll:
+
+![InsertionSort Step1](docs/InsertionSort_Step1.svg)
+
+Wir beginnen ganz links und gehen dann die Reihe zu sortierender Elemente eines nach dem anderen von links nach rechts durch. Die Elemente links des im aktuellen Durchlaufs betrachteten Elements sind dementsprechend schon sortiert (in unserer Grafik grün gefärbt), die rechts davon noch nicht (grau). Da links vom ersten Element keine weiteren Elemente stehen, mit denen der Schlüssel verglichen werden könnte, beginnen wir mit dem zweiten Element:
+
+![InsertionSort Step2](docs/InsertionSort_Step2.svg)
+
+Der Schlüssel des zweiten Elements ist $2$, links von der $2$ steht eine $5$. Da $5>2$ gilt, müssen wir die beiden Elemente also tauschen, damit sie der gewünschten Sortierung entsprechen:
+
+![InsertionSort Step3](docs/InsertionSort_Step3.svg)
+
+Links von der $2$ stehen nun keine weiteren Elemente mehr zum Vergleichen, also sind die beiden ersten Elemente nun sortiert und wir können mit dem nächsten Element weitermachen, welches den Schlüssel $4$ hat:
+
+![InsertionSort Step4](docs/InsertionSort_Step4.svg)
+
+![InsertionSort Step5](docs/InsertionSort_Step5.svg)
+
+$4$ ist kleiner als der Schlüssel des Elements links daneben ($5$), also werden die Elemente getauscht. Der Schlüssel, der dann links neben der $4$ steht ist $2$, $2<4$, es muss also nicht getauscht werden und die $4$ wurde fertig einsortiert:
+
+![InsertionSort Step6](docs/InsertionSort_Step6.svg)
+
+Jetzt ist die Beobachtung wichtig, dass die Elemente links des betrachteten Elements immer schon sortiert sind. Wenn man dann nämlich auf ein Element trifft, dessen Schlüssel kleiner ist als der des aktuell betrachteten Elements, weiß man, dass das Element fertig einsortiert wurde, da ja alle Elemente weiter links dann nur noch kleinere Schlüssel haben. Die ersten drei Elemente wurden nun also fertig sortiert und wir können mit dem nächsten weitermachen, welches des Schlüssel $1$ hat:
+
+![InsertionSort Step7](docs/InsertionSort_Step7.svg)
+
+![InsertionSort Step8](docs/InsertionSort_Step8.svg)
+
+$1$ ist jeweils kleiner als $3$,$4$ und $5$, das Element muss also ganz nach links "durchgetauscht" werden:
+
+![InsertionSort Step9](docs/InsertionSort_Step9.svg)
+
+![InsertionSort Step10](docs/InsertionSort_Step10.svg)
+
+Das nächste Element hat den Schlüssel $7$. Ein Vergleich mit dem Schlüssel links daneben liefert $5<7$, also befindet sich das betrachtete Element bereits an der richtigen Stelle:
+
+![InsertionSort Step11](docs/InsertionSort_Step11.svg)
+
+![InsertionSort Step12](docs/InsertionSort_Step12.svg)
+
+![InsertionSort Step13](docs/InsertionSort_Step13.svg)
+
+Das nächste Element hat den Schlüssel $6$, da $7>6$ müssen wir einmal tauschen. Der nächste Vergleich liefert $5<6$, also wissen wir, dass das Element nun richtig einsortiert ist:
+
+![InsertionSort Step14](docs/InsertionSort_Step14.svg)
+
+![InsertionSort Step15](docs/InsertionSort_Step15.svg)
+
+![InsertionSort Step16](docs/InsertionSort_Step16.svg)
+
+Nun fehlt nur noch das letzte Element mit dem Schlüssel $3$, welches wir genau wie die anderen Elemente so weit nach links "durchtauschen", bis ein Element einen kleineren Schlüssel (hier $2$) aufweist:
+
+![InsertionSort Step17](docs/InsertionSort_Step17.svg)
+
+![InsertionSort Step18](docs/InsertionSort_Step18.svg)
+
+Nun haben wir alle Elemente betrachtet und die Elemente sind fertig sortiert:
+
+![InsertionSort Step19](docs/InsertionSort_Step19.svg)
+
 ## SelectionSort
 
 ## BubbleSort
