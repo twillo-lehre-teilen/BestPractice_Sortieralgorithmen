@@ -78,7 +78,7 @@ Links von der $2$ stehen nun keine weiteren Elemente mehr zum Vergleichen, also 
 
 ![InsertionSort Step5](docs/InsertionSort_Step5.svg)
 
-$4$ ist kleiner als der Schlüssel des Elements links daneben ($5$), also werden die Elemente getauscht. Der Schlüssel, der dann links neben der $4$ steht ist $2$, $2<4$, es muss also nicht getauscht werden und die $4$ wurde fertig einsortiert:
+$4$ ist kleiner als der Schlüssel des Elements links daneben ($5$), also werden die Elemente getauscht. Der Schlüssel, der dann links neben der $4$ steht ist $2$, $2<4$, es muss also nicht weiter getauscht werden::
 
 ![InsertionSort Step6](docs/InsertionSort_Step6.svg)
 
