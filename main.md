@@ -20,12 +20,14 @@ script:
 # Sortieralgorithmen
 Dieser Kurs basiert auf dem Kapitel "Sortieren" aus dem Kurs "Algorithmen und Datenstrukturen" von Wikiversity, zu finden unter diesem [Link](https://de.wikiversity.org/wiki/Kurs:Algorithmen_und_Datenstrukturen/Vorlesung/Sortieren) und ist lizensiert unter der [Lizenz CC-BY-SA (3.0)](https://creativecommons.org/licenses/by-sa/3.0/legalcode).
 
+Diese Selbstlerneinheit konzentriert sich auf die Funktionsweise grundlegender Sortieralgorithmen und enthält interaktive Programmiereinheiten um das Gelernte durch eigene Anwendung zu verinnerlichen.
+
 <!--  style = "background-color: #A6D492; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
 <div>
-  Ziel dieser Selbstlerneinheit ist .
-</div>
+  **Ziel des Kurses:**
 
-Diese Selbstlerneinheit konzentriert sich auf die Funktionsweise grundlegender Sortieralgorithmen und enthält interaktive Programmiereinheiten um das Gelernte durch eigene Anwendung zu verinnerlichen.
+  Am Ende dieser Selbstlerneinheit sollten Sie die vorgestellten Sortieralgorithmen unterscheiden, in den Kontext von Sortierungsproblemen in der Informatik einordnen und selbst anwenden können.
+</div>
 
 ## Grundlagen
 
@@ -33,8 +35,18 @@ Diese Lektion gibt eine grundlegende Einführung in das Thema Sortieren und Sort
 
 #### Definition Ordnung
 
-Zunächst wollen wir den grundlegenden Begriffe der Ordnung definieren.
+<!--  style = "background-color: #A6D492; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
+<div>
+  **Ziel dieses Kapitels:**
 
+  Dieses Kapitel soll Sie in die Lage versetzen Sortieren als Problem in der Informatik beschreiben und einordnen zu können. Sie sollten verstanden haben was eine Ordnung und was Schlüssel sind und welche Rolle sie beim Sortieren spielen.
+</div>
+
+Zunächst wollen wir grundlegenden Begriffe für Ordnungen definieren:
+
+
+<!--  style = "background-color: #F0F2F6; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
+<div>
 **Partielle Ordnung**
 
 Sei M eine Menge und $\leq$ $\subseteq (M\times M)$ eine binäre Relation.
@@ -45,14 +57,22 @@ Es gilt:
 - Transitivität $x \leq y \land y \leq z \to x \leq z$ $ \forall x,y,z \in M$
 - Antisymmetrie $x \leq y \land y \leq x \to x = y$ $ \forall x,y \in M $
 
+</div>
+
+<!--  style = "background-color: #F0F2F6; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
+<div>
 **Strikter Anteil einer Ordnungsrelation $\leq$**
 
 $x \le y := x \leq y \land x \neq y$
+</div>
 
+<!--  style = "background-color: #F0F2F6; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
+<div>
 **Totale Ordnung**
 
 - Partielle Ordnung $(M,\leq)$
 - Trichotomie ("Dreiteilung") $x \le y$  $\lor$  $x = y$  $\lor$  $x \le y$ $\forall x,y \in M$
+</div>
 
 #### Sortieralgorithmen - Problembeschreibung
 
@@ -62,11 +82,18 @@ Die Sortierung erfolgt anhand eines Schlüssels, z.B. ganzen Zahlen. Jedes zu so
 
 ## InsertionSort
 
-**Grundlegende Idee**
+<!--  style = "background-color: #A6D492; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
+<div>
+  **Ziel dieses Kapitels:**
+
+  Nach diesem Kapitel sollten Sie die Vorgehensweise von InsertionSort verstanden haben, sowie die einzelnen Schritte benennen und anwenden können. Außerdem sollten Sie in der Lage sein den Algorithmus schrittweise zu implementieren.
+</div>
+
+#### Grundlegende Idee
 
 Dieses Kapitel behandelt die Sortiermethode InsertionSort oder auch Sortieren durch Einfügen genannt. Die Idee des Algorithmus ist, die typische menschliche Vorgehensweise, etwa beim Sortieren eines Stapels von Karten umzusetzen. Das heißt es wird mit der ersten Karte ein neuer Stapel gestartet. Anschließend nimmt man jeweils die nächste Karte des Originalstapels und fügt diese an der richtigen Stelle im neuen Stapel ein.
 
-**Beispiel**
+#### Beispiel
 
 Schauen wir uns den Algorithmus einmal Schritt für Schritt an folgendem Beispiel an:
 
