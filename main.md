@@ -18,7 +18,7 @@ script:
 -->
 
 # Sortieralgorithmen
-Dieser Kurs basiert auf dem Kapitel "Sortieren" aus dem Kurs "Algorithmen und Datenstrukturen" von Wikiversity, zu finden unter diesem [Link](https://de.wikiversity.org/wiki/Kurs:Algorithmen_und_Datenstrukturen/Vorlesung/Sortieren) und ist lizensiert unter der [Lizenz CC-BY-SA (3.0)](https://creativecommons.org/licenses/by-sa/3.0/legalcode).
+Dieser Kurs basiert auf dem Kapitel "Sortieren" aus dem Kurs "Algorithmen und Datenstrukturen" von Wikiversity, zu finden unter diesem [Link](https://de.wikiversity.org/wiki/Kurs:Algorithmen_und_Datenstrukturen/Vorlesung/Sortieren). Das Kapitel "Grundlagen" enthält außerdem Teile aus dem Kurs "Kurs: Diskrete Mathematik (Osnabrück 2020)/Vorlesung 7" von Wikiversity, zu finden hier: https://de.wikiversity.org/wiki/Kurs:Diskrete_Mathematik_(Osnabr%C3%BCck_2020)/Vorlesung_7. Der Kurs ist lizensiert unter der [Lizenz CC-BY-SA (3.0)](https://creativecommons.org/licenses/by-sa/3.0/legalcode).
 
 Diese Selbstlerneinheit konzentriert sich auf die Funktionsweise grundlegender Sortieralgorithmen und enthält interaktive Programmiereinheiten um das Gelernte durch eigene Anwendung zu verinnerlichen.
 
@@ -42,22 +42,20 @@ Diese Lektion gibt eine grundlegende Einführung in das Thema Sortieren und Sort
   Dieses Kapitel soll Sie in die Lage versetzen Sortieren als Problem in der Informatik beschreiben und einordnen zu können. Sie sollten verstanden haben was eine Ordnung und was Schlüssel sind und welche Rolle sie beim Sortieren spielen.
 </div>
 
-Zunächst wollen wir grundlegenden Begriffe für Ordnungen definieren:
-
+Um die Elemente einer Menge zu sortieren, müssen wir diese miteinander vergleichen können. Dies erreichen wir, indem wir eine Ordnung auf den zu sortierenden Elementen definieren. Ein einfaches und häufig genutztes Beispiel für eine Ordnung ist das übliche $\leq$ auf den natürlichen Zahlen.
 
 <!--  style = "background-color: #F0F2F6; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
 <div>
-**Partielle Ordnung**
+**Ordnung**
 
-Sei M eine Menge und $\leq$ $\subseteq (M\times M)$ eine binäre Relation.
-
-Es gilt:
+Eine Relation $\leq$ auf einer Menge $I$ heißt Ordnungsrelation oder Ordnung, wenn folgende drei Bedingungen erfüllt sind:
 
 - Reflexivität: $x \leq x$ $\forall x \in M$
-- Transitivität $x \leq y \land y \leq z \to x \leq z$ $ \forall x,y,z \in M$
-- Antisymmetrie $x \leq y \land y \leq x \to x = y$ $ \forall x,y \in M $
-
+- Transitivität: $x \leq y \land y \leq z \to x \leq z$ $ \forall x,y,z \in M$
+- Antisymmetrie: $x \leq y \land y \leq x \to x = y$ $ \forall x,y \in M $
 </div>
+
+Weitere nützliche Begriffe im Zusammenhang mit Ordnungen sind:
 
 <!--  style = "background-color: #F0F2F6; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
 <div>
@@ -70,8 +68,10 @@ $x \le y := x \leq y \land x \neq y$
 <div>
 **Totale Ordnung**
 
-- Partielle Ordnung $(M,\leq)$
-- Trichotomie ("Dreiteilung") $x \le y$  $\lor$  $x = y$  $\lor$  $x \le y$ $\forall x,y \in M$
+
+Eine Ordnungsrelation $\leq$ auf einer Menge $I$ heißt totale Ordnung (oder lineare Ordnung), wenn zu je zwei Elementen $x,y \in I$ die Beziehung $x\leq y$ oder $y\leq x$ gilt.
+
+Man sagt auch, dass bei einer linearen Ordnung je zwei Elemente vergleichbar sind.
 </div>
 
 #### Sortieralgorithmen - Problembeschreibung
