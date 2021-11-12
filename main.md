@@ -202,6 +202,50 @@ Nun haben wir alle Elemente betrachtet und die Elemente sind fertig sortiert:
 
 ![InsertionSort Step19](docs/InsertionSort_Step19.svg)
 
+#### Implementierung
+
+In diesem Kapitel werden Sie den Algorithmus selber schrittweise in Python implementieren. Der Code-Rahmen und Möglichkeiten Ihren Code zu testen sind jeweils schon gegeben, Sie müssen nur an den mit "your code here ..." gekennzeichneten Stellen ihren Code einfügen. Bei Bedarf ist es auch möglich eigene Testfälle zu schreiben.
+
+Falls Sie Hilfe beim Einstieg in Python brauchen, empfehlen wir Ihnen ... .
+
+<!--  style = "background-color: #A6D492; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
+<div>
+  **Ziel dieses Kapitels:**
+
+  Nach diesem Kapitel sollten Sie in der Lage sein, einen Algorithmus für InsertionSort selbstständig zu implementieren.
+</div>
+
+##### Code
+
+<!-- data-readOnly="true" -->
+``` js
+function insertionSort(array) {
+  for (let i = 1; i < array.length; i++) {
+    let j = i;
+    while (j > 0 && array[j] < array[j - 1]) {
+      [array[j - 1], array[j]] = [array[j], array[j - 1]];
+      j--;
+    }
+  }
+return array;
+}
+
+var tmp = [];
+send.handle("input", input => {
+  try{
+    tmp = input.split(",").map(Number);
+    var result = insertionSort(tmp);
+    send.lia("Sortierte Liste: [" + result + "]");
+  } catch (e) {
+    console.error(e);
+  }
+});
+
+send.lia("Bitte geben Sie eine unsortierte Liste ein, getrennt durch Kommata:");
+"LIA: terminal";
+```
+<script>@input</script>
+
 ## SelectionSort
 
 ## BubbleSort
