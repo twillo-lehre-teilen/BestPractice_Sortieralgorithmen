@@ -204,7 +204,7 @@ Nun haben wir alle Elemente betrachtet und die Elemente sind fertig sortiert:
 
 #### Implementierung
 
-In diesem Kapitel werden Sie den Algorithmus selber schrittweise in Python implementieren. Der Code-Rahmen und Möglichkeiten Ihren Code zu testen sind jeweils schon gegeben, Sie müssen nur an den mit "your code here ..." gekennzeichneten Stellen ihren Code einfügen. Bei Bedarf ist es auch möglich eigene Testfälle zu schreiben.
+In diesem Kapitel werden Sie den Algorithmus selber schrittweise in Python implementieren. Der Code-Rahmen und Möglichkeiten Ihren Code zu testen sind jeweils schon gegeben, Sie müssen nur an den mit "your code here ..." gekennzeichneten Stellen ihren Code einfügen. Bei Bedarf ist es auch möglich eigene Testfälle zu schreiben. Der Einfachheit halber sortieren wir Listen mit ganzen Zahlen, deren Wert jeweils der zugehörige Schlüssel ist.
 
 Falls Sie Hilfe beim Einstieg in Python brauchen, empfehlen wir Ihnen ... .
 
@@ -217,17 +217,22 @@ Falls Sie Hilfe beim Einstieg in Python brauchen, empfehlen wir Ihnen ... .
 
 ##### Code
 
-<!-- data-readOnly="true" -->
+Schritt 1:
+
+*Schreiben Sie einen Codeabschnitt, so dass alle Elemente der Eingabe nacheinander (von links nach rechts) durchlaufen werden.*
+
+Um zu prüfen, ob dein Code das Gewünschte tut, lasse dir die Elemente nacheinander einzeln via **print()** ausgeben. Für die Liste "3,7,1" sollte deine Ausgabe also wie folgt aussehen:
+
+- 3
+- 7
+- 1
+- 3,7,1 (die Eingabeliste wird am Ende immer zurückgegeben, muss jetzt aber noch nicht sortiert sein)
+
+<!-- data-readOnly="false" -->
 ``` js
 function insertionSort(array) {
-  for (let i = 1; i < array.length; i++) {
-    let j = i;
-    while (j > 0 && array[j] < array[j - 1]) {
-      [array[j - 1], array[j]] = [array[j], array[j - 1]];
-      j--;
-    }
-  }
-return array;
+  //your code goes here ...
+  return array;
 }
 
 var tmp = [];
