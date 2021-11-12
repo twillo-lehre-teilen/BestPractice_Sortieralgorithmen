@@ -50,9 +50,9 @@ Um die Elemente einer Menge zu sortieren, müssen wir diese miteinander vergleic
 
 Eine Relation $\leq$ auf einer Menge $I$ heißt Ordnungsrelation oder Ordnung, wenn folgende drei Bedingungen erfüllt sind:
 
-- Reflexivität: $x \leq x$ $\forall x \in M$
-- Transitivität: $x \leq y \land y \leq z \to x \leq z$ $ \forall x,y,z \in M$
-- Antisymmetrie: $x \leq y \land y \leq x \to x = y$ $ \forall x,y \in M $
+- Reflexivität: $x \leq x$ $\forall x \in I$
+- Transitivität: $x \leq y \land y \leq z \to x \leq z$ $ \forall x,y,z \in I$
+- Antisymmetrie: $x \leq y \land y \leq x \to x = y$ $ \forall x,y \in I $
 </div>
 
 Weitere nützliche Begriffe im Zusammenhang mit Ordnungen sind:
@@ -83,6 +83,47 @@ Da die zu sortierenden Elemente alles mögliche und damit oft schwer zu vergleic
 Als Eingabe haben wir eine Folge von Zahlen $\langle a_1,. . . , a_n\rangle$. Als Ausgabe haben wir die Permutation $\langle a'_{1},...,a'_{n}\rangle$ der gleichen Zahlen mit der Eigenschaft $a'_{1}\leq a'_{2}\leq ,...,a'_{n}$.
 
 Die Sortierung erfolgt anhand eines Schlüssels, z.B. ganzen Zahlen. Jedes zu sortierende Element hat dabei einen festen Schlüssel und die Schlüssel lassen sich mittels einer Ordnungsrelation vergleichen (und somit sortieren). Wie genau die Datenstruktur aussieht auf der sortiert wird, hat natürlich Auswirkungen auf Praktikabilität und Laufzeit, ist für die grundlegende Funktionsweise des Algorithmus aber erst einmal unwichtig.
+
+#### Quiz
+
+**Sind die folgenden Aussagen wahr oder falsch?**
+
+1. Ordnungen sind nur über Mengen von Zahlen, z.B. $\N$, definiert.
+
+    [[ ]] wahr
+    [[X]] falsch
+
+2. Schlüssel müssen nicht eindeutig sein, d.h. zwei Elemente können den gleichen Schlüssel haben.
+
+    [[X]] wahr
+    [[ ]] falsch
+
+3. Der Schlüssel eines Elements kann sich während des Sortierens ändern.
+
+    [[ ]] wahr
+    [[X]] falsch
+
+Sei nun $\leq$ die Ordnungsrelation auf den natürlichen Zahlen $\N$.
+
+4. $\leq$ ist eine totale Ordnung.
+
+    [[X]] wahr
+    [[ ]] falsch
+
+5. Es gilt $x \leq y \land z \leq y \to x \leq z$ $ \forall x,y,z \in \N$
+
+    [[ ]] wahr
+    [[X]] falsch
+
+6. Es gilt $x \leq x$ $\forall x \in I$
+
+    [[X]] wahr
+    [[ ]] falsch
+
+7. Der strikte Anteil von $\leq$ ist: $x \le y := x \leq y \lor x \neq y$
+
+    [[ ]] wahr
+    [[X]] falsch
 
 ## InsertionSort
 
