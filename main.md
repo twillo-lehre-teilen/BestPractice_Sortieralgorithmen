@@ -251,6 +251,12 @@ send.lia("Bitte geben Sie eine unsortierte Liste ein, getrennt durch Kommata:");
 ```
 <script>@input</script>
 
+Nun soll in jedem Durchlauf das jeweils betrachtete Element (im i-ten Durchlauf also das an i-ter Stelle) mit dem Element links davon verglichen werden. Ist das linke Element größer soll getauscht werden.
+
+Bei der Eingabe "3,7,1" sollte jetzt also "3,1,7" ausgegeben werden.
+
+
+
 ## SelectionSort
 
 ## BubbleSort
