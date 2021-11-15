@@ -216,6 +216,169 @@ Falls Sie Hilfe beim Einstieg in Python brauchen, empfehlen wir Ihnen ... .
 </div>
 
 ##### Code
+<lia-keep>
+  <style>
+    /* Style the buttons that are used to open and close the accordion panel */
+    .accordion{
+    background-color: #F0F2F6;
+    color: #0A1F40;
+    font-size: inherit;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.3s ease-out;
+    }
+    /* Add a background color to the button if it is clicked on (add the .activeA class with JS), and when you move the mouse over it (hover) */
+    .activeA, .accordion:hover {
+    background-color: #D1D8E1;
+    }
+    /* Style the accordion panel. Note: hidden by default */
+    .panel {
+    font-size: inherit;
+    padding: 0px 18px;
+    background-color: #FAFAFC;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+    }
+    .accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #54B6B5;
+    float: right;
+    margin-left: 5px;
+    }
+    .activeA:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+    }
+    /* collapsible */
+    /* Style the button that is used to open and close the collapsible content */
+    .collapsible {
+    background-color: #F0F2F6;
+    color: #0A1F40;
+    font-size: inherit;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    }
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .activeC, .collapsible:hover {
+    background-color: #D1D8E1;
+    }
+    /* Style the collapsible content. Note: hidden by default */
+    .collPanel {
+    font-size: inherit;
+    padding: 10px 18px;
+    max-height: 0;
+    overflow: hidden;
+    background-color: #F0F2F6;
+    transition: max-height 0.3s ease-out;
+    }
+    .collapsible:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #54B6B5;
+    float: right;
+    margin-left: 5px;
+    }
+    .activeC:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+    }
+  </style>
+
+  <div>
+    <button class="accordion">Schritt 1:</button>
+    <div class="panel">
+      <p style="padding:10px 0px">
+        <i>Schreiben Sie einen Codeabschnitt, so dass alle Elemente der Eingabe nacheinander (von links nach rechts) durchlaufen werden.</i>
+        <br><br>
+        Um zu prüfen, ob der Code das Gewünschte tut, lassen Sie sich die Elemente nacheinander einzeln via <b>print()</b> ausgeben. Für die Liste "3,7,1" sollte die Ausgabe also wie folgt aussehen:
+        <ul style="list-style-position: inside;list-style-type: narrow;padding-left: 10px;">
+          <li>3</li>
+          <li>7</li>
+          <li>1</li>
+          <li>
+            3,7,1 (die Eingabeliste wird am Ende immer zurückgegeben, muss jetzt aber noch nicht sortiert sein)
+          </li>
+        </ul>
+      </p>
+    </div>
+    <button class="accordion">Schritt 2:</button>
+    <div class="panel">
+      <p style="padding:10px 0px">
+        <i>Ergänzen Sie Ihren Code so, dass in jedem Durchlauf das jeweils betrachtete Element (im i-ten Durchlauf also das an i-ter Stelle) mit dem Element links davon verglichen wird. Ist das linke Element größer soll getauscht werden.</i>
+        <br><br>
+        Bei der Eingabe "3,7,1" sollte jetzt also "3,1,7" ausgegeben werden.
+      </p>
+    </div>
+    <button class="accordion">Schritt 3:</button>
+    <div class="panel">
+      <p style="padding:10px 0px">
+        <i>Jetzt soll das Programm so erweitert werden, dass der Schritt von eben auf alle Elemente links des i-ten Elements angewandt, das betrachtete Element also an die richtige Stelle "durchgetauscht" wird. Erinnerung: bei Betrachtung der i-ten Stelle sind die Elemente an den Stellen 0 bis i-1 bereits sortiert.</i>
+        <br><br>
+        Die Eingabe "3,7,1" sollte nun richtig sortiert als "1,3,7" ausgegeben werden. Probieren Sie Listen verschiedener Längen und mit unterschiedlichen Zahlen aus, um Ihren Code zu testen.
+      </p>
+    </div>
+  </div>
+</lia-keep>
+<script>
+  /* accordeon script file */
+  var acc = document.getElementsByClassName("accordion");
+  for (var i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      var panel = this.nextElementSibling;
+      /* if panel already open */
+      if (panel.style.maxHeight) {
+        this.classList.toggle('activeA', false);
+        panel.style.maxHeight = null;
+        return;
+      }
+      /* else */
+      for (var j = 0; j < acc.length; j++) {
+        acc[j].classList.toggle('activeA', false)
+        var p = acc[j].nextElementSibling;
+        p.style.maxHeight = null;
+      }
+      this.classList.toggle('activeA', true);
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    });
+  }
+</script>
+
+<!-- data-readOnly="false" -->
+``` js
+function insertionSort(array) {
+  //your code goes here ...
+  return array;
+}
+```
+<script>
+  @input(0)
+  <!-- only important code should be visible -->
+  var tmp = [];
+  send.handle("input", input => {
+    try{
+      tmp = input.split(",").map(Number);
+      var result = insertionSort(tmp);
+      send.lia("Sortierte Liste: [" + result + "]");
+    } catch (e) {
+      console.error(e);
+    }
+  });
+
+  send.lia("Bitte geben Sie eine unsortierte Liste ein, getrennt durch Kommata:");
+  "LIA: terminal";
+</script>
+
+
+---
 
 Schritt 1:
 
@@ -228,28 +391,6 @@ Um zu prüfen, ob der Code das Gewünschte tut, lassen Sie sich die Elemente nac
 - 1
 - 3,7,1 (die Eingabeliste wird am Ende immer zurückgegeben, muss jetzt aber noch nicht sortiert sein)
 
-<!-- data-readOnly="false" -->
-``` js
-function insertionSort(array) {
-  //your code goes here ...
-  return array;
-}
-
-var tmp = [];
-send.handle("input", input => {
-  try{
-    tmp = input.split(",").map(Number);
-    var result = insertionSort(tmp);
-    send.lia("Sortierte Liste: [" + result + "]");
-  } catch (e) {
-    console.error(e);
-  }
-});
-
-send.lia("Bitte geben Sie eine unsortierte Liste ein, getrennt durch Kommata:");
-"LIA: terminal";
-```
-<script>@input</script>
 
 Schritt 2:
 
@@ -273,45 +414,7 @@ Die Eingabe "3,7,1" sollte nun richtig sortiert als "1,3,7" ausgegeben werden. P
 
 # For test purposes
 
-## InsertionSort
-
-![InsertionSort Step1](docs/InsertionSort_Step1.svg)
-
-![InsertionSort Step2](docs/InsertionSort_Step2.svg)
-
-![InsertionSort Step3](docs/InsertionSort_Step3.svg)
-
-![InsertionSort Step4](docs/InsertionSort_Step4.svg)
-
-![InsertionSort Step5](docs/InsertionSort_Step5.svg)
-
-![InsertionSort Step6](docs/InsertionSort_Step6.svg)
-
-![InsertionSort Step7](docs/InsertionSort_Step7.svg)
-
-![InsertionSort Step8](docs/InsertionSort_Step8.svg)
-
-![InsertionSort Step9](docs/InsertionSort_Step9.svg)
-
-![InsertionSort Step10](docs/InsertionSort_Step10.svg)
-
-![InsertionSort Step11](docs/InsertionSort_Step11.svg)
-
-![InsertionSort Step12](docs/InsertionSort_Step12.svg)
-
-![InsertionSort Step13](docs/InsertionSort_Step13.svg)
-
-![InsertionSort Step14](docs/InsertionSort_Step14.svg)
-
-![InsertionSort Step15](docs/InsertionSort_Step15.svg)
-
-![InsertionSort Step16](docs/InsertionSort_Step16.svg)
-
-![InsertionSort Step17](docs/InsertionSort_Step17.svg)
-
-![InsertionSort Step18](docs/InsertionSort_Step18.svg)
-
-![InsertionSort Step19](docs/InsertionSort_Step19.svg)
+This section won't be in the final version!
 
 ## Testing Interactive Code Blocks
 
@@ -344,7 +447,7 @@ send.lia("Sortierte Liste: " + sortedList);
 - multiple code blocks (aka Project)
 
 <!-- data-readOnly="true" -->
-``` js +insertionSort.js
+``` js -insertionSort.js
 function insertionSort(array) {
   for (let i = 1; i < array.length; i++) {
     let j = i;
@@ -370,6 +473,7 @@ send.lia("Sortierte Liste: " + sortedList);
   @input(0);
   @input(1);
 </script>
+
 
 ### ..with input query
 
@@ -401,6 +505,7 @@ send.lia("Bitte geben Sie eine unsortierte Liste ein, getrennt durch Leerzeichen
 "LIA: terminal";
 ```
 <script>@input</script>
+
 
 ### ..with input query & seperate code-blocks
 
@@ -449,34 +554,38 @@ send.register("input", function(e){
   @input(1);
 </script>
 
-## Aus dem LiaScript Handbuch
+### Python
 
-### Ping Pong
+<!-- data-readOnly="true" -->
+``` python
+def insertionSort(array):
+  for i in range(1:2):
+    j = i
+    while j > 0 and array[j] < array[j-1]:
+      tmp = array[j-1]
+      array[j-1] = array[j]
+      array[j] = tmp
+      j -= 1
+  return array
 
-``` js
-send.register("ping", function(e){
-  console.warn("ping", e)
-})
+#testing above code
+unsortedList = [12, 11, 13, 5, 6]
+sortedList = insertionSort(unsortedList)
 
-send.handle("input", input => {
-  send.dispatch("pong", input)
-})
-
-"LIA: terminal" // execute the code and
+#return
+send.lia("Sortierte Liste: " + sortedList)
+"LIA: stop"
 ```
 <script>@input</script>
 
-``` js
-send.register("pong", function(e){
-  console.warn("pong", e)
-})
+<!-- data-readOnly="true" -->
+``` python
+def my_function():
+  send.lia("Hello from a function")
 
-send.handle("input", input => {
-  send.dispatch("ping", input)
-})
-
-"LIA: terminal" // execute the code and
+my_function()
+"LIA: stop"
 ```
 <script>@input</script>
 
---> **sending data to other code-blocks only possible if all code-blocks are activated!**
+--> Es gibt bei den [LiaTemplates](https://github.com/orgs/LiaTemplates/repositories) zwei repositories die es ermöglichen sollen (u.a.) Python interaktiv zu nutzen: Skulpt & Rextester. Allerdings ist Rextester soweit ich weiß kostenpflichtig und Skulpt habe ich nicht zum laufen bekommen.. Allerdings funktioniert das Beispiel-Repo von LiaScript auch schon nicht.. Schätze deshalb die ganzen Repos sind nicht aufm aktuellen Stand. 
