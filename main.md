@@ -300,7 +300,7 @@ Falls Sie Hilfe beim Einstieg in Python brauchen, empfehlen wir Ihnen ... .
         <i>Schreiben Sie einen Codeabschnitt, so dass alle Elemente der Eingabe nacheinander (von links nach rechts) durchlaufen werden.</i>
         <br><br>
         Um zu prüfen, ob der Code das Gewünschte tut, lassen Sie sich die Elemente nacheinander einzeln via <b>print()</b> ausgeben. Für die Liste "3,7,1" sollte die Ausgabe also wie folgt aussehen:
-        <ul style="list-style-position: inside;list-style-type: narrow;padding-left: 10px;">
+        <ul style="list-style-position: inside; padding-left: 10px;">
           <li>3</li>
           <li>7</li>
           <li>1</li>
