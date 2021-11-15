@@ -251,13 +251,17 @@ send.lia("Bitte geben Sie eine unsortierte Liste ein, getrennt durch Kommata:");
 ```
 <script>@input</script>
 
+Schritt 2:
+
 Nun soll in jedem Durchlauf das jeweils betrachtete Element (im i-ten Durchlauf also das an i-ter Stelle) mit dem Element links davon verglichen werden. Ist das linke Element größer soll getauscht werden.
 
 Bei der Eingabe "3,7,1" sollte jetzt also "3,1,7" ausgegeben werden.
 
+Schritt 3:
+
 Jetzt soll der Schritt von eben auf alle Elemente links des i-ten Elements angewandt, das betrachtete Element also an die richtige Stelle "durchgetauscht" werden. Erinnerung: bei Betrachtung der i-ten Stelle sind die Elemente an den Stellen 0 bis i-1 bereits sortiert.
 
-Die Eingabe "3,7,1" sollte nun richtig sortiert als "1,3,7" ausgegeben werden. Probiere gern Listen verschiedener Längen und mit unterschiedlichen Zahlen aus, um deinen Code zu testen. 
+Die Eingabe "3,7,1" sollte nun richtig sortiert als "1,3,7" ausgegeben werden. Probiere gern Listen verschiedener Längen und mit unterschiedlichen Zahlen aus, um deinen Code zu testen.
 
 ## SelectionSort
 
