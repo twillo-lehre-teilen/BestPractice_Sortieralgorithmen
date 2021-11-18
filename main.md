@@ -15,7 +15,7 @@ comment:  Eine Selbstlerneinheit mit interaktiven Programmieraufgaben für die g
 link:     https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/dist/jquery.min.js
           https://cdn.jsdelivr.net/gh/TorroRosso46/Sortieralgorithmen/stylesheet.css
 
-script:   
+script:   https://cdn.jsdelivr.net/gh/TorroRosso46/Sortieralgorithmen/accordion.js
 -->
 
 # Sortieralgorithmen
@@ -279,29 +279,7 @@ function insertionSort(array) {
     </div>
   </div>
 </lia-keep>
-<script>
-  /* accordeon script file */
-  var acc = document.getElementsByClassName("accordion");
-  for (var i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-      var panel = this.nextElementSibling;
-      /* if panel already open */
-      if (panel.style.maxHeight) {
-        this.classList.toggle('activeA', false);
-        panel.style.maxHeight = null;
-        return;
-      }
-      /* else */
-      for (var j = 0; j < acc.length; j++) {
-        acc[j].classList.toggle('activeA', false)
-        var p = acc[j].nextElementSibling;
-        p.style.maxHeight = null;
-      }
-      this.classList.toggle('activeA', true);
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    });
-  }
-</script>
+
 
 ## SelectionSort
 
