@@ -16,6 +16,46 @@ link:     https://de.wikiversity.org/wiki/Kurs:Algorithmen_und_Datenstrukturen/V
 
 script:   https://gitcdn.xyz/repo/liaTemplates/skulpt/master/js/skulpt.min.js
           https://gitcdn.xyz/repo/liaTemplates/skulpt/master/js/skulpt-stdlib.js
+
+
+@Skulpt.eval
+<script>
+function builtinRead(x) {
+  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+    throw "File not found: '" + x + "'";
+  return Sk.builtinFiles["files"][x];
+}
+
+function input(handle) {
+  return function(prompt) {
+    return new Promise((resolve, reject) => {	send.handle("input", (e) => resolve(e)) });
+  }
+}
+
+Sk.configure({
+  output: (e) => send.lia(e.toString()),
+  read: builtinRead,
+  inputfun: input(send.handle)});
+
+if( document.getElementById("@0") ) {
+  Sk.canvas = "@0";
+  (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = '@0';
+}
+
+setTimeout( function(e) {
+  let myPromise = Sk.misceval.asyncToPromise(function() {
+    return Sk.importMainWithBody("<stdin>", false, `@input`, true);
+  });
+  myPromise.then(function(mod){ send.lia("LIA: stop") },
+   function(err) {
+       console.error(err);
+       send.lia("LIA: stop");
+   });
+}, 150);
+
+"LIA: terminal";
+</script>
+@end
 -->
 
 # Sortieralgorithmen
@@ -266,44 +306,15 @@ Die Eingabe "3,7,1" sollte nun richtig sortiert als "1,3,7" ausgegeben werden. P
 
 ## SelectionSort
 
+``` python
+print "how many hellos should I print"
+
+hellos = input()
+
+for i in range(int(hellos)):
+  print "Hello World #", i
+```
 @Skulpt.eval
-<script>
-function builtinRead(x) {
-  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
-    throw "File not found: '" + x + "'";
-  return Sk.builtinFiles["files"][x];
-}
-
-function input(handle) {
-  return function(prompt) {
-    return new Promise((resolve, reject) => {	send.handle("input", (e) => resolve(e)) });
-  }
-}
-
-Sk.configure({
-  output: (e) => send.log(true, "", e.toString()),
-  read: builtinRead,
-  inputfun: input(send.handle)});
-
-if( document.getElementById("@0") ) {
-  Sk.canvas = "@0";
-  (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = '@0';
-}
-
-setTimeout( function(e) {
-  let myPromise = Sk.misceval.asyncToPromise(function() {
-    return Sk.importMainWithBody("<stdin>", false, `@input`, true);
-  });
-  myPromise.then(function(mod){ send.lia("LIA: stop") },
-   function(err) {
-       console.error(err);
-       send.lia("LIA: stop");
-   });
-}, 150);
-
-"LIA: terminal";
-</script>
-@end
 
 ## BubbleSort
 
