@@ -216,6 +216,32 @@ Falls Sie Hilfe beim Einstieg in Python brauchen, empfehlen wir Ihnen ... .
 </div>
 
 ##### Code
+
+<!-- data-readOnly="false" -->
+``` js
+function insertionSort(array) {
+  //your code goes here ...
+  return array;
+}
+```
+<script>
+  @input(0)
+  <!-- only important code should be visible -->
+  var tmp = [];
+  send.handle("input", input => {
+    try{
+      tmp = input.split(",").map(Number);
+      var result = insertionSort(tmp);
+      send.lia("Sortierte Liste: [" + result + "]");
+    } catch (e) {
+      console.error(e);
+    }
+  });
+
+  send.lia("Bitte geben Sie eine unsortierte Liste ein, getrennt durch Kommata:");
+  "LIA: terminal";
+</script>
+
 <lia-keep>
   <div>
     <button class="accordion">Schritt 1:</button>
@@ -274,31 +300,6 @@ Falls Sie Hilfe beim Einstieg in Python brauchen, empfehlen wir Ihnen ... .
       panel.style.maxHeight = panel.scrollHeight + "px";
     });
   }
-</script>
-
-<!-- data-readOnly="false" -->
-``` js
-function insertionSort(array) {
-  //your code goes here ...
-  return array;
-}
-```
-<script>
-  @input(0)
-  <!-- only important code should be visible -->
-  var tmp = [];
-  send.handle("input", input => {
-    try{
-      tmp = input.split(",").map(Number);
-      var result = insertionSort(tmp);
-      send.lia("Sortierte Liste: [" + result + "]");
-    } catch (e) {
-      console.error(e);
-    }
-  });
-
-  send.lia("Bitte geben Sie eine unsortierte Liste ein, getrennt durch Kommata:");
-  "LIA: terminal";
 </script>
 
 ## SelectionSort
