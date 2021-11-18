@@ -12,7 +12,8 @@ narrator: Stina Schäfer, Lennart Rosseburg
 comment:  Eine Selbstlerneinheit mit interaktiven Programmieraufgaben für die gängigsten Sortieralgorithmen.
           Diese Seite ist lizenziert unter der [Lizenz CC-BY-SA (3.0)](https://creativecommons.org/licenses/by-sa/3.0/legalcode).
 
-link:     ./stylesheet.css
+link:     https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/dist/jquery.min.js
+          https://cdn.jsdelivr.net/gh/TorroRosso46/Sortieralgorithmen/stylesheet.css
 
 script:   
 -->
