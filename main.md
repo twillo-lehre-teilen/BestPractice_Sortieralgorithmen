@@ -12,9 +12,9 @@ narrator: Stina Schäfer, Lennart Rosseburg
 comment:  Eine Selbstlerneinheit mit interaktiven Programmieraufgaben für die gängigsten Sortieralgorithmen.
           Diese Seite ist lizenziert unter der [Lizenz CC-BY-SA (3.0)](https://creativecommons.org/licenses/by-sa/3.0/legalcode).
 
-link:     https://de.wikiversity.org/wiki/Kurs:Algorithmen_und_Datenstrukturen/Vorlesung/Sortieren
+link:     ./stylesheet.css
 
-script:   
+script:   ./accordion.js
 -->
 
 # Sortieralgorithmen
@@ -217,82 +217,6 @@ Falls Sie Hilfe beim Einstieg in Python brauchen, empfehlen wir Ihnen ... .
 
 ##### Code
 <lia-keep>
-  <style>
-    /* Style the buttons that are used to open and close the accordion panel */
-    .accordion{
-    background-color: #F0F2F6;
-    color: #0A1F40;
-    font-size: inherit;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.3s ease-out;
-    }
-    /* Add a background color to the button if it is clicked on (add the .activeA class with JS), and when you move the mouse over it (hover) */
-    .activeA, .accordion:hover {
-    background-color: #D1D8E1;
-    }
-    /* Style the accordion panel. Note: hidden by default */
-    .panel {
-    font-size: inherit;
-    padding: 0px 18px;
-    background-color: #FAFAFC;
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.3s ease-out;
-    }
-    .accordion:after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-    color: #54B6B5;
-    float: right;
-    margin-left: 5px;
-    }
-    .activeA:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
-    }
-    /* collapsible */
-    /* Style the button that is used to open and close the collapsible content */
-    .collapsible {
-    background-color: #F0F2F6;
-    color: #0A1F40;
-    font-size: inherit;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    }
-    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-    .activeC, .collapsible:hover {
-    background-color: #D1D8E1;
-    }
-    /* Style the collapsible content. Note: hidden by default */
-    .collPanel {
-    font-size: inherit;
-    padding: 10px 18px;
-    max-height: 0;
-    overflow: hidden;
-    background-color: #F0F2F6;
-    transition: max-height 0.3s ease-out;
-    }
-    .collapsible:after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-    color: #54B6B5;
-    float: right;
-    margin-left: 5px;
-    }
-    .activeC:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
-    }
-  </style>
-
   <div>
     <button class="accordion">Schritt 1:</button>
     <div class="panel">
@@ -327,30 +251,8 @@ Falls Sie Hilfe beim Einstieg in Python brauchen, empfehlen wir Ihnen ... .
       </p>
     </div>
   </div>
+  <br>
 </lia-keep>
-<script>
-  /* accordeon script file */
-  var acc = document.getElementsByClassName("accordion");
-  for (var i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-      var panel = this.nextElementSibling;
-      /* if panel already open */
-      if (panel.style.maxHeight) {
-        this.classList.toggle('activeA', false);
-        panel.style.maxHeight = null;
-        return;
-      }
-      /* else */
-      for (var j = 0; j < acc.length; j++) {
-        acc[j].classList.toggle('activeA', false)
-        var p = acc[j].nextElementSibling;
-        p.style.maxHeight = null;
-      }
-      this.classList.toggle('activeA', true);
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    });
-  }
-</script>
 
 <!-- data-readOnly="false" -->
 ``` js
@@ -376,33 +278,6 @@ function insertionSort(array) {
   send.lia("Bitte geben Sie eine unsortierte Liste ein, getrennt durch Kommata:");
   "LIA: terminal";
 </script>
-
-
----
-
-Schritt 1:
-
-*Schreiben Sie einen Codeabschnitt, so dass alle Elemente der Eingabe nacheinander (von links nach rechts) durchlaufen werden.*
-
-Um zu prüfen, ob der Code das Gewünschte tut, lassen Sie sich die Elemente nacheinander einzeln via **print()** ausgeben. Für die Liste "3,7,1" sollte die Ausgabe also wie folgt aussehen:
-
-- 3
-- 7
-- 1
-- 3,7,1 (die Eingabeliste wird am Ende immer zurückgegeben, muss jetzt aber noch nicht sortiert sein)
-
-
-Schritt 2:
-
-*Ergänzen Sie Ihren Code so, dass in jedem Durchlauf das jeweils betrachtete Element (im i-ten Durchlauf also das an i-ter Stelle) mit dem Element links davon verglichen wird. Ist das linke Element größer soll getauscht werden.*
-
-Bei der Eingabe "3,7,1" sollte jetzt also "3,1,7" ausgegeben werden.
-
-Schritt 3:
-
-*Jetzt soll das Programm so erweitert werden, dass der Schritt von eben auf alle Elemente links des i-ten Elements angewandt, das betrachtete Element also an die richtige Stelle "durchgetauscht" wird. Erinnerung: bei Betrachtung der i-ten Stelle sind die Elemente an den Stellen 0 bis i-1 bereits sortiert.*
-
-Die Eingabe "3,7,1" sollte nun richtig sortiert als "1,3,7" ausgegeben werden. Probieren Sie Listen verschiedener Längen und mit unterschiedlichen Zahlen aus, um Ihren Code zu testen.
 
 ## SelectionSort
 
@@ -588,4 +463,4 @@ my_function()
 ```
 <script>@input</script>
 
---> Es gibt bei den [LiaTemplates](https://github.com/orgs/LiaTemplates/repositories) zwei repositories die es ermöglichen sollen (u.a.) Python interaktiv zu nutzen: Skulpt & Rextester. Allerdings ist Rextester soweit ich weiß kostenpflichtig und Skulpt habe ich nicht zum laufen bekommen.. Allerdings funktioniert das Beispiel-Repo von LiaScript auch schon nicht.. Schätze deshalb die ganzen Repos sind nicht aufm aktuellen Stand. 
+--> Es gibt bei den [LiaTemplates](https://github.com/orgs/LiaTemplates/repositories) zwei repositories die es ermöglichen sollen (u.a.) Python interaktiv zu nutzen: Skulpt & Rextester. Allerdings ist Rextester soweit ich weiß kostenpflichtig und Skulpt habe ich nicht zum laufen bekommen.. Allerdings funktioniert das Beispiel-Repo von LiaScript auch schon nicht.. Schätze deshalb die ganzen Repos sind nicht aufm aktuellen Stand.
