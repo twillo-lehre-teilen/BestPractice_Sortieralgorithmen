@@ -14,7 +14,7 @@ comment:  Eine Selbstlerneinheit mit interaktiven Programmieraufgaben für die g
 
 link:     https://de.wikiversity.org/wiki/Kurs:Algorithmen_und_Datenstrukturen/Vorlesung/Sortieren
 
-script:   
+script:  
 -->
 
 # Sortieralgorithmen
