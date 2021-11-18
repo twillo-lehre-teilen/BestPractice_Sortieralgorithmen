@@ -527,8 +527,4 @@ send.handle("input", input => {
 ```
 <script>@input</script>
 
-<<<<<<< HEAD
---> **sending data to other code-blocks only possible if all code-blocks are activated!**
-=======
 --> Es gibt bei den [LiaTemplates](https://github.com/orgs/LiaTemplates/repositories) zwei repositories die es ermöglichen sollen (u.a.) Python interaktiv zu nutzen: Skulpt & Rextester. Allerdings ist Rextester soweit ich weiß kostenpflichtig und Skulpt habe ich nicht zum laufen bekommen.. Allerdings funktioniert das Beispiel-Repo von LiaScript auch schon nicht.. Schätze deshalb die ganzen Repos sind nicht aufm aktuellen Stand.
->>>>>>> 7d34310dbe0f40bb185fdfeea74b33de3a0aa4a4
