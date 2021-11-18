@@ -15,7 +15,7 @@ comment:  Eine Selbstlerneinheit mit interaktiven Programmieraufgaben für die g
 link:     https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/dist/jquery.min.js
           https://cdn.jsdelivr.net/gh/TorroRosso46/Sortieralgorithmen/stylesheet.css
 
-script:   https://cdn.jsdelivr.net/gh/TorroRosso46/Sortieralgorithmen/accordion.js
+script:   
 -->
 
 # Sortieralgorithmen
@@ -279,7 +279,28 @@ function insertionSort(array) {
     </div>
   </div>
 </lia-keep>
-
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  for (var i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      var panel = this.nextElementSibling;
+      /* if panel already open */
+      if (panel.style.maxHeight) {
+        this.classList.toggle('activeA', false);
+        panel.style.maxHeight = null;
+        return;
+      }
+      /* else */
+      for (var j = 0; j < acc.length; j++) {
+        acc[j].classList.toggle('activeA', false)
+        var p = acc[j].nextElementSibling;
+        p.style.maxHeight = null;
+      }
+      this.classList.toggle('activeA', true);
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    });
+  }
+</script>
 
 ## SelectionSort
 
@@ -300,46 +321,6 @@ for i in range(int(hellos)):
 ## QuickSort
 
 # For test purposes
-
-## InsertionSort
-
-![InsertionSort Step1](docs/InsertionSort_Step1.svg)
-
-![InsertionSort Step2](docs/InsertionSort_Step2.svg)
-
-![InsertionSort Step3](docs/InsertionSort_Step3.svg)
-
-![InsertionSort Step4](docs/InsertionSort_Step4.svg)
-
-![InsertionSort Step5](docs/InsertionSort_Step5.svg)
-
-![InsertionSort Step6](docs/InsertionSort_Step6.svg)
-
-![InsertionSort Step7](docs/InsertionSort_Step7.svg)
-
-![InsertionSort Step8](docs/InsertionSort_Step8.svg)
-
-![InsertionSort Step9](docs/InsertionSort_Step9.svg)
-
-![InsertionSort Step10](docs/InsertionSort_Step10.svg)
-
-![InsertionSort Step11](docs/InsertionSort_Step11.svg)
-
-![InsertionSort Step12](docs/InsertionSort_Step12.svg)
-
-![InsertionSort Step13](docs/InsertionSort_Step13.svg)
-
-![InsertionSort Step14](docs/InsertionSort_Step14.svg)
-
-![InsertionSort Step15](docs/InsertionSort_Step15.svg)
-
-![InsertionSort Step16](docs/InsertionSort_Step16.svg)
-
-![InsertionSort Step17](docs/InsertionSort_Step17.svg)
-
-![InsertionSort Step18](docs/InsertionSort_Step18.svg)
-
-![InsertionSort Step19](docs/InsertionSort_Step19.svg)
 
 ## Testing Interactive Code Blocks
 
