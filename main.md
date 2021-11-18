@@ -14,7 +14,7 @@ comment:  Eine Selbstlerneinheit mit interaktiven Programmieraufgaben für die g
 
 link:     ./stylesheet.css
 
-script:   ./accordion.js
+script:   
 -->
 
 # Sortieralgorithmen
@@ -251,8 +251,30 @@ Falls Sie Hilfe beim Einstieg in Python brauchen, empfehlen wir Ihnen ... .
       </p>
     </div>
   </div>
-  <br>
 </lia-keep>
+<script>
+  /* accordeon script file */
+  var acc = document.getElementsByClassName("accordion");
+  for (var i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      var panel = this.nextElementSibling;
+      /* if panel already open */
+      if (panel.style.maxHeight) {
+        this.classList.toggle('activeA', false);
+        panel.style.maxHeight = null;
+        return;
+      }
+      /* else */
+      for (var j = 0; j < acc.length; j++) {
+        acc[j].classList.toggle('activeA', false)
+        var p = acc[j].nextElementSibling;
+        p.style.maxHeight = null;
+      }
+      this.classList.toggle('activeA', true);
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    });
+  }
+</script>
 
 <!-- data-readOnly="false" -->
 ``` js
