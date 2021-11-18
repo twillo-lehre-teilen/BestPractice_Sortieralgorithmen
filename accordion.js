@@ -1,4 +1,4 @@
-/* accordeon script file */
+/* accordion script file */
 var acc = document.getElementsByClassName("accordion");
 for (var i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
@@ -8,14 +8,16 @@ for (var i = 0; i < acc.length; i++) {
       this.classList.toggle('activeA', false);
       panel.style.maxHeight = null;
       return;
-    }
-    /* else */
-    for (var j = 0; j < acc.length; j++) {
-      acc[j].classList.toggle('activeA', false)
-      var p = acc[j].nextElementSibling;
-      p.style.maxHeight = null;
-    }
-    this.classList.toggle('activeA', true);
-    panel.style.maxHeight = panel.scrollHeight + "px";
+    } else {
+      /* if panel closed */
+      for (var j = 0; j < acc.length; j++) {
+        acc[j].classList.toggle('activeA', false)
+        var p = acc[j].nextElementSibling;
+        p.style.maxHeight = null;
+      }
+      this.classList.toggle('activeA', true);
+      panel.style.maxHeight = panel.scrollHeight + "px";
+      return;
+    };
   });
 }

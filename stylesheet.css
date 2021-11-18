@@ -26,13 +26,12 @@ transition: max-height 0.3s ease-out;
 }
 .accordion:after {
 content: '\02795'; /* Unicode character for "plus" sign (+) */
-font-size: 13px;
+font-size: inherit;
 color: #54B6B5;
-float: right;
 margin-left: 5px;
 }
 .activeA:after {
-content: "\2796"; /* Unicode character for "minus" sign (-) */
+content: '\2796'; /* Unicode character for "minus" sign (-) */
 }
 /* collapsible */
 /* Style the button that is used to open and close the collapsible content */

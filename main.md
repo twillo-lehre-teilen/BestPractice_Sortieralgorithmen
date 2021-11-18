@@ -255,10 +255,9 @@ function insertionSort(array) {
           <li>3</li>
           <li>7</li>
           <li>1</li>
-          <li>
-            3,7,1 (die Eingabeliste wird am Ende immer zurückgegeben, muss jetzt aber noch nicht sortiert sein)
-          </li>
+          <li>3,7,1</li>
         </ul>
+        Die Eingabeliste wird am Ende immer zurückgegeben, muss jetzt aber noch nicht sortiert sein.
       </p>
     </div>
     <button class="accordion">Schritt 2:</button>
@@ -290,15 +289,17 @@ function insertionSort(array) {
         this.classList.toggle('activeA', false);
         panel.style.maxHeight = null;
         return;
-      }
-      /* else */
-      for (var j = 0; j < acc.length; j++) {
-        acc[j].classList.toggle('activeA', false)
-        var p = acc[j].nextElementSibling;
-        p.style.maxHeight = null;
-      }
-      this.classList.toggle('activeA', true);
-      panel.style.maxHeight = (panel.scrollHeight + 20) + "px";
+      } else {
+        /* if panel closed */
+        for (var j = 0; j < acc.length; j++) {
+          acc[j].classList.toggle('activeA', false)
+          var p = acc[j].nextElementSibling;
+          p.style.maxHeight = null;
+        }
+        this.classList.toggle('activeA', true);
+        panel.style.maxHeight = (panel.scrollHeight + 0) + "px";
+        return;
+      };
     });
   }
 </script>
