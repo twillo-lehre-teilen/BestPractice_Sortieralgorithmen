@@ -14,8 +14,9 @@ comment:  Eine Selbstlerneinheit mit interaktiven Programmieraufgaben für die g
 
 link:     https://de.wikiversity.org/wiki/Kurs:Algorithmen_und_Datenstrukturen/Vorlesung/Sortieren
 
-script:   https://gitcdn.xyz/repo/liaTemplates/skulpt/master/js/skulpt.min.js
-          https://gitcdn.xyz/repo/liaTemplates/skulpt/master/js/skulpt-stdlib.js
+script:   http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js
+          http://www.skulpt.org/js/skulpt.min.js
+          http://www.skulpt.org/js/skulpt-stdlib.js
 
 
 @Skulpt.eval
