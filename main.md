@@ -12,51 +12,9 @@ narrator: Stina Schäfer, Lennart Rosseburg
 comment:  Eine Selbstlerneinheit mit interaktiven Programmieraufgaben für die gängigsten Sortieralgorithmen.
           Diese Seite ist lizenziert unter der [Lizenz CC-BY-SA (3.0)](https://creativecommons.org/licenses/by-sa/3.0/legalcode).
 
-link:     https://de.wikiversity.org/wiki/Kurs:Algorithmen_und_Datenstrukturen/Vorlesung/Sortieren
+link:     ./stylesheet.css
 
-script:   http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js
-          http://www.skulpt.org/js/skulpt.min.js
-          http://www.skulpt.org/js/skulpt-stdlib.js
-
-
-@Skulpt.eval
-<script>
-function builtinRead(x) {
-  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
-    throw "File not found: '" + x + "'";
-  return Sk.builtinFiles["files"][x];
-}
-
-function input(handle) {
-  return function(prompt) {
-    return new Promise((resolve, reject) => {	send.handle("input", (e) => resolve(e)) });
-  }
-}
-
-Sk.configure({
-  output: (e) => send.lia(e.toString()),
-  read: builtinRead,
-  inputfun: input(send.handle)});
-
-if( document.getElementById("@0") ) {
-  Sk.canvas = "@0";
-  (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = '@0';
-}
-
-setTimeout( function(e) {
-  let myPromise = Sk.misceval.asyncToPromise(function() {
-    return Sk.importMainWithBody("<stdin>", false, `@input`, true);
-  });
-  myPromise.then(function(mod){ send.lia("LIA: stop") },
-   function(err) {
-       console.error(err);
-       send.lia("LIA: stop");
-   });
-}, 150);
-
-"LIA: terminal";
-</script>
-@end
+script:   ./accordion.js
 -->
 
 # Sortieralgorithmen
@@ -258,17 +216,43 @@ Falls Sie Hilfe beim Einstieg in Python brauchen, empfehlen wir Ihnen ... .
 </div>
 
 ##### Code
-
-Schritt 1:
-
-*Schreiben Sie einen Codeabschnitt, so dass alle Elemente der Eingabe nacheinander (von links nach rechts) durchlaufen werden.*
-
-Um zu prüfen, ob der Code das Gewünschte tut, lassen Sie sich die Elemente nacheinander einzeln via **print()** ausgeben. Für die Liste "3,7,1" sollte die Ausgabe also wie folgt aussehen:
-
-- 3
-- 7
-- 1
-- 3,7,1 (die Eingabeliste wird am Ende immer zurückgegeben, muss jetzt aber noch nicht sortiert sein)
+<lia-keep>
+  <div>
+    <button class="accordion">Schritt 1:</button>
+    <div class="panel">
+      <p style="padding:10px 0px">
+        <i>Schreiben Sie einen Codeabschnitt, so dass alle Elemente der Eingabe nacheinander (von links nach rechts) durchlaufen werden.</i>
+        <br><br>
+        Um zu prüfen, ob der Code das Gewünschte tut, lassen Sie sich die Elemente nacheinander einzeln via <b>print()</b> ausgeben. Für die Liste "3,7,1" sollte die Ausgabe also wie folgt aussehen:
+        <ul style="list-style-position: inside;list-style-type: narrow;padding-left: 10px;">
+          <li>3</li>
+          <li>7</li>
+          <li>1</li>
+          <li>
+            3,7,1 (die Eingabeliste wird am Ende immer zurückgegeben, muss jetzt aber noch nicht sortiert sein)
+          </li>
+        </ul>
+      </p>
+    </div>
+    <button class="accordion">Schritt 2:</button>
+    <div class="panel">
+      <p style="padding:10px 0px">
+        <i>Ergänzen Sie Ihren Code so, dass in jedem Durchlauf das jeweils betrachtete Element (im i-ten Durchlauf also das an i-ter Stelle) mit dem Element links davon verglichen wird. Ist das linke Element größer soll getauscht werden.</i>
+        <br><br>
+        Bei der Eingabe "3,7,1" sollte jetzt also "3,1,7" ausgegeben werden.
+      </p>
+    </div>
+    <button class="accordion">Schritt 3:</button>
+    <div class="panel">
+      <p style="padding:10px 0px">
+        <i>Jetzt soll das Programm so erweitert werden, dass der Schritt von eben auf alle Elemente links des i-ten Elements angewandt, das betrachtete Element also an die richtige Stelle "durchgetauscht" wird. Erinnerung: bei Betrachtung der i-ten Stelle sind die Elemente an den Stellen 0 bis i-1 bereits sortiert.</i>
+        <br><br>
+        Die Eingabe "3,7,1" sollte nun richtig sortiert als "1,3,7" ausgegeben werden. Probieren Sie Listen verschiedener Längen und mit unterschiedlichen Zahlen aus, um Ihren Code zu testen.
+      </p>
+    </div>
+  </div>
+  <br>
+</lia-keep>
 
 <!-- data-readOnly="false" -->
 ``` js
@@ -276,34 +260,24 @@ function insertionSort(array) {
   //your code goes here ...
   return array;
 }
-
-var tmp = [];
-send.handle("input", input => {
-  try{
-    tmp = input.split(",").map(Number);
-    var result = insertionSort(tmp);
-    send.lia("Sortierte Liste: [" + result + "]");
-  } catch (e) {
-    console.error(e);
-  }
-});
-
-send.lia("Bitte geben Sie eine unsortierte Liste ein, getrennt durch Kommata:");
-"LIA: terminal";
 ```
-<script>@input</script>
+<script>
+  @input(0)
+  <!-- only important code should be visible -->
+  var tmp = [];
+  send.handle("input", input => {
+    try{
+      tmp = input.split(",").map(Number);
+      var result = insertionSort(tmp);
+      send.lia("Sortierte Liste: [" + result + "]");
+    } catch (e) {
+      console.error(e);
+    }
+  });
 
-Schritt 2:
-
-*Ergänzen Sie Ihren Code so, dass in jedem Durchlauf das jeweils betrachtete Element (im i-ten Durchlauf also das an i-ter Stelle) mit dem Element links davon verglichen wird. Ist das linke Element größer soll getauscht werden.*
-
-Bei der Eingabe "3,7,1" sollte jetzt also "3,1,7" ausgegeben werden.
-
-Schritt 3:
-
-*Jetzt soll das Programm so erweitert werden, dass der Schritt von eben auf alle Elemente links des i-ten Elements angewandt, das betrachtete Element also an die richtige Stelle "durchgetauscht" wird. Erinnerung: bei Betrachtung der i-ten Stelle sind die Elemente an den Stellen 0 bis i-1 bereits sortiert.*
-
-Die Eingabe "3,7,1" sollte nun richtig sortiert als "1,3,7" ausgegeben werden. Probieren Sie Listen verschiedener Längen und mit unterschiedlichen Zahlen aus, um Ihren Code zu testen.
+  send.lia("Bitte geben Sie eine unsortierte Liste ein, getrennt durch Kommata:");
+  "LIA: terminal";
+</script>
 
 ## SelectionSort
 
@@ -531,4 +505,8 @@ send.handle("input", input => {
 ```
 <script>@input</script>
 
+<<<<<<< HEAD
 --> **sending data to other code-blocks only possible if all code-blocks are activated!**
+=======
+--> Es gibt bei den [LiaTemplates](https://github.com/orgs/LiaTemplates/repositories) zwei repositories die es ermöglichen sollen (u.a.) Python interaktiv zu nutzen: Skulpt & Rextester. Allerdings ist Rextester soweit ich weiß kostenpflichtig und Skulpt habe ich nicht zum laufen bekommen.. Allerdings funktioniert das Beispiel-Repo von LiaScript auch schon nicht.. Schätze deshalb die ganzen Repos sind nicht aufm aktuellen Stand.
+>>>>>>> 7d34310dbe0f40bb185fdfeea74b33de3a0aa4a4
