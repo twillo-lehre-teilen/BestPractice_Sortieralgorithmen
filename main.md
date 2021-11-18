@@ -280,7 +280,7 @@ function insertionSort(array) {
   </div>
 </lia-keep>
 <script>
-  /* accordeon script file */
+  /* accordion script file */
   var acc = document.getElementsByClassName("accordion");
   for (var i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
@@ -298,10 +298,18 @@ function insertionSort(array) {
         p.style.maxHeight = null;
       }
       this.classList.toggle('activeA', true);
-      panel.style.maxHeight = panel.scrollHeight + "px";
+      panel.style.maxHeight = (panel.scrollHeight + 20) + "px";
     });
   }
 </script>
+
+<!--  style = "background-color: lightblue; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
+<div>
+  **Erklärungen...**
+
+  Keine Ahnung wieso, aber wenn man irgendetwas überhalb des accordions platziert funktionieren die interaktiven Elemente nichtmehr, bzw. die ganze Seite scheint sich zu überladen (oder ähnliches) und hängt sich auf.
+  Simpler Text reicht dafür schon aus.. wenn wir das nicht fixen können würde ich diese Box einfach darunter platzieren :D
+</div>
 
 ## SelectionSort
 
@@ -312,160 +320,5 @@ function insertionSort(array) {
 ## QuickSort
 
 # For test purposes
-
-## Testing Interactive Code Blocks
-
-- normal code block
-
-``` js
-function insertionSort(array) {
-  for (let i = 1; i < array.length; i++) {
-    let j = i;
-    while (j > 0 && array[j] < array[j - 1]) {
-      [array[j - 1], array[j]] = [array[j], array[j - 1]];
-      j--;
-    }
-  }
-return array;
-}
-//testing above code
-var unsortedList = [12, 11, 13, 5, 6];
-var sortedList = insertionSort(unsortedList);
-//return
-send.lia("Sortierte Liste: " + sortedList);
-"LIA: stop";
-```
-<script>@input</script>
-
----
-
-- multiple code blocks (aka Project)
-
-<!-- data-readOnly="true" -->
-``` js +insertionSort.js
-function insertionSort(array) {
-  for (let i = 1; i < array.length; i++) {
-    let j = i;
-    while (j > 0 && array[j] < array[j - 1]) {
-      [array[j - 1], array[j]] = [array[j], array[j - 1]];
-      j--;
-    }
-  }
-return array;
-}
-```
-<!-- data-readOnly="false" -->
-``` js -main.js
-//testing above code
-var unsortedList = [12, 11, 13, 5, 6];
-var sortedList = insertionSort(unsortedList);
-//return
-send.lia("Sortierte Liste: " + sortedList);
-"LIA: stop";
-```
-<script>
-  @input(0);
-  @input(1);
-</script>
-
-### ..with input query
-
-<!-- data-readOnly="true" -->
-``` js
-function insertionSort(array) {
-  for (let i = 1; i < array.length; i++) {
-    let j = i;
-    while (j > 0 && array[j] < array[j - 1]) {
-      [array[j - 1], array[j]] = [array[j], array[j - 1]];
-      j--;
-    }
-  }
-return array;
-}
-var tmp = [];
-send.handle("input", input => {
-  try{
-    tmp = input.split(" ").map(Number);
-    var result = insertionSort(tmp);
-    send.lia("Sortierte Liste: [" + result + "]");
-  } catch (e) {
-    console.error(e);
-  }
-});
-send.lia("Bitte geben Sie eine unsortierte Liste ein, getrennt durch Leerzeichen:");
-"LIA: terminal";
-```
-<script>@input</script>
-
-### ..with input query & seperate code-blocks
-
-<!-- data-readOnly="true" -->
-``` js
-var tmp = [];
-send.handle("input", input => {
-  try{
-    tmp = input.split(" ").map(Number);
-    send.dispatch("input", tmp);
-    //send.lia("LIA: stop"); //if only one input allowed
-  } catch (e) {
-    console.error(e);
-  }
-});
-send.lia("Bitte geben Sie eine unsortierte Liste ein, getrennt durch Leerzeichen:");
-"LIA: terminal";
-```
-<script>@input</script>
-
-<!-- data-readOnly="true" -->
-``` js
-function insertionSort(array) {
-  for (let i = 1; i < array.length; i++) {
-    let j = i;
-    while (j > 0 && array[j] < array[j - 1]) {
-      [array[j - 1], array[j]] = [array[j], array[j - 1]];
-      j--;
-    }
-  }
-return array;
-}
-```
-<!-- style="display:none;" -->
-```js
-send.register("input", function(e){
-  var result = insertionSort(e);
-  send.lia("Sortierte Liste: [" + result + "]");
-});
-"LIA: wait";
-```
-<script>
-  @input(0);
-  @input(1);
-</script>
-
-## Aus dem LiaScript Handbuch
-
-### Ping Pong
-
-``` js
-send.register("ping", function(e){
-  console.warn("ping", e)
-})
-send.handle("input", input => {
-  send.dispatch("pong", input)
-})
-"LIA: terminal" // execute the code and
-```
-<script>@input</script>
-
-``` js
-send.register("pong", function(e){
-  console.warn("pong", e)
-})
-send.handle("input", input => {
-  send.dispatch("ping", input)
-})
-"LIA: terminal" // execute the code and
-```
-<script>@input</script>
 
 --> Es gibt bei den [LiaTemplates](https://github.com/orgs/LiaTemplates/repositories) zwei repositories die es ermöglichen sollen (u.a.) Python interaktiv zu nutzen: Skulpt & Rextester. Allerdings ist Rextester soweit ich weiß kostenpflichtig und Skulpt habe ich nicht zum laufen bekommen.. Allerdings funktioniert das Beispiel-Repo von LiaScript auch schon nicht.. Schätze deshalb die ganzen Repos sind nicht aufm aktuellen Stand.
