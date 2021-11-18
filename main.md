@@ -218,6 +218,12 @@ Falls Sie Hilfe beim Einstieg in Python brauchen, empfehlen wir Ihnen ... .
 
 ##### Code
 
+<!--  style = "background-color: lightblue; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
+<div>
+**Erklärungen...**
+
+</div>
+
 <!-- data-readOnly="false" -->
 ``` js
 function insertionSort(array) {
@@ -303,16 +309,6 @@ function insertionSort(array) {
 </script>
 
 ## SelectionSort
-
-``` python
-print "how many hellos should I print"
-
-hellos = input()
-
-for i in range(int(hellos)):
-  print "Hello World #", i
-```
-@Skulpt.eval
 
 ## BubbleSort
 
