@@ -251,7 +251,7 @@ function insertionSort(array) {
         <i>Schreiben Sie einen Codeabschnitt, so dass alle Elemente der Eingabe nacheinander (von links nach rechts) durchlaufen werden.</i>
         <br><br>
         Um zu prüfen, ob der Code das Gewünschte tut, lassen Sie sich die Elemente nacheinander einzeln via <b>print()</b> ausgeben. Für die Liste "3,7,1" sollte die Ausgabe also wie folgt aussehen:
-        <ul style="list-style-position: inside;list-style-type: narrow;padding-left: 10px;">
+        <ul style="list-style-position: inside; padding-left: 10px;">
           <li>3</li>
           <li>7</li>
           <li>1</li>
@@ -305,14 +305,6 @@ function insertionSort(array) {
 
 ## SelectionSort
 
-``` python
-print "how many hellos should I print"
-hellos = input()
-for i in range(int(hellos)):
-  print "Hello World #", i
-```
-@Skulpt.eval
-
 ## BubbleSort
 
 ## MergeSort
@@ -320,46 +312,6 @@ for i in range(int(hellos)):
 ## QuickSort
 
 # For test purposes
-
-## InsertionSort
-
-![InsertionSort Step1](docs/InsertionSort_Step1.svg)
-
-![InsertionSort Step2](docs/InsertionSort_Step2.svg)
-
-![InsertionSort Step3](docs/InsertionSort_Step3.svg)
-
-![InsertionSort Step4](docs/InsertionSort_Step4.svg)
-
-![InsertionSort Step5](docs/InsertionSort_Step5.svg)
-
-![InsertionSort Step6](docs/InsertionSort_Step6.svg)
-
-![InsertionSort Step7](docs/InsertionSort_Step7.svg)
-
-![InsertionSort Step8](docs/InsertionSort_Step8.svg)
-
-![InsertionSort Step9](docs/InsertionSort_Step9.svg)
-
-![InsertionSort Step10](docs/InsertionSort_Step10.svg)
-
-![InsertionSort Step11](docs/InsertionSort_Step11.svg)
-
-![InsertionSort Step12](docs/InsertionSort_Step12.svg)
-
-![InsertionSort Step13](docs/InsertionSort_Step13.svg)
-
-![InsertionSort Step14](docs/InsertionSort_Step14.svg)
-
-![InsertionSort Step15](docs/InsertionSort_Step15.svg)
-
-![InsertionSort Step16](docs/InsertionSort_Step16.svg)
-
-![InsertionSort Step17](docs/InsertionSort_Step17.svg)
-
-![InsertionSort Step18](docs/InsertionSort_Step18.svg)
-
-![InsertionSort Step19](docs/InsertionSort_Step19.svg)
 
 ## Testing Interactive Code Blocks
 
