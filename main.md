@@ -315,7 +315,7 @@ hellos = input()
 for i in range(int(hellos)):
   print "Hello World #", i
 ```
-@Skulpt.eval
+@Pyodide.eval
 
 ## BubbleSort
 
