@@ -287,6 +287,7 @@ function insertionSort(array) {
 ```
 @Pyodide.eval
 
+
 <script>
   @input(0)
   <!-- only important code should be visible -->
