@@ -287,6 +287,19 @@ function insertionSort(array) {
 ```
 @Pyodide.eval
 
+## SelectionSort
+
+``` python
+print "how many hellos should I print"
+
+hellos = input()
+
+for i in range(int(hellos)):
+  print "Hello World #", i
+```
+@Pyodide.eval
+
+## BubbleSort
 
 <script>
   @input(0)
@@ -305,20 +318,6 @@ function insertionSort(array) {
   send.lia("Bitte geben Sie eine unsortierte Liste ein, getrennt durch Kommata:");
   "LIA: terminal";
 </script>
-
-## SelectionSort
-
-``` python
-print "how many hellos should I print"
-
-hellos = input()
-
-for i in range(int(hellos)):
-  print "Hello World #", i
-```
-@Pyodide.eval
-
-## BubbleSort
 
 ## MergeSort
 
