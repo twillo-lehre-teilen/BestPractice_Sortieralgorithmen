@@ -281,7 +281,7 @@ Falls Sie Hilfe beim Einstieg in Python brauchen, empfehlen wir Ihnen ... .
 <!-- data-readOnly="false" -->
 ``` python
 function insertionSort(array) {
-  //your code goes here ....
+  //your code goes here ...
   return array;
 }
 ```
