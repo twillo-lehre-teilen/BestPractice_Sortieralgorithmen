@@ -282,7 +282,7 @@ import: https://github.com/LiaTemplates/Pyodide/blob/0.1.4/README.md
 -->
 ``` python
 function insertionSort(array) {
-  //your code goes here ...
+  //your code goes here ....
   return array;
 }
 ```
