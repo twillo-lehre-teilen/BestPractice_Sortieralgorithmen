@@ -277,7 +277,7 @@ Falls Sie Hilfe beim Einstieg in Python brauchen, empfehlen wir Ihnen ... .
 </script>
 
 <!--
-data-readOnly="false" 
+data-readOnly="false"
 import: https://github.com/LiaTemplates/Pyodide/blob/0.1.4/README.md
 -->
 ``` python
@@ -286,7 +286,7 @@ function insertionSort(array) {
   return array;
 }
 ```
-@Pyodide.eval
+
 
 <script>
   @input(0)
