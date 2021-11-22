@@ -14,8 +14,6 @@ comment:  Eine Selbstlerneinheit mit interaktiven Programmieraufgaben für die g
 
 link:     ./stylesheet.css
 
-import: https://github.com/LiaTemplates/Pyodide/blob/0.1.4/README.md
-
 script:   
 -->
 
@@ -278,7 +276,10 @@ Falls Sie Hilfe beim Einstieg in Python brauchen, empfehlen wir Ihnen ... .
   }
 </script>
 
-<!-- data-readOnly="false" -->
+<!--
+data-readOnly="false" 
+import: https://github.com/LiaTemplates/Pyodide/blob/0.1.4/README.md
+-->
 ``` python
 function insertionSort(array) {
   //your code goes here ...
