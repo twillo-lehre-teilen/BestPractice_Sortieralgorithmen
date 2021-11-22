@@ -285,7 +285,7 @@ function insertionSort(array) {
   return array;
 }
 ```
-
+@Pyodide.eval
 
 <script>
   @input(0)
