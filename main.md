@@ -17,9 +17,13 @@ link:     https://cdn.jsdelivr.net/gh/TorroRosso46/Sortieralgorithmen/stylesheet
 import:   https://github.com/LiaTemplates/Pyodide/blob/0.1.4/README.md
           https://github.com/LiaScript/CodeRunner/blob/master/README.md
 
-@@ can also be replaced by @Pyodide.eval
 
 @eval:  @LIA.eval(`["main.py"]`, `python -m compileall .`, `python main.pyc`)
+-->
+<!--
+Pyodide:
+- use @eval only for single code-blocks
+- for multiple code-blocks define own @LIA.eval()
 -->
 
 # Sortieralgorithmen
@@ -221,6 +225,7 @@ Falls Sie Hilfe beim Einstieg in Python brauchen, empfehlen wir Ihnen ... .
 </div>
 
 ##### Code
+
 <lia-keep>
   <div>
     <button class="accordion">Schritt 1:</button>
@@ -288,31 +293,20 @@ def insertionSort(array):
   #your code goes here ...
   return array
 ```
-<script>
-  @input(0)
-  <!-- only important code should be visible -->
-  tmp = []
-  send.handle("input", input => {
-    try:
-      tmp = input.split(",").map(Number)
-      result = insertionSort(tmp)
-      send.lia("Sortierte Liste: [" + result + "]")
-    catch (e):
-      console.error(e);
-  });
+<!-- data-readOnly="True" -->
+``` python
+from InsertionSort import insertionSort
 
-  send.lia("Bitte geben Sie eine unsortierte Liste ein, getrennt durch Kommata:")
-  "LIA: terminal"
-</script>
-@Pyodide.eval
+if __name__ == "__main__":
+    #only important code should be visible
+    print "Bitte geben Sie eine unsortierte Liste ein, getrennt durch Kommata:"
+    array = input()
+    sorted = insertionSort(array)
+    print "Sortierte Liste: ", sorted
+```
+@LIA.eval(`["InsertionSort.py", "main.py"]`, `python -m compileall .`, `python main.pyc`)
 
-<!--  style = "background-color: lightblue; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
-<div>
-  **Erklärungen...**
 
-  Keine Ahnung wieso, aber wenn man irgendetwas überhalb des accordions platziert funktionieren die interaktiven Elemente nichtmehr, bzw. die ganze Seite scheint sich zu überladen (oder ähnliches) und hängt sich auf.
-  Simpler Text reicht dafür schon aus.. wenn wir das nicht fixen können würde ich diese Box einfach darunter platzieren :D
-</div>
 
 ## SelectionSort
 
@@ -324,30 +318,6 @@ def insertionSort(array):
 
 # For test purposes
 
-``` python
-print "how many hellos should I print"
-
-hellos = input()
-
-for i in range(int(hellos)):
-  print "Hello World #", i
-```
-@Pyodide.eval
-
----
-
-``` python
-import sys
-
-for i in range(5):
-	print("Hello", 'World #', i)
-
-sys.version
-```
-@Pyodide.eval
-
----
-
 ```python
 for i in range(10):
   print "Hallo Welt", i
@@ -356,8 +326,11 @@ for i in range(10):
 
 ---
 
-```python
-for i in range(10):
-  print "Hello World", i
+``` python
+if __name__=="__main__":
+  print "how many hellos should I print"
+  hellos = input()
+  for i in range(int(hellos)):
+    print "Hello World #", i
 ```
 @eval
