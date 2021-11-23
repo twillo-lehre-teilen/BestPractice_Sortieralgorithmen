@@ -294,7 +294,7 @@ def insertionSort(array):
   return array
 ```
 <!-- data-readOnly="True" -->
-``` python
+``` python -main.py
 from InsertionSort import insertionSort
 
 if __name__ == "__main__":
