@@ -18,9 +18,8 @@ import:   https://github.com/LiaTemplates/Pyodide/blob/0.1.4/README.md
           https://github.com/LiaScript/CodeRunner/blob/master/README.md
 
 @@ can also be replaced by @Pyodide.eval
-@eval:  @LIA.eval(`["main.py"]`, `python -m compileall .`, `python main.pyc`)
 
-script:   
+@eval:  @LIA.eval(`["main.py"]`, `python -m compileall .`, `python main.pyc`)
 -->
 
 # Sortieralgorithmen
@@ -335,6 +334,8 @@ for i in range(int(hellos)):
 ```
 @Pyodide.eval
 
+---
+
 ``` python
 import sys
 
@@ -345,11 +346,15 @@ sys.version
 ```
 @Pyodide.eval
 
+---
+
 ```python
 for i in range(10):
   print "Hallo Welt", i
 ```
 @LIA.eval(`["main.py"]`, `python -m compileall .`, `python main.pyc`)
+
+---
 
 ```python
 for i in range(10):
