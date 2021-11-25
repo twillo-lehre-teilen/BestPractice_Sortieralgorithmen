@@ -247,7 +247,7 @@ from InsertionSort import insertionSort
 
 if __name__ == "__main__":
     #only important code should be visible
-    print "Bitte geben Sie eine unsortierte Liste ein, in eckigen Klammern, getrennt durch Kommata (Bsp: [3,1,7]):"
+    print "Bitte geben Sie eine unsortierte Liste ein (in eckigen Klammern, getrennt durch Kommata, Bsp: [3,1,7]):"
     array = input()
     sorted = insertionSort(array)
     print "Sortierte Liste: ", sorted
