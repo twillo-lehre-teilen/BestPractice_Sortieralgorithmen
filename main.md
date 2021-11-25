@@ -235,6 +235,26 @@ Falls Sie Hilfe beim Einstieg in Python brauchen, empfehlen wir Ihnen ... .
 - Mithilfe der Pfeiltasten rechts unterhalb des Blocks können Sie zwischen Ihren Speicherständen vor und zurück wechseln, um ggf. Änderungen rückgängig zu machen oder ältere Zustände wiederherzustellen.
 </div>
 
+<!-- data-readOnly="false" -->
+``` python
+def insertionSort(array):
+  #your code goes here ...
+  return array
+```
+<!-- data-readOnly="True" -->
+``` python -main.py
+from InsertionSort import insertionSort
+
+if __name__ == "__main__":
+    #only important code should be visible
+    print "Bitte geben Sie eine unsortierte Liste ein, getrennt durch Kommata:"
+    array = input()
+    sorted = insertionSort(array)
+    print "Sortierte Liste: ", sorted
+```
+@LIA.eval(`["InsertionSort.py", "main.py"]`, `python -m compileall .`, `python main.pyc`)
+
+
 <lia-keep>
   <div>
     <button class="accordion">Schritt 1:</button>
@@ -295,26 +315,6 @@ Falls Sie Hilfe beim Einstieg in Python brauchen, empfehlen wir Ihnen ... .
     });
   }
 </script>
-
-<!-- data-readOnly="false" -->
-``` python
-def insertionSort(array):
-  #your code goes here ...
-  return array
-```
-<!-- data-readOnly="True" -->
-``` python -main.py
-from InsertionSort import insertionSort
-
-if __name__ == "__main__":
-    #only important code should be visible
-    print "Bitte geben Sie eine unsortierte Liste ein, getrennt durch Kommata:"
-    array = input()
-    sorted = insertionSort(array)
-    print "Sortierte Liste: ", sorted
-```
-@LIA.eval(`["InsertionSort.py", "main.py"]`, `python -m compileall .`, `python main.pyc`)
-
 
 
 ## SelectionSort
