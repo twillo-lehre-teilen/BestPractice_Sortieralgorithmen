@@ -317,6 +317,56 @@ if __name__ == "__main__":
 
 ## SelectionSort
 
+### Grundlegende Idee
+
+### Beispiel
+
+![SelectionSort Step1](docs/SelectionSort_Step1.svg)
+
+![SelectionSort Step2](docs/SelectionSort_Step2.svg)
+
+![SelectionSort Step3](docs/SelectionSort_Step3.svg)
+
+![SelectionSort Step4](docs/SelectionSort_Step4.svg)
+
+![SelectionSort Step5](docs/SelectionSort_Step5.svg)
+
+![SelectionSort Step6](docs/SelectionSort_Step6.svg)
+
+![SelectionSort Step7](docs/SelectionSort_Step7.svg)
+
+![SelectionSort Step8](docs/SelectionSort_Step8.svg)
+
+![SelectionSort Step9](docs/SelectionSort_Step9.svg)
+
+![SelectionSort Step10](docs/SelectionSort_Step10.svg)
+
+![SelectionSort Step11](docs/SelectionSort_Step11.svg)
+
+![SelectionSort Step12](docs/SelectionSort_Step12.svg)
+
+![SelectionSort Step13](docs/SelectionSort_Step13.svg)
+
+![SelectionSort Step14](docs/SelectionSort_Step14.svg)
+
+![SelectionSort Step15](docs/SelectionSort_Step15.svg)
+
+![SelectionSort Step16](docs/SelectionSort_Step16.svg)
+
+![SelectionSort Step17](docs/SelectionSort_Step17.svg)
+
+![SelectionSort Step18](docs/SelectionSort_Step18.svg)
+
+![SelectionSort Step19](docs/SelectionSort_Step19.svg)
+
+![SelectionSort Step20](docs/SelectionSort_Step20.svg)
+
+![SelectionSort Step21](docs/SelectionSort_Step21.svg)
+
+### Implementierung
+
+#### Code
+
 ## BubbleSort
 
 ## MergeSort
