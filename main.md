@@ -215,7 +215,7 @@ Nun haben wir alle Elemente betrachtet und die Elemente sind fertig sortiert:
 
 In diesem Kapitel werden Sie den Algorithmus selber schrittweise in Python implementieren. Der Code-Rahmen und Möglichkeiten Ihren Code zu testen sind jeweils schon gegeben, Sie müssen nur an den mit "your code here ..." gekennzeichneten Stellen ihren Code einfügen. Bei Bedarf ist es auch möglich eigene Testfälle zu schreiben. Der Einfachheit halber sortieren wir Listen mit ganzen Zahlen, deren Wert jeweils der zugehörige Schlüssel ist.
 
-Falls Sie Hilfe beim Einstieg in Python brauchen, empfehlen wir Ihnen ... .
+Falls Sie Hilfe beim Einstieg in Python brauchen, finden Sie diese z.B. [hier](https://learnxinyminutes.com/docs/de-de/python-de/), falls es ganz schnell gehen muss oder [hier](https://www.python-lernen.de/), falls es etwas ausführlicher sein soll.
 
 <!--  style = "background-color: #A6D492; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
 <div>
@@ -225,6 +225,35 @@ Falls Sie Hilfe beim Einstieg in Python brauchen, empfehlen wir Ihnen ... .
 </div>
 
 ##### Code
+
+<!--  style = "background-color: lightblue; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
+<div>
+**Bedienungsanleitung des Code-Blocks:**
+
+- Zum ausführen des Codes müssen Sie den Button links unterhalb des Code-Blocks anklicken. Dadurch wird der gesamte Inhalt kompiliert und ausgeführt. Falls Sie anschließend Änderungen an Ihrem Code vornehmen, müssen Sie darauf achten den Button erneut anzuklicken, damit diese gespeichert und neu kompiliert werden.
+
+- Mithilfe der Pfeiltasten rechts unterhalb des Blocks können Sie zwischen Ihren Speicherständen vor und zurück wechseln, um ggf. Änderungen rückgängig zu machen oder ältere Zustände wiederherzustellen.
+</div>
+
+<!-- data-readOnly="false" -->
+``` python
+def insertionSort(array):
+  #your code goes here ...
+  return array
+```
+<!-- data-readOnly="True" -->
+``` python -main.py
+from InsertionSort import insertionSort
+
+if __name__ == "__main__":
+    #only important code should be visible
+    print "Bitte geben Sie eine unsortierte Liste ein (in eckigen Klammern, getrennt durch Kommata, Bsp: [3,1,7]):"
+    array = input()
+    sorted = insertionSort(array)
+    print "Sortierte Liste: ", sorted
+```
+@LIA.eval(`["InsertionSort.py", "main.py"]`, `python -m compileall .`, `python main.pyc`)
+
 
 <lia-keep>
   <div>
@@ -287,33 +316,6 @@ Falls Sie Hilfe beim Einstieg in Python brauchen, empfehlen wir Ihnen ... .
   }
 </script>
 
-<!-- data-readOnly="false" -->
-``` python
-def insertionSort(array):
-  #your code goes here ...
-  return array
-```
-<!-- data-readOnly="True" -->
-``` python -main.py
-from InsertionSort import insertionSort
-
-if __name__ == "__main__":
-    #only important code should be visible
-    print "Bitte geben Sie eine unsortierte Liste ein, getrennt durch Kommata:"
-    array = input()
-    sorted = insertionSort(array)
-    print "Sortierte Liste: ", sorted
-```
-@LIA.eval(`["InsertionSort.py", "main.py"]`, `python -m compileall .`, `python main.pyc`)
-
-<!--  style = "background-color: lightblue; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
-<div>
-**Bedienungsanleitung des Code-Blocks:**
-
-- Zum ausführen des Codes müssen Sie den Button links unterhalb des Code-Blocks anklicken. Dadurch wird der gesamte Inhalt kompiliert und ausgeführt. Falls Sie anschließend Änderungen an Ihrem Code vornehmen, müssen Sie darauf achten den Button erneut anzuklicken, damit diese gespeichert und neu kompiliert werden.
-
-- Mithilfe der Pfeiltasten rechts unterhalb des Blocks können Sie zwischen Ihren Speicherständen vor und zurück wechseln, um ggf. Änderungen rückgängig zu machen oder ältere Zustände wiederherzustellen.
-</div>
 
 ## SelectionSort
 
