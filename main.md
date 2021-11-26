@@ -368,6 +368,35 @@ if __name__ == "__main__":
 
 #### Code
 
+<!--  style = "background-color: lightblue; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
+<div>
+**Bedienungsanleitung des Code-Blocks:**
+
+- Zum ausführen des Codes müssen Sie den Button links unterhalb des Code-Blocks anklicken. Dadurch wird der gesamte Inhalt kompiliert und ausgeführt. Falls Sie anschließend Änderungen an Ihrem Code vornehmen, müssen Sie darauf achten den Button erneut anzuklicken, damit diese gespeichert und neu kompiliert werden.
+
+- Mithilfe der Pfeiltasten rechts unterhalb des Blocks können Sie zwischen Ihren Speicherständen vor und zurück wechseln, um ggf. Änderungen rückgängig zu machen oder ältere Zustände wiederherzustellen.
+</div>
+
+
+<!-- data-readOnly="false" -->
+``` python
+def selectionSort(array):
+  #your code goes here ...
+  return array
+```
+<!-- data-readOnly="True" -->
+``` python -main.py
+from SelectionSort import selectionSort
+
+if __name__ == "__main__":
+    #only important code should be visible
+    print "Bitte geben Sie eine unsortierte Liste ein (in eckigen Klammern, getrennt durch Kommata, Bsp: [3,1,7]):"
+    array = input()
+    sorted = selectionSort(array)
+    print "Sortierte Liste: ", sorted
+```
+@LIA.eval(`["SelectionSort.py", "main.py"]`, `python -m compileall .`, `python main.pyc`)
+
 ## BubbleSort
 
 ## MergeSort
