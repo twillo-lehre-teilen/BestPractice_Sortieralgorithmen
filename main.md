@@ -282,14 +282,12 @@ Bei der Eingabe "3,7,1" sollte jetzt also "3,1,7" ausgegeben werden.
 <details class="panel">
 <summary class="button">**Schritt 3:**</summary>
 
-<p class="panel-content animate__slideInDown" >
+<p class="panel-content" >
 <i>Jetzt soll das Programm so erweitert werden, dass der Schritt von eben auf alle Elemente links des i-ten Elements angewandt, das betrachtete Element also an die richtige Stelle "durchgetauscht" wird. Erinnerung: bei Betrachtung der i-ten Stelle sind die Elemente an den Stellen 0 bis i-1 bereits sortiert.</i>
 <br><br>
 Die Eingabe "3,7,1" sollte nun richtig sortiert als "1,3,7" ausgegeben werden. Probieren Sie Listen verschiedener Längen und mit unterschiedlichen Zahlen aus, um Ihren Code zu testen.
 </p>
 </details>
-
-* {0}{ *bounce* } <!-- class = "animated infinite bounce" style = "animation-delay: 5s;" -->
 
 ## SelectionSort
 
