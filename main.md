@@ -12,7 +12,7 @@ narrator: Stina Schäfer, Lennart Rosseburg
 comment:  Eine Selbstlerneinheit mit interaktiven Programmieraufgaben für die gängigsten Sortieralgorithmen.
           Diese Seite ist lizenziert unter der [Lizenz CC-BY-SA (3.0)](https://creativecommons.org/licenses/by-sa/3.0/legalcode).
 
-link:     ./stylesheet.css
+link:     https://cdn.jsdelivr.net/gh/TorroRosso46/Sortieralgorithmen/stylesheet.css
 
 import:   https://github.com/LiaTemplates/Pyodide/blob/0.1.4/README.md
           https://github.com/LiaScript/CodeRunner/blob/master/README.md
@@ -24,7 +24,6 @@ import:   https://github.com/LiaTemplates/Pyodide/blob/0.1.4/README.md
 Pyodide:
 - use @eval only for single code-blocks
 - for multiple code-blocks define own @LIA.eval()
-https://cdn.jsdelivr.net/gh/TorroRosso46/Sortieralgorithmen/stylesheet.css
 -->
 
 # Sortieralgorithmen
