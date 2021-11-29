@@ -1,72 +1,37 @@
 /* Style the buttons that are used to open and close the accordion panel */
-.accordion{
+.button {
+font-size: inherit;
 background-color: #F0F2F6;
 color: #0A1F40;
-font-size: inherit;
-cursor: pointer;
-padding: 18px;
 width: 100%;
+padding: 18px 18px;
+cursor: pointer;
 text-align: left;
+overflow: hidden;
 border: none;
-outline: none;
-transition: 0.3s ease-out;
 }
-/* Add a background color to the button if it is clicked on (add the .activeA class with JS), and when you move the mouse over it (hover) */
-.activeA, .accordion:hover {
-background-color: #D1D8E1;
-}
-/* Style the accordion panel. Note: hidden by default */
-.panel {
+/* Style the panel. Note: hidden by default */
+.panel{
 font-size: inherit;
-padding: 0px 18px;
 background-color: #FAFAFC;
-overflow: hidden;
-max-height: 0;
-transition: max-height 0.3s ease-out;
-}
-.accordion:after {
-content: '\02795'; /* Unicode character for "plus" sign (+) */
-font-size: inherit;
-color: #54B6B5;
-margin-left: 5px;
-}
-.activeA:after {
-content: '\2796'; /* Unicode character for "minus" sign (-) */
-}
-/* collapsible */
-/* Style the button that is used to open and close the collapsible content */
-.collapsible {
-background-color: #F0F2F6;
-color: #0A1F40;
-font-size: inherit;
-cursor: pointer;
-padding: 18px;
+border-radius: 10px;
 width: 100%;
-border: none;
+padding: 0px;
 text-align: left;
-outline: none;
-font-size: 15px;
-}
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.activeC, .collapsible:hover {
-background-color: #D1D8E1;
-}
-/* Style the collapsible content. Note: hidden by default */
-.collPanel {
-font-size: inherit;
-padding: 10px 18px;
-max-height: 0;
 overflow: hidden;
-background-color: #F0F2F6;
-transition: max-height 0.3s ease-out;
+border: none;
 }
-.collapsible:after {
-content: '\02795'; /* Unicode character for "plus" sign (+) */
-font-size: 13px;
-color: #54B6B5;
-float: right;
-margin-left: 5px;
+.panel-content{
+font-size: inherit;
+background-color: #FAFAFC;
+color: #0A1F40;
+width: 100%;
+padding: 10px;
+text-align: left;
+overflow: hidden;
+border: none;
 }
-.activeC:after {
-content: "\2796"; /* Unicode character for "minus" sign (-) */
+/* Change background color to the button if it is clicked or hovered */
+.button:focus, .button:hover {
+background-color: #D1D8E1;
 }

@@ -12,7 +12,7 @@ narrator: Stina Schäfer, Lennart Rosseburg
 comment:  Eine Selbstlerneinheit mit interaktiven Programmieraufgaben für die gängigsten Sortieralgorithmen.
           Diese Seite ist lizenziert unter der [Lizenz CC-BY-SA (3.0)](https://creativecommons.org/licenses/by-sa/3.0/legalcode).
 
-link:     https://cdn.jsdelivr.net/gh/TorroRosso46/Sortieralgorithmen/stylesheet.css
+link:     ./stylesheet.css
 
 import:   https://github.com/LiaTemplates/Pyodide/blob/0.1.4/README.md
           https://github.com/LiaScript/CodeRunner/blob/master/README.md
@@ -24,6 +24,7 @@ import:   https://github.com/LiaTemplates/Pyodide/blob/0.1.4/README.md
 Pyodide:
 - use @eval only for single code-blocks
 - for multiple code-blocks define own @LIA.eval()
+https://cdn.jsdelivr.net/gh/TorroRosso46/Sortieralgorithmen/stylesheet.css
 -->
 
 # Sortieralgorithmen
@@ -235,75 +236,13 @@ Falls Sie Hilfe beim Einstieg in Python brauchen, finden Sie diese z.B. [hier](h
 - Mithilfe der Pfeiltasten rechts unterhalb des Blocks können Sie zwischen Ihren Speicherständen vor und zurück wechseln, um ggf. Änderungen rückgängig zu machen oder ältere Zustände wiederherzustellen.
 </div>
 
-
-<lia-keep>
-  <div>
-    <button class="accordion">Schritt 1:</button>
-    <div class="panel">
-      <p style="padding:10px 0px">
-        <i>Schreiben Sie einen Codeabschnitt, so dass alle Elemente der Eingabe nacheinander (von links nach rechts) durchlaufen werden.</i>
-        <br><br>
-        Um zu prüfen, ob der Code das Gewünschte tut, lassen Sie sich die Elemente nacheinander einzeln via <b>print()</b> ausgeben. Für die Liste "3,7,1" sollte die Ausgabe also wie folgt aussehen:
-        <ul style="list-style-position: inside; padding-left: 10px;">
-          <li>3</li>
-          <li>7</li>
-          <li>1</li>
-          <li>3,7,1</li>
-        </ul>
-        Die Eingabeliste wird am Ende immer zurückgegeben, muss jetzt aber noch nicht sortiert sein.
-      </p>
-    </div>
-    <button class="accordion">Schritt 2:</button>
-    <div class="panel">
-      <p style="padding:10px 0px">
-        <i>Ergänzen Sie Ihren Code so, dass in jedem Durchlauf das jeweils betrachtete Element (im i-ten Durchlauf also das an i-ter Stelle) mit dem Element links davon verglichen wird. Ist das linke Element größer soll getauscht werden.</i>
-        <br><br>
-        Bei der Eingabe "3,7,1" sollte jetzt also "3,1,7" ausgegeben werden.
-      </p>
-    </div>
-    <button class="accordion">Schritt 3:</button>
-    <div class="panel">
-      <p style="padding:10px 0px">
-        <i>Jetzt soll das Programm so erweitert werden, dass der Schritt von eben auf alle Elemente links des i-ten Elements angewandt, das betrachtete Element also an die richtige Stelle "durchgetauscht" wird. Erinnerung: bei Betrachtung der i-ten Stelle sind die Elemente an den Stellen 0 bis i-1 bereits sortiert.</i>
-        <br><br>
-        Die Eingabe "3,7,1" sollte nun richtig sortiert als "1,3,7" ausgegeben werden. Probieren Sie Listen verschiedener Längen und mit unterschiedlichen Zahlen aus, um Ihren Code zu testen.
-      </p>
-    </div>
-  </div>
-</lia-keep>
-<script>
-  /* accordion script file */
-  var acc = document.getElementsByClassName("accordion");
-  for (var i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-      var panel = this.nextElementSibling;
-      /* if panel already open */
-      if (panel.style.maxHeight) {
-        this.classList.toggle('activeA', false);
-        panel.style.maxHeight = null;
-        return;
-      } else {
-        /* if panel closed */
-        for (var j = 0; j < acc.length; j++) {
-          acc[j].classList.toggle('activeA', false)
-          var p = acc[j].nextElementSibling;
-          p.style.maxHeight = null;
-        }
-        this.classList.toggle('activeA', true);
-        panel.style.maxHeight = (panel.scrollHeight + 0) + "px";
-        return;
-      };
-    });
-  }
-</script>
-
 <!-- data-readOnly="false" -->
 ``` python
 def insertionSort(array):
   #your code goes here ...
   return array
 ```
-<!-- data-readOnly="True" -->
+<!-- data-readOnly="True"  style="display:block"-->
 ``` python -main.py
 from InsertionSort import insertionSort
 
@@ -315,6 +254,43 @@ if __name__ == "__main__":
     print "Sortierte Liste: ", sorted
 ```
 @LIA.eval(`["InsertionSort.py", "main.py"]`, `python -m compileall .`, `python main.pyc`)
+
+<details class="panel">
+<summary class="button">**Schritt 1:**</summary>
+
+<p class="panel-content">
+<i>Schreiben Sie einen Codeabschnitt, so dass alle Elemente der Eingabe nacheinander (von links nach rechts) durchlaufen werden.</i>
+<br><br>
+Um zu prüfen, ob der Code das Gewünschte tut, lassen Sie sich die Elemente nacheinander einzeln via <b>print()</b> ausgeben. Für die Liste "3,7,1" sollte die Ausgabe also wie folgt aussehen:
+<ul style="list-style-position: inside; padding-left: 10px;">
+  <li>3</li>
+  <li>7</li>
+  <li>1</li>
+  <li>3,7,1</li>
+</ul>
+Die Eingabeliste wird am Ende immer zurückgegeben, muss jetzt aber noch nicht sortiert sein.
+</p>
+</details>
+<details class="panel">
+<summary class="button">**Schritt 2:**</summary>
+
+<p class="panel-content">
+<i>Ergänzen Sie Ihren Code so, dass in jedem Durchlauf das jeweils betrachtete Element (im i-ten Durchlauf also das an i-ter Stelle) mit dem Element links davon verglichen wird. Ist das linke Element größer soll getauscht werden.</i>
+<br><br>
+Bei der Eingabe "3,7,1" sollte jetzt also "3,1,7" ausgegeben werden.
+</p>
+</details>
+<details class="panel">
+<summary class="button">**Schritt 3:**</summary>
+
+<p class="panel-content animate__slideInDown" >
+<i>Jetzt soll das Programm so erweitert werden, dass der Schritt von eben auf alle Elemente links des i-ten Elements angewandt, das betrachtete Element also an die richtige Stelle "durchgetauscht" wird. Erinnerung: bei Betrachtung der i-ten Stelle sind die Elemente an den Stellen 0 bis i-1 bereits sortiert.</i>
+<br><br>
+Die Eingabe "3,7,1" sollte nun richtig sortiert als "1,3,7" ausgegeben werden. Probieren Sie Listen verschiedener Längen und mit unterschiedlichen Zahlen aus, um Ihren Code zu testen.
+</p>
+</details>
+
+* {0}{ *bounce* } <!-- class = "animated infinite bounce" style = "animation-delay: 5s;" -->
 
 ## SelectionSort
 
