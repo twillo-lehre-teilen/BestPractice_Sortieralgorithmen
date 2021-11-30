@@ -294,43 +294,6 @@ Die Eingabe "3,7,1" sollte nun richtig sortiert als "1,3,7" ausgegeben werden. P
 
 ## SelectionSort
 
-<details class="panel">
-<summary class="button">**Schritt 1:**</summary>
-
-<p class="panel-content">
-<i>Schreiben Sie einen Codeabschnitt, so dass alle Elemente der Eingabe nacheinander (von links nach rechts) durchlaufen werden.</i>
-<br><br>
-Um zu prüfen, ob der Code das Gewünschte tut, lassen Sie sich die Elemente nacheinander einzeln via <b>print()</b> ausgeben. Für die Liste "3,7,1" sollte die Ausgabe also wie folgt aussehen:
-<ul style="list-style-position: inside; padding-left: 10px;">
-  <li>3</li>
-  <li>7</li>
-  <li>1</li>
-  <li>3,7,1</li>
-</ul>
-Die Eingabeliste wird am Ende immer zurückgegeben, muss jetzt aber noch nicht sortiert sein.
-</p>
-</details>
-
-<details class="panel">
-<summary class="button">**Schritt 2:**</summary>
-
-<p class="panel-content">
-<i>Ergänzen Sie Ihren Code so, dass in jedem Durchlauf das jeweils betrachtete Element (im i-ten Durchlauf also das an i-ter Stelle) mit dem Element links davon verglichen wird. Ist das linke Element größer soll getauscht werden.</i>
-<br><br>
-Bei der Eingabe "3,7,1" sollte jetzt also "3,1,7" ausgegeben werden.
-</p>
-</details>
-
-<details class="panel">
-<summary class="button">**Schritt 3:**</summary>
-
-<p class="panel-content" >
-<i>Jetzt soll das Programm so erweitert werden, dass der Schritt von eben auf alle Elemente links des i-ten Elements angewandt, das betrachtete Element also an die richtige Stelle "durchgetauscht" wird. Erinnerung: bei Betrachtung der i-ten Stelle sind die Elemente an den Stellen 0 bis i-1 bereits sortiert.</i>
-<br><br>
-Die Eingabe "3,7,1" sollte nun richtig sortiert als "1,3,7" ausgegeben werden. Probieren Sie Listen verschiedener Längen und mit unterschiedlichen Zahlen aus, um Ihren Code zu testen.
-</p>
-</details>
-
 ### Grundlegende Idee
 
 ### Beispiel
