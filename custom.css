@@ -29,6 +29,3 @@ text-align: left;
 overflow: hidden;
 border: none;
 }
-.button:focus, .button:hover{
-background-color: #D1D8E1;
-}
