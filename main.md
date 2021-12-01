@@ -17,6 +17,7 @@ link:     https://cdn.jsdelivr.net/gh/TorroRosso46/Sortieralgorithmen/custom.css
 import:   https://github.com/LiaTemplates/Pyodide/blob/0.1.4/README.md
           https://github.com/LiaScript/CodeRunner/blob/master/README.md
 
+mode:     Presentation
 
 @eval:  @LIA.eval(`["main.py"]`, `python -m compileall .`, `python main.pyc`)
 -->
@@ -353,7 +354,6 @@ Die Eingabe "3,7,1" sollte nun richtig sortiert als "1,3,7" ausgegeben werden. P
 - Mithilfe der Pfeiltasten rechts unterhalb des Blocks können Sie zwischen Ihren Speicherständen vor und zurück wechseln, um ggf. Änderungen rückgängig zu machen oder ältere Zustände wiederherzustellen.
 </div>
 
-
 <!-- data-readOnly="false" -->
 ``` python
 def selectionSort(array):
@@ -372,6 +372,31 @@ if __name__ == "__main__":
     print "Sortierte Liste: ", sorted
 ```
 @LIA.eval(`["SelectionSort.py", "main.py"]`, `python -m compileall .`, `python main.pyc`)
+
+<details class="panel">
+<summary class="button">**Schritt 1:**</summary>
+
+<p class="panel-content">
+
+</p>
+</details>
+
+<details class="panel">
+<summary class="button">**Schritt 2:**</summary>
+
+<p class="panel-content">
+
+</p>
+</details>
+
+<details class="panel">
+<summary class="button">**Schritt 3:**</summary>
+
+<p class="panel-content" >
+
+</p>
+</details>
+
 
 ## BubbleSort
 
