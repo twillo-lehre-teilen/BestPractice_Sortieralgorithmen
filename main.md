@@ -408,6 +408,58 @@ if __name__ == "__main__":
 
 #### Code
 
+<!--  style = "background-color: lightblue; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
+<div>
+**Bedienungsanleitung des Code-Blocks:**
+
+- Zum ausführen des Codes müssen Sie den Button links unterhalb des Code-Blocks anklicken. Dadurch wird der gesamte Inhalt kompiliert und ausgeführt. Falls Sie anschließend Änderungen an Ihrem Code vornehmen, müssen Sie darauf achten den Button erneut anzuklicken, damit diese gespeichert und neu kompiliert werden.
+
+- Mithilfe der Pfeiltasten rechts unterhalb des Blocks können Sie zwischen Ihren Speicherständen vor und zurück wechseln, um ggf. Änderungen rückgängig zu machen oder ältere Zustände wiederherzustellen.
+</div>
+
+<!-- data-readOnly="false" -->
+``` python
+def bubbleSort(array):
+  #your code goes here ...
+  return array
+```
+<!-- data-readOnly="true" style="display:block"-->
+``` python -main.py
+from BubbleSort import bubbleSort
+
+if __name__ == "__main__":
+    #only important code should be visible
+    print "Bitte geben Sie eine unsortierte Liste ein (in eckigen Klammern, getrennt durch Kommata, Bsp: [3,1,7]):"
+    array = input()
+    sorted = bubbleSort(array)
+    print "Sortierte Liste: ", sorted
+```
+@LIA.eval(`["BubbleSort.py", "main.py"]`, `python -m compileall .`, `python main.pyc`)
+
+<details class="panel">
+<summary class="button">**Schritt 1:**</summary>
+
+<p class="panel-content">
+
+</p>
+</details>
+
+<details class="panel">
+<summary class="button">**Schritt 2:**</summary>
+
+<p class="panel-content">
+
+</p>
+</details>
+
+<details class="panel">
+<summary class="button">**Schritt 3:**</summary>
+
+<p class="panel-content" >
+
+</p>
+</details>
+
 ## MergeSort
 
 ### Grundlegende Idee
@@ -418,6 +470,58 @@ if __name__ == "__main__":
 
 #### Code
 
+<!--  style = "background-color: lightblue; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
+<div>
+**Bedienungsanleitung des Code-Blocks:**
+
+- Zum ausführen des Codes müssen Sie den Button links unterhalb des Code-Blocks anklicken. Dadurch wird der gesamte Inhalt kompiliert und ausgeführt. Falls Sie anschließend Änderungen an Ihrem Code vornehmen, müssen Sie darauf achten den Button erneut anzuklicken, damit diese gespeichert und neu kompiliert werden.
+
+- Mithilfe der Pfeiltasten rechts unterhalb des Blocks können Sie zwischen Ihren Speicherständen vor und zurück wechseln, um ggf. Änderungen rückgängig zu machen oder ältere Zustände wiederherzustellen.
+</div>
+
+<!-- data-readOnly="false" -->
+``` python
+def selectionSort(array):
+  #your code goes here ...
+  return array
+```
+<!-- data-readOnly="true" style="display:block"-->
+``` python -main.py
+from MergeSort import mergeSort
+
+if __name__ == "__main__":
+    #only important code should be visible
+    print "Bitte geben Sie eine unsortierte Liste ein (in eckigen Klammern, getrennt durch Kommata, Bsp: [3,1,7]):"
+    array = input()
+    sorted = mergeSort(array)
+    print "Sortierte Liste: ", sorted
+```
+@LIA.eval(`["MergeSort.py", "main.py"]`, `python -m compileall .`, `python main.pyc`)
+
+<details class="panel">
+<summary class="button">**Schritt 1:**</summary>
+
+<p class="panel-content">
+
+</p>
+</details>
+
+<details class="panel">
+<summary class="button">**Schritt 2:**</summary>
+
+<p class="panel-content">
+
+</p>
+</details>
+
+<details class="panel">
+<summary class="button">**Schritt 3:**</summary>
+
+<p class="panel-content" >
+
+</p>
+</details>
+
 ## QuickSort
 
 ### Grundlegende Idee
@@ -427,3 +531,55 @@ if __name__ == "__main__":
 ### Implementierung
 
 #### Code
+
+<!--  style = "background-color: lightblue; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
+<div>
+**Bedienungsanleitung des Code-Blocks:**
+
+- Zum ausführen des Codes müssen Sie den Button links unterhalb des Code-Blocks anklicken. Dadurch wird der gesamte Inhalt kompiliert und ausgeführt. Falls Sie anschließend Änderungen an Ihrem Code vornehmen, müssen Sie darauf achten den Button erneut anzuklicken, damit diese gespeichert und neu kompiliert werden.
+
+- Mithilfe der Pfeiltasten rechts unterhalb des Blocks können Sie zwischen Ihren Speicherständen vor und zurück wechseln, um ggf. Änderungen rückgängig zu machen oder ältere Zustände wiederherzustellen.
+</div>
+
+<!-- data-readOnly="false" -->
+``` python
+def quickSort(array):
+  #your code goes here ...
+  return array
+```
+<!-- data-readOnly="true" style="display:block"-->
+``` python -main.py
+from QuickSort import quickSort
+
+if __name__ == "__main__":
+    #only important code should be visible
+    print "Bitte geben Sie eine unsortierte Liste ein (in eckigen Klammern, getrennt durch Kommata, Bsp: [3,1,7]):"
+    array = input()
+    sorted = quickSort(array)
+    print "Sortierte Liste: ", sorted
+```
+@LIA.eval(`["QuickSort.py", "main.py"]`, `python -m compileall .`, `python main.pyc`)
+
+<details class="panel">
+<summary class="button">**Schritt 1:**</summary>
+
+<p class="panel-content">
+
+</p>
+</details>
+
+<details class="panel">
+<summary class="button">**Schritt 2:**</summary>
+
+<p class="panel-content">
+
+</p>
+</details>
+
+<details class="panel">
+<summary class="button">**Schritt 3:**</summary>
+
+<p class="panel-content" >
+
+</p>
+</details>
