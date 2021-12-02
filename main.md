@@ -96,44 +96,99 @@ Die Sortierung erfolgt anhand eines Schlüssels, z.B. ganzen Zahlen. Jedes zu so
 
 #### Quiz
 
+**Schreiben Sie die richtige Antwort in die vorgegebenen Textfelder. Achten Sie dabei auf Gross- und Kleinschreibung.**
+
+1. Welche Bedingung muss eine Relation neben der Transitivität und der Antisymmetrie erfüllen, damit sie eine Ordnung genannt werden kann?
+
+    [[Reflexivität]]
+
+2. Durch was werden Elemente einer Menge eindeutig identifiziert?
+
+    [[Schlüssel]]
+
 **Sind die folgenden Aussagen wahr oder falsch?**
 
-1. Ordnungen sind nur über Mengen von Zahlen, z.B. $\N$, definiert.
+3. Ordnungen sind nur über Mengen von Zahlen, z.B. $\N$, definiert.
 
-    [[ ]] wahr
-    [[X]] falsch
+    [( )] wahr
+    [(x)] falsch
+    ******************
 
-2. Schlüssel müssen nicht eindeutig sein, d.h. zwei Elemente können den gleichen Schlüssel haben.
+    - Ordnungen können z.B. auch über Mengen von Buchstaben definiert sein.
 
-    [[X]] wahr
-    [[ ]] falsch
+    *************
 
-3. Der Schlüssel eines Elements kann sich während des Sortierens ändern.
+4. Schlüssel müssen nicht eindeutig sein, d.h. zwei Elemente können den gleichen Schlüssel haben.
 
-    [[ ]] wahr
-    [[X]] falsch
+    [(X)] wahr
+    [( )] falsch
+    ***********
 
-Sei nun $\leq$ die Ordnungsrelation auf den natürlichen Zahlen $\N$.
+    - Schlüssel müssen definitionsgemäß eindeutig sein, damit Elemente eindeutig identifizierbar sind.
 
-4. $\leq$ ist eine totale Ordnung.
+    ***********
 
-    [[X]] wahr
-    [[ ]] falsch
+5. Der Schlüssel eines Elements kann sich während des Sortierens ändern.
 
-5. Es gilt $x \leq y \land z \leq y \to x \leq z$ $ \forall x,y,z \in \N$
+    [( )] wahr
+    [(x)] falsch
+    ************
 
-    [[ ]] wahr
-    [[X]] falsch
+    - Jedes Element hat einen festen Schlüssel. Gäbe es variable Schlüssel könnte keine Ordnung darauf definiert werden.
 
-6. Es gilt $x \leq x$ $\forall x \in I$
+    ***********
 
-    [[X]] wahr
-    [[ ]] falsch
+**Sei nun $\leq$ die Ordnungsrelation auf den natürlichen Zahlen $\N$.**
 
-7. Der strikte Anteil von $\leq$ ist: $x \le y := x \leq y \lor x \neq y$
+6. Welche der folgenden Aussagen sind richtig?
 
-    [[ ]] wahr
-    [[X]] falsch
+    [[ ]] $\leq$ ist keine lineare Ordnung.
+    [[x]] Es gilt $x \leq x$ $\forall x \in I$
+    [[x]] $\leq$ ist eine totale Ordnung.
+    **************
+
+    - Eine totale Ordnung ist dasselbe wie eine lineare Ordnung.
+
+    **************
+
+7. Es gilt $x \leq y \land z \leq y \to x \leq z$ $ \forall x,y,z \in \N$
+
+    [( )] wahr
+    [(x)] falsch
+    **************************
+
+    - Das $x \leq y \land z \leq y$ gilt gibt uns keinen Hinweis darüber, ob auch $x \leq z$ gilt.
+
+    **************************
+
+8. Der strikte Anteil von $\leq$ ist:
+
+    $x \le y := x \leq y \lor x \neq y$
+
+    [( )] wahr
+    [(X)] falsch
+    **************************
+
+    - Der strikte Anteil von $\leq$ ist: $x \le y := x \leq y \land x \neq y$
+
+    **************************
+
+**Wählen Sie die richtige Antwortmöglichkeit aus.**
+
+9. Welche Relation wird durch folgende Gleichung beschrieben?
+
+    $x \leq y \land y \leq z \to x \leq z$ $ \forall x,y,z \in I$
+
+    [[ Reflexivität | (Transitivität) | Antisymmetrie ]]
+    **********
+
+    - Die anderen beiden Relationen, die von einer Ordnung erfüllt sind, werden durch folgende Gleichungen beschrieben:
+
+      - Reflexivität: $x \leq x$ $\forall x \in I$
+      - Antisymmetrie: $x \leq y \land y \leq x \to x = y$ $ \forall x,y \in I $
+
+    **********
+
 
 ## InsertionSort
 
