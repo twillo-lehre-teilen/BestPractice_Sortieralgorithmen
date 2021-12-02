@@ -295,6 +295,13 @@ Die Eingabe "3,7,1" sollte nun richtig sortiert als "1,3,7" ausgegeben werden. P
 
 ## SelectionSort
 
+<!--  style = "background-color: #A6D492; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
+<div>
+  **Ziel dieses Kapitels:**
+
+  Nach diesem Kapitel sollten Sie die Vorgehensweise von SelectionSort verstanden haben, sowie die einzelnen Schritte benennen und anwenden können. Außerdem sollten Sie in der Lage sein den Algorithmus schrittweise zu implementieren.
+</div>
+
 ### Grundlegende Idee
 
 ### Beispiel
@@ -400,6 +407,13 @@ if __name__ == "__main__":
 
 ## BubbleSort
 
+<!--  style = "background-color: #A6D492; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
+<div>
+  **Ziel dieses Kapitels:**
+
+  Nach diesem Kapitel sollten Sie die Vorgehensweise von BubbleSort verstanden haben, sowie die einzelnen Schritte benennen und anwenden können. Außerdem sollten Sie in der Lage sein den Algorithmus schrittweise zu implementieren.
+</div>
+
 ### Grundlegende Idee
 
 ### Beispiel
@@ -462,6 +476,13 @@ if __name__ == "__main__":
 
 ## MergeSort
 
+<!--  style = "background-color: #A6D492; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
+<div>
+  **Ziel dieses Kapitels:**
+
+  Nach diesem Kapitel sollten Sie die Vorgehensweise von MergeSort verstanden haben, sowie die einzelnen Schritte benennen und anwenden können. Außerdem sollten Sie in der Lage sein den Algorithmus schrittweise zu implementieren.
+</div>
+
 ### Grundlegende Idee
 
 ### Beispiel
@@ -523,6 +544,13 @@ if __name__ == "__main__":
 </details>
 
 ## QuickSort
+
+<!--  style = "background-color: #A6D492; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
+<div>
+  **Ziel dieses Kapitels:**
+
+  Nach diesem Kapitel sollten Sie die Vorgehensweise von QuickSort verstanden haben, sowie die einzelnen Schritte benennen und anwenden können. Außerdem sollten Sie in der Lage sein den Algorithmus schrittweise zu implementieren.
+</div>
 
 ### Grundlegende Idee
 
