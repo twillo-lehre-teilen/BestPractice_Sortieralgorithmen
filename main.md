@@ -360,7 +360,7 @@ def selectionSort(array):
   #your code goes here ...
   return array
 ```
-<!-- data-readOnly="True" -->
+<!-- data-readOnly="true" style="display:block"-->
 ``` python -main.py
 from SelectionSort import selectionSort
 
@@ -400,25 +400,30 @@ if __name__ == "__main__":
 
 ## BubbleSort
 
+### Grundlegende Idee
+
+### Beispiel
+
+### Implementierung
+
+#### Code
+
 ## MergeSort
+
+### Grundlegende Idee
+
+### Beispiel
+
+### Implementierung
+
+#### Code
 
 ## QuickSort
 
-# For test purposes
+### Grundlegende Idee
 
-```python
-for i in range(10):
-  print "Hallo Welt", i
-```
-@LIA.eval(`["main.py"]`, `python -m compileall .`, `python main.pyc`)
+### Beispiel
 
----
+### Implementierung
 
-``` python
-if __name__=="__main__":
-  print "how many hellos should I print"
-  hellos = input()
-  for i in range(int(hellos)):
-    print "Hello World #", i
-```
-@eval
+#### Code
