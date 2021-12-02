@@ -101,10 +101,26 @@ Die Sortierung erfolgt anhand eines Schlüssels, z.B. ganzen Zahlen. Jedes zu so
 1. Welche Bedingung muss eine Relation neben der Transitivität und der Antisymmetrie erfüllen, damit sie eine Ordnung genannt werden kann?
 
     [[Reflexivität]]
+    <script>
+      if("@input" == "Reflexivität"){
+        send.lia("true");
+      }else{
+        send.lia("false");
+      }
+      "LIA: stop"
+    </script>
 
 2. Durch was werden Elemente einer Menge eindeutig identifiziert?
 
     [[Schlüssel]]
+    <script>
+      if("@input" == "Schlüssel"){
+        send.lia("true");
+      }else{
+        send.lia("false");
+      }
+      "LIA: stop"
+    </script>
 
 **Sind die folgenden Aussagen wahr oder falsch?**
 
@@ -322,7 +338,7 @@ Um zu prüfen, ob der Code das Gewünschte tut, lassen Sie sich die Elemente nac
   <li>3</li>
   <li>7</li>
   <li>1</li>
-  <li>3,7,1</li>
+  <li>Sortierte Liste:  [3, 7, 1]</li>
 </ul>
 Die Eingabeliste wird am Ende immer zurückgegeben, muss jetzt aber noch nicht sortiert sein.
 </p>
