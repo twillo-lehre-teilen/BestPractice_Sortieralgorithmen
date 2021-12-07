@@ -1,3 +1,33 @@
+.quiz{
+font-size: inherit;
+background-color: #F0F2F6;
+color: #0A1F40;
+width: 150px;
+padding: 10px 10px;
+margin-right: 10px;
+cursor: pointer;
+text-align: center;
+float: left;
+display: block;
+overflow: hidden;
+border: none;
+}
+.quiz:focus, .quiz:hover{
+background-color: #D1D8E1;
+}
+.ergebnis{
+font-size: inherit;
+background-color: #F0F2F6;
+color: #0A1F40;
+padding: 10px 10px;
+margin-right: 10px;
+margin-bottom: 10px;
+text-align: left;
+display: none;
+overflow: hidden;
+border: none;
+border-radius: 8px;
+}
 .button{
 font-size: inherit;
 background-color: #F0F2F6;

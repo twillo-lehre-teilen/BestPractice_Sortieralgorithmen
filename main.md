@@ -13,6 +13,7 @@ comment:  Eine Selbstlerneinheit mit interaktiven Programmieraufgaben für die g
           Diese Seite ist lizenziert unter der [Lizenz CC-BY-SA (3.0)](https://creativecommons.org/licenses/by-sa/3.0/legalcode).
 
 link:     https://cdn.jsdelivr.net/gh/TorroRosso46/Sortieralgorithmen/custom.css
+          ./custom.css
 
 import:   https://github.com/LiaTemplates/Pyodide/blob/0.1.4/README.md
           https://github.com/LiaScript/CodeRunner/blob/master/README.md
@@ -96,6 +97,166 @@ Die Sortierung erfolgt anhand eines Schlüssels, z.B. ganzen Zahlen. Jedes zu so
 
 #### Quiz
 
+<!--  style = "background-color: lightblue; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
+<div>
+**Bedienungsanleitung des Quiz:**
+
+Damit beim Quiz Ihr Punktestand berechnet werden kann, müssen folgende Schritte absolviert werden:
+
+1. Führen Sie den Code-Block mit der Beschriftung <b>"Ausführen zur Punkteberechnung"</b> aus. Dafür müssen Sie den kleinen Button links unterhalb des Code-Blocks anklicken.
+2. Um das Quiz zu starten klicken Sie auf den Button <b>"Quiz starten!"</b>.
+3. Beantworten Sie nun alle Fragen im Quiz.
+4. Um das Quiz zu beenden klicken Sie auf den Button <b>"Quiz beenden!"</b>. Ihr Endpunktestand wird Ihnen unterhalb des Code-Blocks mitgeteilt.
+</div>
+
+<lia-keep>
+<button type="button" id="start" class="quiz">Quiz starten!</button>
+<button type="button" id="stop" class="quiz">Quiz beenden!</button>
+<br><br>
+</lia-keep>
+
+<!-- data-readOnly="true" style="display:block;" -->
+``` js -Ausführen zur Punkteberechnung
+
+let quiz_started = false;
+let points = 0;
+
+function start(){
+  if(!quiz_started){   
+    points = 0;
+    quiz_started = true;
+    console.warn("Das Quiz wurde gestartet!");
+  }
+}
+
+function stop(){
+  if(quiz_started){
+    quiz_started = false;
+    console.warn("Quiz beendet!");
+    document.getElementById("start").removeEventListener("click", start);
+    document.getElementById("stop").removeEventListener("click", stop);
+    document.getElementById("Ergebnis").innerHTML="Dein Endpunktestand ist: " + points;
+    document.getElementById("Ergebnis").style.display="inline-block";
+    send.lia("LIA: stop");
+  } else {
+    console.warn("Quiz wurde noch nicht gestartet!");
+  }
+}
+
+document.getElementById("start").addEventListener("click", start);
+document.getElementById("stop").addEventListener("click", stop);
+
+send.register("q1", function(e){
+  if(quiz_started){
+    if(e == "t"){
+      points += 1;
+    } else {
+      points -= 1;
+    }
+    //console.warn("Your current score is:", points);
+  }
+});
+send.register("q2", function(e){
+  if(quiz_started){
+    if(e == "t"){
+      points += 1;
+    } else {
+      points -= 1;
+    }
+    //console.warn("Your current score is:", points);
+  }
+});
+send.register("q3", function(e){
+  if(quiz_started){
+    if(e == "t"){
+      points += 1;
+    } else {
+      points -= 1;
+    }
+    //console.warn("Your current score is:", points);
+  }
+});
+send.register("q4", function(e){
+  if(quiz_started){
+    if(e == "t"){
+      points += 1;
+    } else {
+      points -= 1;
+    }
+    //console.warn("Your current score is:", points);
+  }
+});
+send.register("q5", function(e){
+  if(quiz_started){
+    if(e == "t"){
+      points += 1;
+    } else {
+      points -= 1;
+    }
+    //console.warn("Your current score is:", points);
+  }
+});
+send.register("q6", function(e){
+  if(quiz_started){
+    if(e == "t"){
+      points += 1;
+    } else {
+      points -= 1;
+    }
+    //console.warn("Your current score is:", points);
+  }
+});
+send.register("q7", function(e){
+  if(quiz_started){
+    if(e == "t"){
+      points += 1;
+    } else {
+      points -= 1;
+    }
+    //console.warn("Your current score is:", points);
+  }
+});
+send.register("q8", function(e){
+  if(quiz_started){
+    if(e == "t"){
+      points += 1;
+    } else {
+      points -= 1;
+    }
+    //console.warn("Your current score is:", points);
+  }
+});
+send.register("q9", function(e){
+  if(quiz_started){
+    if(e == "t"){
+      points += 1;
+    } else {
+      points -= 1;
+    }
+    //console.warn("Your current score is:", points);
+  }
+});
+
+"LIA: wait";
+```
+<script>@input</script>
+
+<lia-keep>
+<div id="Ergebnis" class="ergebnis">
+</div>
+</lia-keep>
+
+<!--  style = "background-color: #A6D492; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
+<div>
+<b>Punktevergabe:</b>
+<br>
+
+- Für jede richtige Antwort gibt es einen Punkt.
+- Für jede falsche Antwort (<b>pro Versuch</b>) wird ein Punkt abgezogen.
+
+Es können <b>maximal 9 Punkte</b> erzielt werden. Dies ist nur möglich, wenn jede Frage mit dem <b>1. Versuch</b> richtig beantwortet wird!
+</div>
+
 **Schreiben Sie die richtige Antwort in die vorgegebenen Textfelder. Achten Sie dabei auf Gross- und Kleinschreibung.**
 
 1. Welche Bedingung muss eine Relation neben der Transitivität und der Antisymmetrie erfüllen, damit sie eine Ordnung genannt werden kann?
@@ -104,8 +265,10 @@ Die Sortierung erfolgt anhand eines Schlüssels, z.B. ganzen Zahlen. Jedes zu so
     <script>
       if("@input" == "Reflexivität"){
         send.lia("true");
+        send.dispatch("q1", "t");
       }else{
         send.lia("false");
+        send.dispatch("q1", "f");
       }
       "LIA: stop"
     </script>
@@ -116,8 +279,10 @@ Die Sortierung erfolgt anhand eines Schlüssels, z.B. ganzen Zahlen. Jedes zu so
     <script>
       if("@input" == "Schlüssel"){
         send.lia("true");
+        send.dispatch("q2", "t");
       }else{
         send.lia("false");
+        send.dispatch("q2", "f");
       }
       "LIA: stop"
     </script>
@@ -128,16 +293,37 @@ Die Sortierung erfolgt anhand eines Schlüssels, z.B. ganzen Zahlen. Jedes zu so
 
     [( )] wahr
     [(x)] falsch
+    <script>
+      if("@input" == 1){
+        send.lia("true");
+        send.dispatch("q3", "t");
+      }else{
+        send.lia("false");
+        send.dispatch("q3", "f");
+      }
+      "LIA: stop"
+    </script>
     ******************
 
     - Ordnungen können z.B. auch über Mengen von Buchstaben definiert sein.
 
     *************
 
+
 4. Schlüssel müssen nicht eindeutig sein, d.h. zwei Elemente können den gleichen Schlüssel haben.
 
     [(X)] wahr
     [( )] falsch
+    <script>
+      if("@input" == 0){
+        send.lia("true");
+        send.dispatch("q4", "t");
+      }else{
+        send.lia("false");
+        send.dispatch("q4", "f");
+      }
+      "LIA: stop"
+    </script>
     ***********
 
     - Schlüssel müssen definitionsgemäß eindeutig sein, damit Elemente eindeutig identifizierbar sind.
@@ -148,6 +334,16 @@ Die Sortierung erfolgt anhand eines Schlüssels, z.B. ganzen Zahlen. Jedes zu so
 
     [( )] wahr
     [(x)] falsch
+    <script>
+      if("@input" == 1){
+        send.lia("true");
+        send.dispatch("q5", "t");
+      }else{
+        send.lia("false");
+        send.dispatch("q5", "f");
+      }
+      "LIA: stop"
+    </script>
     ************
 
     - Jedes Element hat einen festen Schlüssel. Gäbe es variable Schlüssel könnte keine Ordnung darauf definiert werden.
@@ -161,6 +357,16 @@ Die Sortierung erfolgt anhand eines Schlüssels, z.B. ganzen Zahlen. Jedes zu so
     [[ ]] $\leq$ ist keine lineare Ordnung.
     [[x]] Es gilt $x \leq x$ $\forall x \in I$
     [[x]] $\leq$ ist eine totale Ordnung.
+    <script>
+      if("@input" == "[0,1,1]"){
+        send.lia("true");
+        send.dispatch("q6", "t");
+      }else{
+        send.lia("false");
+        send.dispatch("q6", "f");
+      }
+      "LIA: stop"
+    </script>
     **************
 
     - Eine totale Ordnung ist dasselbe wie eine lineare Ordnung.
@@ -171,6 +377,16 @@ Die Sortierung erfolgt anhand eines Schlüssels, z.B. ganzen Zahlen. Jedes zu so
 
     [( )] wahr
     [(x)] falsch
+    <script>
+      if("@input" == 1){
+        send.lia("true");
+        send.dispatch("q7", "t");
+      }else{
+        send.lia("false");
+        send.dispatch("q7", "f");
+      }
+      "LIA: stop"
+    </script>
     **************************
 
     - Das $x \leq y \land z \leq y$ gilt gibt uns keinen Hinweis darüber, ob auch $x \leq z$ gilt.
@@ -183,6 +399,16 @@ Die Sortierung erfolgt anhand eines Schlüssels, z.B. ganzen Zahlen. Jedes zu so
 
     [( )] wahr
     [(X)] falsch
+    <script>
+      if("@input" == 1){
+        send.lia("true");
+        send.dispatch("q8", "t");
+      }else{
+        send.lia("false");
+        send.dispatch("q8", "f");
+      }
+      "LIA: stop"
+    </script>
     **************************
 
     - Der strikte Anteil von $\leq$ ist: $x \le y := x \leq y \land x \neq y$
@@ -196,6 +422,16 @@ Die Sortierung erfolgt anhand eines Schlüssels, z.B. ganzen Zahlen. Jedes zu so
     $x \leq y \land y \leq z \to x \leq z$ $ \forall x,y,z \in I$
 
     [[ Reflexivität | (Transitivität) | Antisymmetrie ]]
+    <script>
+      if("@input" == 1){
+        send.lia("true");
+        send.dispatch("q9", "t");
+      }else{
+        send.lia("false");
+        send.dispatch("q9", "f");
+      }
+      "LIA: stop"
+    </script>
     **********
 
     - Die anderen beiden Relationen, die von einer Ordnung erfüllt sind, werden durch folgende Gleichungen beschrieben:
