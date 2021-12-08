@@ -615,25 +615,45 @@ Die Idee dieses Suchalgorithmus ist, den jeweils größten Wert im Array zu such
 
 ### Beispiel
 
+Schauen wir uns den Algorithmus Schritt für Schritt an folgendem Beispiel an:
+
+Sei dies eine Reihe zu sortierender Elemente, die Zahlen die zugehörigen Schlüssel, nach denen aufsteigend sortiert werden soll:
+
 ![SelectionSort Step1](docs/SelectionSort_Step1.svg)
+
+Die graue Färbung bedeutet, dass diese Elemente noch nicht sortiert sind. Fertig sortierte Elemente werden später grün gefärbt.
+
+Wir markieren zunächst die Position ganz rechts, denn dort sollen nach diesem Durchlauf das größte Element der Liste stehen.
 
 ![SelectionSort Step2](docs/SelectionSort_Step2.svg)
 
+Nun gehen wir die Liste einmal durch und tauschen das Element mit dem größten Schlüssel, in unserem Fall ist dies das Element mit dem Schlüssel 7, mit dem letzten Element in der Liste.
+
 ![SelectionSort Step3](docs/SelectionSort_Step3.svg)
+
+Das letzte Element ist jetzt fertig sortiert, also betrachten wir nur noch die Liste links des letzten Elements und markieren darin wieder die letzte Stelle.
 
 ![SelectionSort Step4](docs/SelectionSort_Step4.svg)
 
+Als nächstes gehen wir die verkleinerte Liste durch und suchen wieder nach dem größten Schlüssel. Das ist diesmal die 6.
+
 ![SelectionSort Step5](docs/SelectionSort_Step5.svg)
+
+Das Element mit dem Schlüssel 6 steht bereits an der richtigen Stelle, nämlich an der letzten Stelle der Liste. Deshalb muss nichts getauscht werden und wir können die noch zu sortierende Liste wieder verkleinern.
 
 ![SelectionSort Step6](docs/SelectionSort_Step6.svg)
 
 ![SelectionSort Step7](docs/SelectionSort_Step7.svg)
+
+Wir tauschen nun wieder das Element ganz rechts in der unsortierten Liste mit dem Element mit dem größten Schlüssel und verkleinern dann die noch zu sortierende Liste.
 
 ![SelectionSort Step8](docs/SelectionSort_Step8.svg)
 
 ![SelectionSort Step9](docs/SelectionSort_Step9.svg)
 
 ![SelectionSort Step10](docs/SelectionSort_Step10.svg)
+
+Auf die gleiche Art fahren wir fort, bis alle Elemente sortiert sind:
 
 ![SelectionSort Step11](docs/SelectionSort_Step11.svg)
 
