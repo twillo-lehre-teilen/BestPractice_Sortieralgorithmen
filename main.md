@@ -611,6 +611,8 @@ Die Eingabe "3,7,1" sollte nun richtig sortiert als "1,3,7" ausgegeben werden. P
 
 ### Grundlegende Idee
 
+Die Idee dieses Suchalgorithmus ist, den jeweils größten Wert im Array zu suchen und diesen an die letzte Stelle zu tauschen. Anschließend fährt man mit der um 1 kleineren Liste fort.
+
 ### Beispiel
 
 ![SelectionSort Step1](docs/SelectionSort_Step1.svg)
