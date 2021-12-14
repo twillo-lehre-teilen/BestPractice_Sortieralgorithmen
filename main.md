@@ -781,6 +781,8 @@ Probieren Sie Listen verschiedener Längen und mit unterschiedlichen Zahlen aus,
 
 ### Grundlegende Idee
 
+Das Grundprinzip ist, die zu sortierende Liste immer wieder zu durchlaufen und dabei benachbarte Elemente, die nicht die gewünschte Sortierreihenfolge haben, zu vertauschen. Das bedeutet bei aufsteigender Sortierung, dass Elemente die größer sind als ihre Nachfolger, diese "überholen". Die Liste wird so oft durchlaufen, bis in einem Durchgang nichts mehr getauscht wurde.
+
 ### Beispiel
 
 ### Implementierung
