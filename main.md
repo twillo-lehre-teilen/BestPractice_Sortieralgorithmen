@@ -806,7 +806,18 @@ if __name__ == "__main__":
 <summary class="button">**Schritt 1:**</summary>
 
 <p class="panel-content">
+*Schreiben Sie einen Codeabschnitt, so dass alle Elemente der Eingabe von rechts nach links durchlaufen werden.*
 
+Um zu prüfen, ob der Code das gewünschte tut, lassen Sie sich die Elemente nacheinander einzeln vie **print()** ausgeben. Für die Liste "[3,4,1,7,2]" sollte die Ausgabe also wie folgt aussehen:
+
+- 2
+- 7
+- 1
+- 4
+- 3
+- Sortierte Liste: [3,4,1,7,2]
+
+Die Eingabeliste wird am Ende immer zurückgegben, muss jetzt aber noch nciht sortiert sein.
 </p>
 </details>
 
@@ -814,7 +825,16 @@ if __name__ == "__main__":
 <summary class="button">**Schritt 2:**</summary>
 
 <p class="panel-content">
+*Ergänzen Sie ihren Code so, dass für jedes Element der Eingabeliste jeweils das größte Element links davon ermittelt wird.*
 
+Lassen Sie sich dieses größte Element jeweils ausgeben um ihren Code zu testen.
+Für die Eingabe "[3,4,1,7,2]" sollte die Ausgabe so aussehen:
+
+- 7
+- 4
+- 4
+- 3
+- Sortierte Liste: [3,4,1,7,2]
 </p>
 </details>
 
@@ -822,7 +842,11 @@ if __name__ == "__main__":
 <summary class="button">**Schritt 3:**</summary>
 
 <p class="panel-content" >
+*Jetzt soll das Programm so erweitert werden, dass in jedem Durchlauf das dafür ermittelte größte Element mit dem Element an der aktuell betrachteten Position verglichen wird. Ist das Element an der aktuellen Position kleiner als das größte Element, sollen die beiden Elemente getauscht werden.*
 
+Die Eingabe "[3,4,1,7,2]" sollte nun richtig sortiert als "[1,2,3,4,7]" ausgegeben werden.
+
+Probieren Sie Listen verschiedener Längen und mit unterschiedlichen Zahlen aus, um Ihren Code zu testen.
 </p>
 </details>
 
