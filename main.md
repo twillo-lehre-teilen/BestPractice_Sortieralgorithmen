@@ -834,7 +834,7 @@ if __name__ == "__main__":
 <p class="panel-content">
 *Schreiben Sie einen Codeabschnitt, so dass alle Elemente der Eingabe nacheinander (von links nach rechts) durchlaufen werden.*
 
-Um zu prüfen, ob der Code das Gewünschte tut, lassen Sie sich die Elemente nacheinander einzeln via print() ausgeben. Für die Liste "[3,7,1,9,2]" sollte die Ausgabe also wie folgt aussehen:
+Um zu prüfen, ob der Code das Gewünschte tut, lassen Sie sich die Elemente nacheinander einzeln via **print()** ausgeben. Für die Liste "[3,7,1,9,2]" sollte die Ausgabe also wie folgt aussehen:
 
 - 3
 - 7
@@ -957,6 +957,8 @@ if __name__ == "__main__":
 </div>
 
 ### Grundlegende Idee
+
+MergeSort ist ein Divide-and-Conquer Algorithmus zum vergleichsbasierten Sortieren. Das heißt, das Problem wird in rekursiv in mehrere Teilprobleme gleichen Typs zerlegt, die dann gelöst und wieder zusammengesetzt werden. Bei MergeSort bedeutet das hier konkret, dass die zu sortierende Folge zuerst in zwei Teile geteilt wird. Anschließend werden beide Teile voneinander getrennt sortiert, wobei bei Folgen mit mehr als zwei Elementen zunächst wieder eine Teilung stattfindet. Das Sortieren findet erst auf der "untersten Ebene" statt, also wenn es nur noch zwei zu sortierende Elemente gibt. Zuletzt werden an jeder Stelle, an der geteilt wurde, beide Teilergebnisse in der richtigen Reihenfolge zusammen gemischt.
 
 ### Beispiel
 
