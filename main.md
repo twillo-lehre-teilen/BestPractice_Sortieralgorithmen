@@ -967,6 +967,10 @@ if __name__ == "__main__":
 
 ### Beispiel
 
+![MergeSort Step1](docs/MergeSort_Step1.svg)
+
+![MergeSort Step2](docs/MergeSort_Step2.svg)
+
 ### Implementierung
 
 In diesem Kapitel werden Sie den Algorithmus selber schrittweise in Python implementieren. Der Code-Rahmen und Möglichkeiten Ihren Code zu testen sind jeweils schon gegeben, Sie müssen nur an den mit "your code here ..." gekennzeichneten Stellen ihren Code einfügen. Bei Bedarf ist es auch möglich eigene Testfälle zu schreiben. Der Einfachheit halber sortieren wir Listen mit ganzen Zahlen, deren Wert jeweils der zugehörige Schlüssel ist.
