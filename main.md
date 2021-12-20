@@ -1049,7 +1049,7 @@ if __name__ == "__main__":
 
 ### Grundlegende Idee
 
-![QuickSort Step4-13](docs/QuickSort_total.svg)
+![QuickSort](docs/QuickSort_total.svg)
 
 ### Beispiel
 
