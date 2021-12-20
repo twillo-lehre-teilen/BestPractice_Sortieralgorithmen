@@ -1,4 +1,4 @@
 # TO DO
 
-- scoring summary für das Quiz
+- Erklärung zu rekursiven Algorithmen verlinken bei Merge sort ?
 - hinweis zum ersten mal ausführen des codeblocks

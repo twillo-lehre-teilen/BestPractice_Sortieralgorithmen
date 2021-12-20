@@ -878,6 +878,8 @@ Die Eingabe "[3,7,1,9,2]" sollte nun richtig sortiert als "[1,2,3,7,9]" ausgegeb
 
 ### Grundlegende Idee
 
+MergeSort ist ein Divide-and-Conquer Algorithmus zum vergleichsbasierten Sortieren. Das heißt, das Problem wird in rekursiv in mehrere Teilprobleme gleichen Typs zerlegt, die dann gelöst und wieder zusammengesetzt werden. Bei MergeSort bedeutet das hier konkret, dass die zu sortierende Folge zuerst in zwei Teile geteilt wird. Anschließend werden beide Teile voneinander getrennt sortiert indem MergeSort selbst auf beide Hälften angewandt wird (Rekursion). Folgen mit mehr als zwei Elementen werden also zunächst wieder geteilt, das eigentliche Sortieren findet erst auf der "untersten Ebene" statt, also wenn es nur noch zwei zu sortierende Elemente gibt. Danach werden die sortierten Teilfolgen wieder zusammengesetzt, logischerweise beginnend bei Folgen der Länge zwei (denn die sind ja als erstes sortiert) und dann immer weiter aufsteigend, bis man alle Teilfolgen wieder vereint hat und die ursprüngliche Liste jetzt in sortierter Form erhält.
+
 ### Beispiel
 
 ### Implementierung
@@ -957,8 +959,6 @@ if __name__ == "__main__":
 </div>
 
 ### Grundlegende Idee
-
-MergeSort ist ein Divide-and-Conquer Algorithmus zum vergleichsbasierten Sortieren. Das heißt, das Problem wird in rekursiv in mehrere Teilprobleme gleichen Typs zerlegt, die dann gelöst und wieder zusammengesetzt werden. Bei MergeSort bedeutet das hier konkret, dass die zu sortierende Folge zuerst in zwei Teile geteilt wird. Anschließend werden beide Teile voneinander getrennt sortiert indem MergeSort selbst auf beide Hälften angewandt wird (Rekursion). Folgen mit mehr als zwei Elementen werden also zunächst wieder geteilt, das eigentliche Sortieren findet erst auf der "untersten Ebene" statt, also wenn es nur noch zwei zu sortierende Elemente gibt. Danach werden die sortierten Teilfolgen wieder zusammengesetzt, logischerweise beginnend bei Folgen der Länge zwei (denn die sind ja als erstes sortiert) und dann immer weiter aufsteigend, bis man alle Teilfolgen wieder vereint hat und die ursprüngliche Liste jetzt in sortierter Form erhält.
 
 ### Beispiel
 
