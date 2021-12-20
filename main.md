@@ -759,6 +759,134 @@ if __name__ == "__main__":
 
 ### Beispiel
 
+![BubbleSort Step1](docs/BubbleSort_Step1.svg)
+
+![BubbleSort Step2](docs/BubbleSort_Step2.svg)
+
+![BubbleSort Step3](docs/BubbleSort_Step3.svg)
+
+![BubbleSort Step4](docs/BubbleSort_Step4.svg)
+
+![BubbleSort Step5](docs/BubbleSort_Step5.svg)
+
+![BubbleSort Step6](docs/BubbleSort_Step6.svg)
+
+![BubbleSort Step7](docs/BubbleSort_Step7.svg)
+
+![BubbleSort Step8](docs/BubbleSort_Step8.svg)
+
+![BubbleSort Step9](docs/BubbleSort_Step9.svg)
+
+![BubbleSort Step10](docs/BubbleSort_Step10.svg)
+
+![BubbleSort Step11](docs/BubbleSort_Step11.svg)
+
+![BubbleSort Step12](docs/BubbleSort_Step12.svg)
+
+![BubbleSort Step13](docs/BubbleSort_Step13.svg)
+
+![BubbleSort Step14](docs/BubbleSort_Step14.svg)
+
+![BubbleSort Step15](docs/BubbleSort_Step15.svg)
+
+![BubbleSort Step16](docs/BubbleSort_Step16.svg)
+
+![BubbleSort Step17](docs/BubbleSort_Step17.svg)
+
+![BubbleSort Step18](docs/BubbleSort_Step18.svg)
+
+![BubbleSort Step19](docs/BubbleSort_Step19.svg)
+
+![BubbleSort Step20](docs/BubbleSort_Step20.svg)
+
+![BubbleSort Step21](docs/BubbleSort_Step21.svg)
+
+![BubbleSort Step22](docs/BubbleSort_Step22.svg)
+
+![BubbleSort Step23](docs/BubbleSort_Step23.svg)
+
+![BubbleSort Step24](docs/BubbleSort_Step24.svg)
+
+![BubbleSort Step25](docs/BubbleSort_Step25.svg)
+
+![BubbleSort Step26](docs/BubbleSort_Step26.svg)
+
+![BubbleSort Step27](docs/BubbleSort_Step27.svg)
+
+![BubbleSort Step28](docs/BubbleSort_Step28.svg)
+
+![BubbleSort Step29](docs/BubbleSort_Step29.svg)
+
+![BubbleSort Step30](docs/BubbleSort_Step30.svg)
+
+![BubbleSort Step31](docs/BubbleSort_Step31.svg)
+
+![BubbleSort Step32](docs/BubbleSort_Step32.svg)
+
+![BubbleSort Step33](docs/BubbleSort_Step33.svg)
+
+![BubbleSort Step34](docs/BubbleSort_Step34.svg)
+
+![BubbleSort Step35](docs/BubbleSort_Step35.svg)
+
+![BubbleSort Step36](docs/BubbleSort_Step36.svg)
+
+![BubbleSort Step37](docs/BubbleSort_Step37.svg)
+
+![BubbleSort Step38](docs/BubbleSort_Step38.svg)
+
+![BubbleSort Step39](docs/BubbleSort_Step39.svg)
+
+![BubbleSort Step40](docs/BubbleSort_Step40.svg)
+
+![BubbleSort Step41](docs/BubbleSort_Step41.svg)
+
+![BubbleSort Step42](docs/BubbleSort_Step42.svg)
+
+![BubbleSort Step43](docs/BubbleSort_Step43.svg)
+
+![BubbleSort Step44](docs/BubbleSort_Step44.svg)
+
+![BubbleSort Step45](docs/BubbleSort_Step45.svg)
+
+![BubbleSort Step46](docs/BubbleSort_Step46.svg)
+
+![BubbleSort Step47](docs/BubbleSort_Step47.svg)
+
+![BubbleSort Step48](docs/BubbleSort_Step48.svg)
+
+![BubbleSort Step49](docs/BubbleSort_Step49.svg)
+
+![BubbleSort Step50](docs/BubbleSort_Step50.svg)
+
+![BubbleSort Step51](docs/BubbleSort_Step51.svg)
+
+![BubbleSort Step52](docs/BubbleSort_Step52.svg)
+
+![BubbleSort Step53](docs/BubbleSort_Step53.svg)
+
+![BubbleSort Step54](docs/BubbleSort_Step54.svg)
+
+![BubbleSort Step55](docs/BubbleSort_Step55.svg)
+
+![BubbleSort Step56](docs/BubbleSort_Step56.svg)
+
+![BubbleSort Step57](docs/BubbleSort_Step57.svg)
+
+![BubbleSort Step58](docs/BubbleSort_Step58.svg)
+
+![BubbleSort Step59](docs/BubbleSort_Step59.svg)
+
+![BubbleSort Step60](docs/BubbleSort_Step60.svg)
+
+![BubbleSort Step61](docs/BubbleSort_Step61.svg)
+
+![BubbleSort Step62](docs/BubbleSort_Step62.svg)
+
+![BubbleSort Step63](docs/BubbleSort_Step63.svg)
+
+![BubbleSort Step64](docs/BubbleSort_Step64.svg)
+
 ### Implementierung
 
 In diesem Kapitel werden Sie den Algorithmus selber schrittweise in Python implementieren. Der Code-Rahmen und Möglichkeiten Ihren Code zu testen sind jeweils schon gegeben, Sie müssen nur an den mit "your code here ..." gekennzeichneten Stellen ihren Code einfügen. Bei Bedarf ist es auch möglich eigene Testfälle zu schreiben. Der Einfachheit halber sortieren wir Listen mit ganzen Zahlen, deren Wert jeweils der zugehörige Schlüssel ist.
