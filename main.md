@@ -725,7 +725,18 @@ if __name__ == "__main__":
 <summary class="button">**Schritt 1:**</summary>
 
 <p class="panel-content">
+*Schreiben Sie einen Codeabschnitt, so dass alle Elemente der Eingabe von rechts nach links durchlaufen werden.*
 
+Um zu prüfen, ob der Code das gewünschte tut, lassen Sie sich die Elemente nacheinander einzeln vie **print()** ausgeben. Für die Liste "[3,4,1,7,2]" sollte die Ausgabe also wie folgt aussehen:
+
+- 2
+- 7
+- 1
+- 4
+- 3
+- Sortierte Liste: [3,4,1,7,2]
+
+Die Eingabeliste wird am Ende immer zurückgegben, muss jetzt aber noch nicht sortiert sein.
 </p>
 </details>
 
@@ -733,7 +744,16 @@ if __name__ == "__main__":
 <summary class="button">**Schritt 2:**</summary>
 
 <p class="panel-content">
+*Ergänzen Sie ihren Code so, dass für jedes Element der Eingabeliste jeweils das größte Element links davon ermittelt wird.*
 
+Lassen Sie sich dieses größte Element jeweils ausgeben um ihren Code zu testen.
+Für die Eingabe "[3,4,1,7,2]" sollte die Ausgabe so aussehen:
+
+- 7
+- 4
+- 4
+- 3
+- Sortierte Liste: [3,4,1,7,2]
 </p>
 </details>
 
@@ -741,7 +761,11 @@ if __name__ == "__main__":
 <summary class="button">**Schritt 3:**</summary>
 
 <p class="panel-content" >
+*Jetzt soll das Programm so erweitert werden, dass in jedem Durchlauf das dafür ermittelte größte Element mit dem Element an der aktuell betrachteten Position verglichen wird. Ist das Element an der aktuellen Position kleiner als das größte Element, sollen die beiden Elemente getauscht werden.*
 
+Die Eingabe "[3,4,1,7,2]" sollte nun richtig sortiert als "[1,2,3,4,7]" ausgegeben werden.
+
+Probieren Sie Listen verschiedener Längen und mit unterschiedlichen Zahlen aus, um Ihren Code zu testen.
 </p>
 </details>
 
@@ -756,6 +780,8 @@ if __name__ == "__main__":
 </div>
 
 ### Grundlegende Idee
+
+Das Grundprinzip ist, die zu sortierende Liste immer wieder zu durchlaufen und dabei benachbarte Elemente, die nicht die gewünschte Sortierreihenfolge haben, zu vertauschen. Das bedeutet bei aufsteigender Sortierung, dass Elemente die größer sind als ihre Nachfolger, diese "überholen". Die Liste wird so oft durchlaufen, bis in einem Durchgang nichts mehr getauscht wurde.
 
 ### Beispiel
 
@@ -934,7 +960,18 @@ if __name__ == "__main__":
 <summary class="button">**Schritt 1:**</summary>
 
 <p class="panel-content">
+*Schreiben Sie einen Codeabschnitt, so dass alle Elemente der Eingabe nacheinander (von links nach rechts) durchlaufen werden.*
 
+Um zu prüfen, ob der Code das Gewünschte tut, lassen Sie sich die Elemente nacheinander einzeln via **print()** ausgeben. Für die Liste "[3,7,1,9,2]" sollte die Ausgabe also wie folgt aussehen:
+
+- 3
+- 7
+- 1
+- 9
+- 2
+- Sortierte Liste: [3, 7, 1, 9, 2]
+
+Die Eingabeliste wird am Ende immer zurückgegeben, muss jetzt aber noch nicht sortiert sein.
 </p>
 </details>
 
@@ -942,7 +979,9 @@ if __name__ == "__main__":
 <summary class="button">**Schritt 2:**</summary>
 
 <p class="panel-content">
+*Ergänzen Sie Ihren Code so, dass jedes Element mit dem Element rechts davon verglichen wird. Ist das rechte Element größer, soll getauscht werden.*
 
+Bei der Eingabe "[3,7,1,9,2]" sollte jetzt also "[3,1,7,2,9]" ausgegeben werden.
 </p>
 </details>
 
@@ -950,7 +989,9 @@ if __name__ == "__main__":
 <summary class="button">**Schritt 3:**</summary>
 
 <p class="panel-content" >
+*Jetzt soll das Programm so erweitert werden, dass das Durchlaufen der Liste so oft wiederholt wird, bis in einem Durchlauf keine Elemente mehr getauscht wurden.*
 
+Die Eingabe "[3,7,1,9,2]" sollte nun richtig sortiert als "[1,2,3,7,9]" ausgegeben werden. Probieren Sie Listen verschiedener Längen und mit unterschiedlichen Zahlen aus, um Ihren Code zu testen.
 </p>
 </details>
 
@@ -964,6 +1005,8 @@ if __name__ == "__main__":
 </div>
 
 ### Grundlegende Idee
+
+MergeSort ist ein Divide-and-Conquer Algorithmus zum vergleichsbasierten Sortieren. Das heißt, das Problem wird in rekursiv in mehrere Teilprobleme gleichen Typs zerlegt, die dann gelöst und wieder zusammengesetzt werden. Bei MergeSort bedeutet das hier konkret, dass die zu sortierende Folge zuerst in zwei Teile geteilt wird. Anschließend werden beide Teile voneinander getrennt sortiert indem MergeSort selbst auf beide Hälften angewandt wird (Rekursion). Folgen mit mehr als zwei Elementen werden also zunächst wieder geteilt, das eigentliche Sortieren findet erst auf der "untersten Ebene" statt, also wenn es nur noch zwei zu sortierende Elemente gibt. Danach werden die sortierten Teilfolgen wieder zusammengesetzt, logischerweise beginnend bei Folgen der Länge zwei (denn die sind ja als erstes sortiert) und dann immer weiter aufsteigend, bis man alle Teilfolgen wieder vereint hat und die ursprüngliche Liste jetzt in sortierter Form erhält.
 
 ### Beispiel
 
