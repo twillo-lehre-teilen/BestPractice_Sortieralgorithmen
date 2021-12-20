@@ -1049,7 +1049,31 @@ if __name__ == "__main__":
 
 ### Grundlegende Idee
 
+![QuickSort Step4-13](docs/QuickSort_total.svg)
+
 ### Beispiel
+
+![QuickSort Step1](docs/QuickSort_Step1.svg)
+
+![QuickSort Step2](docs/QuickSort_Step2.svg)
+
+![QuickSort Step3](docs/QuickSort_Step3.svg)
+
+![QuickSort Step4](docs/QuickSort_Step4.svg)
+
+![QuickSort Step5](docs/QuickSort_Step5.svg)
+
+![QuickSort Step6](docs/QuickSort_Step6.svg)
+
+![QuickSort Step7](docs/QuickSort_Step7.svg)
+
+![QuickSort Step8](docs/QuickSort_Step8.svg)
+
+![QuickSort Step9](docs/QuickSort_Step9.svg)
+
+![QuickSort Step10-14](docs/QuickSort_Step10-14.svg)
+
+![QuickSort Step15](docs/QuickSort_Step15.svg)
 
 ### Implementierung
 
