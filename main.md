@@ -1092,31 +1092,19 @@ if __name__ == "__main__":
 
 ### Grundlegende Idee
 
-![QuickSort](docs/QuickSort_total.svg)
-
 ### Beispiel
 
-![QuickSort Step1](docs/QuickSort_Step1.svg)
-
-![QuickSort Step2](docs/QuickSort_Step2.svg)
-
-![QuickSort Step3](docs/QuickSort_Step3.svg)
-
-![QuickSort Step4](docs/QuickSort_Step4.svg)
-
-![QuickSort Step5](docs/QuickSort_Step5.svg)
-
-![QuickSort Step6](docs/QuickSort_Step6.svg)
-
-![QuickSort Step7](docs/QuickSort_Step7.svg)
-
-![QuickSort Step8](docs/QuickSort_Step8.svg)
-
-![QuickSort Step9](docs/QuickSort_Step9.svg)
-
-![QuickSort Step10-14](docs/QuickSort_Step10-14.svg)
-
-![QuickSort Step15](docs/QuickSort_Step15.svg)
+<img src="docs/QuickSort_Step1.svg" alt="QuickSort Step1" width="100%" style="margin-bottom:15px;">
+<img src="docs/QuickSort_Step2.svg" alt="QuickSort Step2" width="100%" style="margin-bottom:15px;">
+<img src="docs/QuickSort_Step3.svg" alt="QuickSort Step3" width="100%" style="margin-bottom:15px;">
+<img src="docs/QuickSort_Step4.svg" alt="QuickSort Step4" width="100%" style="margin-bottom:15px;">
+<img src="docs/QuickSort_Step5.svg" alt="QuickSort Step5" width="100%" style="padding-left:14.5%;margin-bottom:15px;">
+<img src="docs/QuickSort_Step6.svg" alt="QuickSort Step6" width="100%" style="padding-left:14.5%;margin-bottom:15px;">
+<img src="docs/QuickSort_Step7.svg" alt="QuickSort Step7" width="100%" style="padding-left:14.5%;margin-bottom:15px;">
+<img src="docs/QuickSort_Step8.svg" alt="QuickSort Step8" width="100%" style="padding-left:14.5%;margin-bottom:15px;">
+<img src="docs/QuickSort_Step9.svg" alt="QuickSort Step9" width="100%" style="padding-left:14.5%;margin-bottom:15px;">
+<img src="docs/QuickSort_Step10-14.svg" alt="QuickSort Step10" width="100%" style="padding-left:14.5%;margin-bottom:15px;">
+<img src="docs/QuickSort_Step15.svg" alt="QuickSort Step15" width="100%" style="margin-bottom:15px;">
 
 ### Implementierung
 
