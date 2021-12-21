@@ -1094,6 +1094,7 @@ if __name__ == "__main__":
 
 ### Beispiel
 
+<div style="width:100%">
 <img src="docs/QuickSort_Step1.svg" alt="QuickSort Step1" width="100%" style="margin-bottom:15px;">
 <img src="docs/QuickSort_Step2.svg" alt="QuickSort Step2" width="100%" style="margin-bottom:15px;">
 <img src="docs/QuickSort_Step3.svg" alt="QuickSort Step3" width="100%" style="margin-bottom:15px;">
@@ -1103,8 +1104,11 @@ if __name__ == "__main__":
 <img src="docs/QuickSort_Step7.svg" alt="QuickSort Step7" width="100%" style="padding-left:14.5%;margin-bottom:15px;">
 <img src="docs/QuickSort_Step8.svg" alt="QuickSort Step8" width="100%" style="padding-left:14.5%;margin-bottom:15px;">
 <img src="docs/QuickSort_Step9.svg" alt="QuickSort Step9" width="100%" style="padding-left:14.5%;margin-bottom:15px;">
-<img src="docs/QuickSort_Step10-14.svg" alt="QuickSort Step10" width="100%" style="padding-left:14.5%;margin-bottom:15px;">
+<img src="docs/QuickSort_Step10.svg" alt="QuickSort Step10" width="100%" style="padding-left:14.5%;margin-bottom:15px;">
+<img src="docs/QuickSort_Step11.svg" alt="QuickSort Step11" width="100%" style="padding-left:14.5%;margin-bottom:15px;background-color:blue;">
+<img src="docs/QuickSort_Step12-14.svg" alt="QuickSort Step12-14" width="100%" style="padding-left:14.5%;margin-bottom:15px;background-color:red;">
 <img src="docs/QuickSort_Step15.svg" alt="QuickSort Step15" width="100%" style="margin-bottom:15px;">
+</div>
 
 ### Implementierung
 
