@@ -785,9 +785,17 @@ Das Grundprinzip ist, die zu sortierende Liste immer wieder zu durchlaufen und d
 
 ### Beispiel
 
+Schauen wir uns den Algorithmus einmal Schritt für Schritt an folgendem Beispiel an:
+
+Sei dies eine Reihe zu sortierender Elemente, die Zahlen die zugehörigen Schlüssel, nach denen aufsteigend sortiert werden soll:
+
 ![BubbleSort Step1](docs/BubbleSort_Step1.svg)
 
+Wir durchlaufen die Liste von links nach rechts und betrachten somit zuerst das Element ganz links, welches den Schlüssel fünf hat.
+
 ![BubbleSort Step2](docs/BubbleSort_Step2.svg)
+
+Nun wird der Schlüssel des betrachteten Elements mit dem des Elements eine Stelle weiter rechts verglichen. In unserem Beispiel ist dies die Zwei. Es gilt $5>2$, also müssen die Elemente getauscht werden.
 
 ![BubbleSort Step3](docs/BubbleSort_Step3.svg)
 
