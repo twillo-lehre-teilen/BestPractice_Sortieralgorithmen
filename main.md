@@ -1019,9 +1019,18 @@ Bei der Eingabe "[3,7,1,9,2]" sollte jetzt also "[3,1,7,2,9]" ausgegeben werden.
 <summary class="button">**Schritt 3:**</summary>
 
 <p class="panel-content" >
-*Jetzt soll das Programm so erweitert werden, dass das Durchlaufen der Liste so oft wiederholt wird, bis in einem Durchlauf keine Elemente mehr getauscht wurden.*
+*Jetzt soll das Programm so erweitert werden, dass das Durchlaufen der Liste so oft wiederholt wird, dass am Ende alle Elemente richtig sortiert sind (Hinweis: Wie hängt das mit der Länge der Liste zusammen?).*
 
 Die Eingabe "[3,7,1,9,2]" sollte nun richtig sortiert als "[1,2,3,7,9]" ausgegeben werden. Probieren Sie Listen verschiedener Längen und mit unterschiedlichen Zahlen aus, um Ihren Code zu testen.
+</p>
+</details>
+
+<details class="panel">
+<summary class="button">**(Optional) Schritt 4:**</summary>
+
+<p class="panel-content" >
+*Optimieren Sie ihr Programm dahingehend, dass bereits fertig sortierte Elemente im nächsten Durchlauf nicht mehr betrachtet werden (Hinweis: Wie viele Elemente werden pro Durchgang an die richtige Stelle verschoben?).*
+
 </p>
 </details>
 
