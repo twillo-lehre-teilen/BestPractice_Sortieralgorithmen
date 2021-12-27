@@ -811,15 +811,21 @@ Der Schlüssel des betrachteten Elements wird wieder mit dem des Elements eine S
 
 ![BubbleSort Step7](docs/BubbleSort_Step7.svg)
 
+Nun wird die dritte Stelle der Liste betrachtet und der Schlüssel wieder mit dem des Elements eine Stelle weiter rechts verglichen. Da gilt $5>1$ werden die beiden Elemente getauscht.
+
 ![BubbleSort Step8](docs/BubbleSort_Step8.svg)
 
 ![BubbleSort Step9](docs/BubbleSort_Step9.svg)
+
+Als nächstes betrachten wir das Element an der vierten Stelle und vergleichen wieder den Schlüssel mit dem des Elements rechts daneben. Diesmal haben wir $5>7$, also muss nicht getauscht werden.
 
 ![BubbleSort Step10](docs/BubbleSort_Step10.svg)
 
 ![BubbleSort Step11](docs/BubbleSort_Step11.svg)
 
 ![BubbleSort Step12](docs/BubbleSort_Step12.svg)
+
+Auf die gleiche Weise werden nun auch noch die restlichen Stellen bis zum vorletzten Element betrachtet:
 
 ![BubbleSort Step13](docs/BubbleSort_Step13.svg)
 
@@ -833,7 +839,13 @@ Der Schlüssel des betrachteten Elements wird wieder mit dem des Elements eine S
 
 ![BubbleSort Step18](docs/BubbleSort_Step18.svg)
 
+Wenn alle Stellen der Liste einmal betrachtet wurden, wissen wir, dass das größte Element nun an der letzten Stelle steht und somit fertig sortiert ist.
+
 ![BubbleSort Step19](docs/BubbleSort_Step19.svg)
+
+Im nächsten Durchlauf betrachten wir nur die noch unsortierten Elemente, also alle bis auf das letzte, unsere Liste enthält also nun ein Element weniger.
+
+Die Elemente werden wieder von links nach rechts durchlaufen und immer mit dem Element eine Stelle weiter rechts verglichen. Ist der Schlüssel des linken Elements größer als der des rechten Elements wird getauscht.
 
 ![BubbleSort Step20](docs/BubbleSort_Step20.svg)
 
@@ -863,7 +875,13 @@ Der Schlüssel des betrachteten Elements wird wieder mit dem des Elements eine S
 
 ![BubbleSort Step33](docs/BubbleSort_Step33.svg)
 
+Wurden alle Elemente erneut durchlaufen, steht das größte Element wieder an letzter Stelle und die noch zu sortierende Liste wird wieder um ein Element kürzer.
+
 ![BubbleSort Step34](docs/BubbleSort_Step34.svg)
+
+Nun werden wieder die noch übrigen Elemente mit dem gleichen Prinzip wie eben immer weider durchlaufen. Die Liste der unsortierten Elemente verkürzt sich dabei jedes Mal um ein Element.
+
+Dieser Vorgang wird so lange wiederholt, bis alle Elementefertig sortiert sind, es ergibt sich also eine Anzahl von n Durchläufen, wobei n die Länge der ursprünglichen Liste ist.
 
 ![BubbleSort Step35](docs/BubbleSort_Step35.svg)
 
