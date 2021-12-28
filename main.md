@@ -1049,7 +1049,15 @@ MergeSort ist ein Divide-and-Conquer Algorithmus zum vergleichsbasierten Sortier
 
 ### Beispiel
 
+Schauen wir uns den Algorithmus einmal Schritt für Schritt an folgendem Beispiel an:
+
+Sei dies eine Reihe zu sortierender Elemente, die Zahlen die zugehörigen Schlüssel, nach denen aufsteigend sortiert werden soll:
+
+Der erste Schritt des Algorithmus ist die Zerlegung der zu sortierenden Liste in zwei Teile, sofern die Liste mehr als zwei Elemente besitzt. Dann wird der Algorithmus rekursiv auf den beiden Teillisten aufgerufen. So erhalten wir zunächst eine Zerlegung der ursprünglichen Liste in unsortierte Teillisten der Länge zwei.
+
 ![MergeSort Step1](docs/MergeSort_Step1.svg)
+
+Diese zweielementigen Listen werden nun durch Vergleichen der Schlüssel der beiden Elemente sortiert. Dann werden je zwei sortierte Teillisten zu einer größeren, sortierten Liste zusammengefügt, die dann wieder mit weiteren Teillisten der gleichen Größe sortiert zusammengesetzt wird usw., bis man am Ende die ursprüngliche Liste in sortierter Form erhält.
 
 ![MergeSort Step2](docs/MergeSort_Step2.svg)
 
