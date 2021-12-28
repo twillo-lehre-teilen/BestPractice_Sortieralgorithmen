@@ -1108,7 +1108,9 @@ if __name__ == "__main__":
 <summary class="button">**Schritt 1:**</summary>
 
 <p class="panel-content">
-*Schreiben Sie zunächst die Funktion startMergeSort(array). Diese bekommt einen Array übergeben und definiert den Startpunkt l (Stelle des erstes Elements: 0) und Endpunkt r (Stelle des letzten Elements). Dann übergibt startMergeSort() das eingegebene Array, sowie l und r an die mergeSort() Funktion.* Der Start- und Endpunkt wird beim Aufruf von mergeSort immer mit dem Array übergeben, um die jeweilige Teilliste zu definieren, auf die der ALgorithmus (rekursiv) angewandt werden soll.
+*Schreiben Sie zunächst die Funktion startMergeSort(array). Diese bekommt einen Array übergeben und definiert den Startpunkt l (Stelle des erstes Elements: 0) und Endpunkt r (Stelle des letzten Elements). Dann übergibt startMergeSort() das eingegebene Array, sowie l und r an die mergeSort() Funktion.*
+
+Der Start- und Endpunkt wird beim Aufruf von mergeSort() immer mit dem Array übergeben, um die jeweilige Teilliste zu definieren, auf die der Algorithmus (rekursiv) angewandt werden soll.
 </p>
 </details>
 
@@ -1116,7 +1118,7 @@ if __name__ == "__main__":
 <summary class="button">**Schritt 2:**</summary>
 
 <p class="panel-content">
-
+*Schreiben Sie als nächstes die Fuktion mergeSort(), die einen Array, sowie den Startpunkt l und Endpunkt r des zu sortierenden Abschnitts übergeben bekommt. Wenn l und r einen Abstand größer eins haben, soll die Mitte m des betrachteten Arrayabschnitts bestimmt und dann mergeSort() rekursiv auf jeweils die Hälften des Abschnitts angewandt werden. Danach sollen die beiden Hälften mit l, m und r an die Funktion merge() übergeben werden.*
 </p>
 </details>
 
