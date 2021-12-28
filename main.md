@@ -1118,7 +1118,7 @@ Der Start- und Endpunkt wird beim Aufruf von mergeSort() immer mit dem Array üb
 <summary class="button">**Schritt 2:**</summary>
 
 <p class="panel-content">
-*Schreiben Sie als nächstes die Fuktion mergeSort(), die einen Array, sowie den Startpunkt l und Endpunkt r des zu sortierenden Abschnitts übergeben bekommt. Wenn l und r einen Abstand größer eins haben, soll die Mitte m des betrachteten Arrayabschnitts bestimmt und dann mergeSort() rekursiv auf jeweils die Hälften des Abschnitts angewandt werden. Danach sollen die beiden Hälften mit l, m und r an die Funktion merge() übergeben werden.*
+*Schreiben Sie als nächstes die Funktion mergeSort(), die einen Array, sowie den Startpunkt l und Endpunkt r des zu sortierenden Abschnitts übergeben bekommt. Wenn l und r einen Abstand größer eins haben, soll die Mitte m des betrachteten Arrayabschnitts bestimmt und dann mergeSort() rekursiv auf jeweils die Hälften des Abschnitts angewandt werden. Danach sollen die beiden Hälften mit l, m und r an die Funktion merge() übergeben werden.*
 </p>
 </details>
 
@@ -1126,7 +1126,9 @@ Der Start- und Endpunkt wird beim Aufruf von mergeSort() immer mit dem Array üb
 <summary class="button">**Schritt 3:**</summary>
 
 <p class="panel-content" >
+*Schreiben Sie nun die Funktion merge(), die einen Array, sowie einen Startpunkt l, einen Endpunkt r und einen Trennpunkt m übergeben bekommt. Die Abschnitte von l bis m und m bis r können jeweils als sortiert angenommen werden. merge() soll jetzt den Abschnitt l bis r sortieren.*
 
+Hinweis: Es bietet sich an, Temp-Arrays zum Zwischenspeichern zu erstellen und deren Inhalte am Ende in das ursprüngliche Array zu kopieren.
 </p>
 </details>
 
