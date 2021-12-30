@@ -1157,7 +1157,7 @@ Wir wählen das Element in der Mitte als Pivot-Element aus, also in diesem Fall 
 
 <img src="docs/QuickSort_Step2.svg" alt="QuickSort Step2" width="100%" style="margin-bottom:12px;">
 
-Nun werden die Elemente links des Pivot-Elements der Reihe nach durchsucht, wenn ein Element mit größerem Schlüssel als der des Pivot-Elements gefunden wird, wird dieses markiert (in unserem Beispiel orange). Auf der rechten Seite des Pivot-Elements wird das gleiche gemacht, nur das hier solange gesucht wird bis ein Element mit kleinerem Schlüssel gefunden wurde. Wurde kein Element gefunden, wird das Pivot-Element markiert. Die beiden markierten Elemente werden getauscht. 
+Nun werden die Elemente links des Pivot-Elements der Reihe nach durchsucht, wenn ein Element mit größerem Schlüssel als der des Pivot-Elements gefunden wird, wird dieses markiert (in unserem Beispiel orange). Auf der rechten Seite des Pivot-Elements wird das gleiche gemacht, nur das hier solange gesucht wird bis ein Element mit kleinerem Schlüssel gefunden wurde. Wurde kein Element gefunden, wird das Pivot-Element markiert. Die beiden markierten Elemente werden getauscht.
 
 <img src="docs/QuickSort_Step3.svg" alt="QuickSort Step3" width="100%" style="margin-bottom:12px;">
 <img src="docs/QuickSort_Step4.svg" alt="QuickSort Step4" width="100%" style="margin-bottom:12px;">
@@ -1218,7 +1218,9 @@ if __name__ == "__main__":
 <summary class="button">**Schritt 1:**</summary>
 
 <p class="panel-content">
+*Schreiben Sie zunächst die Funktion startMergeSort(array). Diese bekommt einen Array übergeben und definiert den Startpunkt u (Stelle des erstes Elements: 0) und Endpunkt o (Stelle des letzten Elements). Dann übergibt startMergeSort() das eingegebene Array, sowie u und o an die mergeSort() Funktion.*
 
+Der Start- und Endpunkt wird beim Aufruf von mergeSort() immer mit dem Array übergeben, um die jeweilige Teilliste zu definieren, auf die der Algorithmus (rekursiv) angewandt werden soll.
 </p>
 </details>
 
@@ -1226,7 +1228,9 @@ if __name__ == "__main__":
 <summary class="button">**Schritt 2:**</summary>
 
 <p class="panel-content">
+*Schreiben Sie nun die Hilfsfunktion split(), die einen Int-Array, sowie einen Startpunkt u, einen Endpunkt o und einen Trennpunkt p übergeben bekommt. Der Abschnitte von u bis p soll nach einem Element mit Schlüssel größer als der des Pivot-Elements durchsucht werden, der Abschnitt p bis o nach einem kleineren Schlüssel. Wurde auf beiden Seiten ein Element gefunden, sollen die beiden Elemente getauscht werden. Wurde nur auf einer Seite ein Element gefunden, soll dieses mit dem Pivot Element getauscht werden, wurde auf keiner Seite eines gefunden wird nichts getauscht. split() soll den Index (Integer) des auf der linken Seite gefundenen Elements (falls keines gefunden wurde den des Pivot-Elements) zurückgeben.*
 
+Hinweis: Es bietet sich an, Temp-Arrays zum Zwischenspeichern zu erstellen und deren Inhalte am Ende in das ursprüngliche Array zu kopieren.
 </p>
 </details>
 
