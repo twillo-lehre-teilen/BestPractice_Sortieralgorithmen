@@ -1143,6 +1143,8 @@ Hinweis: Es bietet sich an, Temp-Arrays zum Zwischenspeichern zu erstellen und d
 
 ### Grundlegende Idee
 
+QuickSort basiert (ebenso wie MergeSort) auf einer rekursiven Aufteilung, aber hier werden Mischvorgänge vermieden (speicherintensiv!). Die Teillisten werden in zwei Hälften geteilt bezüglich eines Pivot-Elements, wobei in einer Hälfte alle Elemente größer als das PivotElement sind und in der anderen Hälfte alle kleiner. Das Pivot Element ist ein beliebiges Element der Liste/Folge, z.B. das linke, mittlere oder rechte Element.
+
 ### Beispiel
 
 Schauen wir uns den Algorithmus einmal Schritt für Schritt an folgendem Beispiel an:
