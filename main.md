@@ -1145,8 +1145,16 @@ Hinweis: Es bietet sich an, Temp-Arrays zum Zwischenspeichern zu erstellen und d
 
 ### Beispiel
 
+Schauen wir uns den Algorithmus einmal Schritt für Schritt an folgendem Beispiel an:
+
+Sei dies eine Reihe zu sortierender Elemente, die Zahlen die zugehörigen Schlüssel, nach denen aufsteigend sortiert werden soll:
+
 <img src="docs/QuickSort_Step1.svg" alt="QuickSort Step1" width="100%" style="margin-bottom:12px;">
+
+Wir wählen das Element in der Mitte als Pivot-Element aus, also in diesem Fall das Element mit dem Schlüssel 1.
+
 <img src="docs/QuickSort_Step2.svg" alt="QuickSort Step2" width="100%" style="margin-bottom:12px;">
+
 <img src="docs/QuickSort_Step3.svg" alt="QuickSort Step3" width="100%" style="margin-bottom:12px;">
 <img src="docs/QuickSort_Step4.svg" alt="QuickSort Step4" width="100%" style="margin-bottom:12px;">
 <img src="docs/QuickSort_Step5.svg" alt="QuickSort Step5" width="100%" style="padding-left:14.5%;margin-bottom:12px;">
