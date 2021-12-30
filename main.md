@@ -1218,7 +1218,7 @@ if __name__ == "__main__":
 <summary class="button">**Schritt 1:**</summary>
 
 <p class="panel-content">
-*Schreiben Sie zunächst die Funktion startMergeSort(array). Diese bekommt einen Array übergeben und definiert den Startpunkt u (Stelle des erstes Elements: 0) und Endpunkt o (Stelle des letzten Elements). Dann übergibt startMergeSort() das eingegebene Array, sowie u und o an die mergeSort() Funktion.*
+*Schreiben Sie zunächst die Funktion starQuickSort(array). Diese bekommt einen Array übergeben und definiert den Startpunkt u (Stelle des erstes Elements: 0) und Endpunkt o (Stelle des letzten Elements). Dann übergibt startQuickSort() das eingegebene Array, sowie u und o an die QuickSort() Funktion (die in den nächsten Schritten geschrieben wird).*
 
 Der Start- und Endpunkt wird beim Aufruf von mergeSort() immer mit dem Array übergeben, um die jeweilige Teilliste zu definieren, auf die der Algorithmus (rekursiv) angewandt werden soll.
 </p>
