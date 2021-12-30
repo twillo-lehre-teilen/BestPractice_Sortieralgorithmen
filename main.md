@@ -1238,6 +1238,6 @@ Hinweis: Es bietet sich an, Temp-Arrays zum Zwischenspeichern zu erstellen und d
 <summary class="button">**Schritt 3:**</summary>
 
 <p class="panel-content" >
-
+*Schreiben Sie als nächstes die Funktion quickSort(), die einen Array, den Startpunkt u und den Endpunkt o des zu sortierenden Abschnitts, sowie den Index p des Pivot-Elements übergeben bekommt. quickSort() soll zunächst den Index p des Pivot-Elements bestimmen (Mitte zwischen u und o) und dann das zu sortierende Array, u, o und p an split() übergeben. Zuletzt soll quickSort() rekursiv auf die beiden Teillisten (links und rechts des Pivot-Elements) angewandt werden.*
 </p>
 </details>
