@@ -1143,7 +1143,7 @@ Hinweis: Es bietet sich an, Temp-Arrays zum Zwischenspeichern zu erstellen und d
 
 ### Grundlegende Idee
 
-QuickSort basiert (ebenso wie MergeSort) auf einer rekursiven Aufteilung, aber hier werden Mischvorgänge vermieden (speicherintensiv!). Die Teillisten werden in zwei Hälften geteilt bezüglich eines Pivot-Elements, wobei in einer Hälfte alle Elemente größer als das PivotElement sind und in der anderen Hälfte alle kleiner. Das Pivot Element ist ein beliebiges Element der Liste/Folge, z.B. das linke, mittlere oder rechte Element.
+QuickSort basiert (ebenso wie MergeSort) auf einer rekursiven Aufteilung, aber hier werden Mischvorgänge vermieden (speicherintensiv!). Die Teillisten werden in zwei Hälften geteilt bezüglich eines Pivot-Elements, wobei in einer Hälfte alle Elemente größer als das PivotElement sind und in der anderen Hälfte alle kleiner. Das Pivot Element ist ein beliebiges Element der Liste, z.B. das linke, mittlere oder rechte Element. Dieses Vorgehen wird dann rekursiv auf beide Hälften angewandt.
 
 ### Beispiel
 
@@ -1156,6 +1156,8 @@ Sei dies eine Reihe zu sortierender Elemente, die Zahlen die zugehörigen Schlü
 Wir wählen das Element in der Mitte als Pivot-Element aus, also in diesem Fall das Element mit dem Schlüssel 1.
 
 <img src="docs/QuickSort_Step2.svg" alt="QuickSort Step2" width="100%" style="margin-bottom:12px;">
+
+Nun werden die Elemente links des Pivot-Elements der Reihe nach durchsucht, wenn ein Element mit größerem Schlüssel als der des Pivot-Elements gefunden wird, wird dieses markiert (in unserem Beispiel orange). Auf der rechten Seite des Pivot-Elements wird das gleiche gemacht, nur das hier solange gesucht wird bis ein Element mit kleinerem Schlüssel gefunden wurde. Wurde kein Element gefunden, wird das Pivot-Element markiert. Die beiden markierten Elemente werden getauscht. 
 
 <img src="docs/QuickSort_Step3.svg" alt="QuickSort Step3" width="100%" style="margin-bottom:12px;">
 <img src="docs/QuickSort_Step4.svg" alt="QuickSort Step4" width="100%" style="margin-bottom:12px;">
