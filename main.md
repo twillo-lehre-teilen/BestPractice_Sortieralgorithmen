@@ -1229,8 +1229,6 @@ Der Start- und Endpunkt wird beim Aufruf von mergeSort() immer mit dem Array üb
 
 <p class="panel-content">
 *Schreiben Sie nun die Hilfsfunktion split(), die einen Int-Array, sowie einen Startpunkt u, einen Endpunkt o und einen Trennpunkt p übergeben bekommt. Der Abschnitte von u bis p soll nach einem Element mit Schlüssel größer als der des Pivot-Elements durchsucht werden, der Abschnitt p bis o nach einem kleineren Schlüssel. Wurde auf beiden Seiten ein Element gefunden, sollen die beiden Elemente getauscht werden. Wurde nur auf einer Seite ein Element gefunden, soll dieses mit dem Pivot Element getauscht werden, wurde auf keiner Seite eines gefunden wird nichts getauscht. split() soll den Index (Integer) des auf der linken Seite gefundenen Elements (falls keines gefunden wurde den des Pivot-Elements) zurückgeben.*
-
-Hinweis: Es bietet sich an, Temp-Arrays zum Zwischenspeichern zu erstellen und deren Inhalte am Ende in das ursprüngliche Array zu kopieren.
 </p>
 </details>
 
