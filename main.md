@@ -1220,7 +1220,7 @@ if __name__ == "__main__":
 <p class="panel-content">
 *Schreiben Sie zunächst die Funktion starQuickSort(array). Diese bekommt einen Array übergeben und definiert den Startpunkt u (Stelle des erstes Elements: 0) und Endpunkt o (Stelle des letzten Elements). Dann übergibt startQuickSort() das eingegebene Array, sowie u und o an die QuickSort() Funktion (die in den nächsten Schritten geschrieben wird).*
 
-Der Start- und Endpunkt wird beim Aufruf von mergeSort() immer mit dem Array übergeben, um die jeweilige Teilliste zu definieren, auf die der Algorithmus (rekursiv) angewandt werden soll.
+Der Start- und Endpunkt wird beim Aufruf von quickSort() immer mit dem Array übergeben, um die jeweilige Teilliste zu definieren, auf die der Algorithmus (rekursiv) angewandt werden soll.
 </p>
 </details>
 
