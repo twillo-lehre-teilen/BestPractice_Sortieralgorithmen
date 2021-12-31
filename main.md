@@ -853,8 +853,6 @@ Die Elemente werden wieder von links nach rechts durchlaufen und immer mit dem E
 
 ![BubbleSort Step30](docs/BubbleSort_Step30.svg)
 
-![BubbleSort Step31](docs/BubbleSort_Step31.svg)
-
 ![BubbleSort Step32](docs/BubbleSort_Step32.svg)
 
 ![BubbleSort Step33](docs/BubbleSort_Step33.svg)
@@ -871,55 +869,37 @@ Dieser Vorgang wird so lange wiederholt, bis alle Elementefertig sortiert sind, 
 
 ![BubbleSort Step36](docs/BubbleSort_Step36.svg)
 
-![BubbleSort Step37](docs/BubbleSort_Step37.svg)
-
 ![BubbleSort Step38](docs/BubbleSort_Step38.svg)
 
 ![BubbleSort Step39](docs/BubbleSort_Step39.svg)
-
-![BubbleSort Step40](docs/BubbleSort_Step40.svg)
 
 ![BubbleSort Step41](docs/BubbleSort_Step41.svg)
 
 ![BubbleSort Step42](docs/BubbleSort_Step42.svg)
 
-![BubbleSort Step43](docs/BubbleSort_Step43.svg)
-
 ![BubbleSort Step44](docs/BubbleSort_Step44.svg)
 
 ![BubbleSort Step45](docs/BubbleSort_Step45.svg)
-
-![BubbleSort Step46](docs/BubbleSort_Step46.svg)
 
 ![BubbleSort Step47](docs/BubbleSort_Step47.svg)
 
 ![BubbleSort Step48](docs/BubbleSort_Step48.svg)
 
-![BubbleSort Step49](docs/BubbleSort_Step49.svg)
-
 ![BubbleSort Step50](docs/BubbleSort_Step50.svg)
 
 ![BubbleSort Step51](docs/BubbleSort_Step51.svg)
-
-![BubbleSort Step52](docs/BubbleSort_Step52.svg)
 
 ![BubbleSort Step53](docs/BubbleSort_Step53.svg)
 
 ![BubbleSort Step54](docs/BubbleSort_Step54.svg)
 
-![BubbleSort Step55](docs/BubbleSort_Step55.svg)
-
 ![BubbleSort Step56](docs/BubbleSort_Step56.svg)
 
 ![BubbleSort Step57](docs/BubbleSort_Step57.svg)
 
-![BubbleSort Step58](docs/BubbleSort_Step58.svg)
-
 ![BubbleSort Step59](docs/BubbleSort_Step59.svg)
 
 ![BubbleSort Step60](docs/BubbleSort_Step60.svg)
-
-![BubbleSort Step61](docs/BubbleSort_Step61.svg)
 
 ![BubbleSort Step62](docs/BubbleSort_Step62.svg)
 
