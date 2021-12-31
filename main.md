@@ -312,8 +312,8 @@ Es können <b>maximal 9 Punkte</b> erzielt werden. Dies ist nur möglich, wenn j
 
 4. Schlüssel müssen nicht eindeutig sein, d.h. zwei Elemente können den gleichen Schlüssel haben.
 
-    [(X)] wahr
-    [( )] falsch
+    [( )] wahr
+    [(X)] falsch
     <script>
       if("@input" == 0){
         send.lia("true");
@@ -395,7 +395,7 @@ Es können <b>maximal 9 Punkte</b> erzielt werden. Dies ist nur möglich, wenn j
 
 8. Der strikte Anteil von $\leq$ ist:
 
-    $x \le y := x \leq y \lor x \neq y$
+    $x < y := x \leq y \lor x \neq y$
 
     [( )] wahr
     [(X)] falsch
@@ -411,7 +411,7 @@ Es können <b>maximal 9 Punkte</b> erzielt werden. Dies ist nur möglich, wenn j
     </script>
     **************************
 
-    - Der strikte Anteil von $\leq$ ist: $x \le y := x \leq y \land x \neq y$
+    - Der strikte Anteil von $\leq$ ist: $x < y := x \leq y \land x \neq y$
 
     **************************
 
