@@ -841,19 +841,13 @@ Die Elemente werden wieder von links nach rechts durchlaufen und immer mit dem E
 
 ![BubbleSort Step21](docs/BubbleSort_Step21.svg)
 
-![BubbleSort Step22](docs/BubbleSort_Step22.svg)
-
 ![BubbleSort Step23](docs/BubbleSort_Step23.svg)
 
 ![BubbleSort Step24](docs/BubbleSort_Step24.svg)
 
-![BubbleSort Step25](docs/BubbleSort_Step25.svg)
-
 ![BubbleSort Step26](docs/BubbleSort_Step26.svg)
 
 ![BubbleSort Step27](docs/BubbleSort_Step27.svg)
-
-![BubbleSort Step28](docs/BubbleSort_Step28.svg)
 
 ![BubbleSort Step29](docs/BubbleSort_Step29.svg)
 
