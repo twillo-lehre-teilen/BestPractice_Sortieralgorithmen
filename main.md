@@ -799,8 +799,6 @@ Nun wird der Schlüssel des betrachteten Elements mit dem des Elements eine Stel
 
 ![BubbleSort Step3](docs/BubbleSort_Step3.svg)
 
-![BubbleSort Step4](docs/BubbleSort_Step4.svg)
-
 Als nächstes betrachten wir das Element an der zweiten Stelle. Da wir eben das Element mit dem Schlüssel $5$ nach rechts getauscht haben und wir stellen- und nicht elementweise die Liste durchlaufen, ist das betrachtete Element das gleiche wie eben.
 
 ![BubbleSort Step5](docs/BubbleSort_Step5.svg)
@@ -808,8 +806,6 @@ Als nächstes betrachten wir das Element an der zweiten Stelle. Da wir eben das 
 Der Schlüssel des betrachteten Elements wird wieder mit dem des Elements eine Stelle weiter rechts verglichen. Da $5>4$ gilt, muss wieder getauscht werden.
 
 ![BubbleSort Step6](docs/BubbleSort_Step6.svg)
-
-![BubbleSort Step7](docs/BubbleSort_Step7.svg)
 
 Nun wird die dritte Stelle der Liste betrachtet und der Schlüssel wieder mit dem des Elements eine Stelle weiter rechts verglichen. Da gilt $5>1$ werden die beiden Elemente getauscht.
 
@@ -819,21 +815,15 @@ Nun wird die dritte Stelle der Liste betrachtet und der Schlüssel wieder mit de
 
 Als nächstes betrachten wir das Element an der vierten Stelle und vergleichen wieder den Schlüssel mit dem des Elements rechts daneben. Diesmal haben wir $5>7$, also muss nicht getauscht werden.
 
-![BubbleSort Step10](docs/BubbleSort_Step10.svg)
-
 ![BubbleSort Step11](docs/BubbleSort_Step11.svg)
 
 ![BubbleSort Step12](docs/BubbleSort_Step12.svg)
 
 Auf die gleiche Weise werden nun auch noch die restlichen Stellen bis zum vorletzten Element betrachtet:
 
-![BubbleSort Step13](docs/BubbleSort_Step13.svg)
-
 ![BubbleSort Step14](docs/BubbleSort_Step14.svg)
 
 ![BubbleSort Step15](docs/BubbleSort_Step15.svg)
-
-![BubbleSort Step16](docs/BubbleSort_Step16.svg)
 
 ![BubbleSort Step17](docs/BubbleSort_Step17.svg)
 
