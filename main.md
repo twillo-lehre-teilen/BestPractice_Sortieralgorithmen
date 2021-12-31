@@ -72,7 +72,7 @@ Weitere nützliche Begriffe im Zusammenhang mit Ordnungen sind:
 <div>
 **Strikter Anteil einer Ordnungsrelation $\leq$**
 
-$x \le y := x \leq y \land x \neq y$
+$x < y := x \leq y \land x \neq y$
 </div>
 
 <!--  style = "background-color: #F0F2F6; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
