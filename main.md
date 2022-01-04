@@ -763,9 +763,7 @@ Für die Eingabe "[3,4,1,7,2]" sollte die Ausgabe so aussehen:
 <p class="panel-content" >
 *Jetzt soll das Programm so erweitert werden, dass in jedem Durchlauf das dafür ermittelte größte Element mit dem Element an der aktuell betrachteten Position verglichen wird. Ist das Element an der aktuellen Position kleiner als das größte Element, sollen die beiden Elemente getauscht werden.*
 
-Die Eingabe "[3,4,1,7,2]" sollte nun richtig sortiert als "[1,2,3,4,7]" ausgegeben werden.
-
-Probieren Sie Listen verschiedener Längen und mit unterschiedlichen Zahlen aus, um Ihren Code zu testen.
+Die Eingabe "[3,4,1,7,2]" sollte nun richtig sortiert als "[1,2,3,4,7]" ausgegeben werden.Probieren Sie Listen verschiedener Längen und mit unterschiedlichen Zahlen aus, um Ihren Code zu testen.
 </p>
 </details>
 
@@ -1210,7 +1208,7 @@ Der Start- und Endpunkt wird beim Aufruf von quickSort() immer mit dem Array üb
 <details class="panel">
 <summary class="button">**Schritt 3:**</summary>
 
-<p class="panel-content" >
+<p class="panel-content">
 *Schreiben Sie als nächstes die Funktion quickSort(), die einen Array, den Startpunkt u und den Endpunkt o des zu sortierenden Abschnitts, sowie den Index p des Pivot-Elements übergeben bekommt. quickSort() soll zunächst den Index p des Pivot-Elements bestimmen (Mitte zwischen u und o) und dann das zu sortierende Array, u, o und p an split() übergeben. Zuletzt soll quickSort() rekursiv auf die beiden Teillisten (links und rechts des Pivot-Elements) angewandt werden.*
 </p>
 </details>
