@@ -1116,7 +1116,7 @@ Haben Sie alle Schritte erfolgreich implementiert, sollte mit der Eingabe "[3,7,
 
 ### Grundlegende Idee
 
-QuickSort basiert (ebenso wie MergeSort) auf einer rekursiven Aufteilung, aber hier werden Mischvorgänge vermieden (speicherintensiv!). Die Teillisten werden in zwei Hälften geteilt bezüglich eines Pivot-Elements, wobei in einer Hälfte alle Elemente größer als das PivotElement sind und in der anderen Hälfte alle kleiner. Das Pivot Element ist ein beliebiges Element der Liste, z.B. das linke, mittlere oder rechte Element. Dieses Vorgehen wird dann rekursiv auf beide Hälften angewandt.
+QuickSort basiert (ebenso wie MergeSort) auf einer rekursiven Aufteilung, aber hier werden Mischvorgänge vermieden (speicherintensiv!). Die Teillisten werden in zwei Hälften geteilt bezüglich eines Pivot-Elements, wobei in einer Hälfte alle Elemente größer als das Pivot Element sind und in der anderen Hälfte alle kleiner. Das Pivot Element ist ein beliebiges Element der Liste, z.B. das linke, mittlere oder rechte Element. Dieses Vorgehen wird dann rekursiv auf beide Hälften angewandt.
 
 ### Beispiel
 
@@ -1170,19 +1170,28 @@ Falls Sie Hilfe beim Einstieg in Python brauchen, finden Sie diese z.B. [hier](h
 
 <!-- data-readOnly="false" -->
 ``` python
-def quickSort(array):
+def startQuickSort(array):
   #your code goes here ...
-  return array
+return array
+
+def quickSort(array, u, o):
+  #your code goes here ...
+  return None
+
+def split(array, u, hiogh, p):
+  #your code goes here ...
+  return None
+
 ```
 <!-- data-readOnly="true" style="display:block"-->
 ``` python -main.py
-from QuickSort import quickSort
+from QuickSort import startQuickSort
 
 if __name__ == "__main__":
     #only important code should be visible
     print "Bitte geben Sie eine unsortierte Liste ein (in eckigen Klammern, getrennt durch Kommata, Bsp: [3,1,7]):"
     array = input()
-    sorted = quickSort(array)
+    sorted = startQuickSort(array)
     print "Sortierte Liste: ", sorted
 ```
 @LIA.eval(`["QuickSort.py", "main.py"]`, `python -m compileall .`, `python main.pyc`)
@@ -1191,7 +1200,7 @@ if __name__ == "__main__":
 <summary class="button">**Schritt 1:**</summary>
 
 <p class="panel-content">
-*Schreiben Sie zunächst die Funktion starQuickSort(array). Diese bekommt einen Array übergeben und definiert den Startpunkt u (Stelle des erstes Elements: 0) und Endpunkt o (Stelle des letzten Elements). Dann übergibt startQuickSort() das eingegebene Array, sowie u und o an die QuickSort() Funktion (die in den nächsten Schritten geschrieben wird).*
+*Schreiben Sie zunächst die Funktion __starQuickSort()__. Diese bekommt einen Array übergeben und definiert den Startpunkt __u__ (Stelle des erstes Elements: 0) und Endpunkt __o__ (Stelle des letzten Elements). Dann übergibt startQuickSort() das eingegebene Array, sowie u und o an die __QuickSort()__ Funktion (die in den nächsten Schritten geschrieben wird).*
 
 Der Start- und Endpunkt wird beim Aufruf von quickSort() immer mit dem Array übergeben, um die jeweilige Teilliste zu definieren, auf die der Algorithmus (rekursiv) angewandt werden soll.
 </p>
@@ -1201,7 +1210,7 @@ Der Start- und Endpunkt wird beim Aufruf von quickSort() immer mit dem Array üb
 <summary class="button">**Schritt 2:**</summary>
 
 <p class="panel-content">
-*Schreiben Sie nun die Hilfsfunktion split(), die einen Int-Array, sowie einen Startpunkt u, einen Endpunkt o und einen Trennpunkt p übergeben bekommt. Der Abschnitte von u bis p soll nach einem Element mit Schlüssel größer als der des Pivot-Elements durchsucht werden, der Abschnitt p bis o nach einem kleineren Schlüssel. Wurde auf beiden Seiten ein Element gefunden, sollen die beiden Elemente getauscht werden. Wurde nur auf einer Seite ein Element gefunden, soll dieses mit dem Pivot Element getauscht werden, wurde auf keiner Seite eines gefunden wird nichts getauscht. split() soll den Index (Integer) des auf der linken Seite gefundenen Elements (falls keines gefunden wurde den des Pivot-Elements) zurückgeben.*
+*Schreiben Sie nun die Hilfsfunktion __split()__, die einen Int-Array, sowie einen Startpunkt u, einen Endpunkt o und ein Pivotelement p übergeben bekommt. Der Abschnitte von u bis p soll nach einem Element mit Schlüssel __größer__ als der des Pivot-Elements durchsucht werden, der Abschnitt p bis o nach einem __kleineren__ Schlüssel. Wurde auf beiden Seiten ein Element gefunden, sollen die beiden Elemente __getauscht__ werden. Wurde nur auf einer Seite ein Element gefunden, soll dieses mit dem Pivot Element getauscht werden. Wurde auf keiner Seite eines gefunden wird nichts getauscht. split() soll den Index (Integer) des auf der linken Seite gefundenen Elements (falls keines gefunden wurde den des Pivot-Elements) zurückgeben.*
 </p>
 </details>
 
@@ -1209,6 +1218,8 @@ Der Start- und Endpunkt wird beim Aufruf von quickSort() immer mit dem Array üb
 <summary class="button">**Schritt 3:**</summary>
 
 <p class="panel-content">
-*Schreiben Sie als nächstes die Funktion quickSort(), die einen Array, den Startpunkt u und den Endpunkt o des zu sortierenden Abschnitts, sowie den Index p des Pivot-Elements übergeben bekommt. quickSort() soll zunächst den Index p des Pivot-Elements bestimmen (Mitte zwischen u und o) und dann das zu sortierende Array, u, o und p an split() übergeben. Zuletzt soll quickSort() rekursiv auf die beiden Teillisten (links und rechts des Pivot-Elements) angewandt werden.*
+*Schreiben Sie als nächstes die Funktion __quickSort()__, die einen Array, den Startpunkt u und den Endpunkt o des zu sortierenden Abschnitts übergeben bekommt. quickSort() soll zunächst den Index __p__ des Pivot-Elements bestimmen (Hier: Mitte zwischen u und o) und dann das zu sortierende Array, u, o und p an __split()__ übergeben. Zuletzt soll quickSort() __rekursiv__ auf die beiden Teillisten (links und rechts des Pivot-Elements) angewandt werden.*
+
+Haben Sie alle Schritte erfolgreich implementiert, sollte mit der Eingabe "[3,7,1,9,2]" nun die sortierte Liste "[1,2,3,7,9]" ausgegeben werden. Probieren Sie Listen verschiedener Längen und mit unterschiedlichen Zahlen aus, um Ihren Code zu testen.
 </p>
 </details>
