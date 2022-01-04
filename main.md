@@ -1060,7 +1060,6 @@ def mergeSort(array, left, right):
 def merge(array, startLeft, endLeft, endRight):
   #your code goes here ...
   return None
-
 ```
 <!-- data-readOnly="true" style="display:block"-->
 ``` python -main.py
@@ -1181,7 +1180,6 @@ def quickSort(array, u, o):
 def split(array, u, hiogh, p):
   #your code goes here ...
   return None
-
 ```
 <!-- data-readOnly="true" style="display:block"-->
 ``` python -main.py
