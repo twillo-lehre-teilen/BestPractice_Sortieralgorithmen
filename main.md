@@ -1051,19 +1051,28 @@ Falls Sie Hilfe beim Einstieg in Python brauchen, finden Sie diese z.B. [hier](h
 
 <!-- data-readOnly="false" -->
 ``` python
-def mergeSort(array):
+def startMergeSort(array):
   #your code goes here ...
   return array
+
+def mergeSort(array, left, right):
+  #your code goes here ...
+  return None
+
+def merge(array, startLeft, endLeft, endRight):
+  #your code goes here ...
+  return None
+
 ```
 <!-- data-readOnly="true" style="display:block"-->
 ``` python -main.py
-from MergeSort import mergeSort
+from MergeSort import startMergeSort
 
 if __name__ == "__main__":
     #only important code should be visible
     print "Bitte geben Sie eine unsortierte Liste ein (in eckigen Klammern, getrennt durch Kommata, Bsp: [3,1,7]):"
     array = input()
-    sorted = mergeSort(array)
+    sorted = startMergeSort(array)
     print "Sortierte Liste: ", sorted
 ```
 @LIA.eval(`["MergeSort.py", "main.py"]`, `python -m compileall .`, `python main.pyc`)
@@ -1072,9 +1081,9 @@ if __name__ == "__main__":
 <summary class="button">**Schritt 1:**</summary>
 
 <p class="panel-content">
-*Schreiben Sie zunächst die Funktion startMergeSort(array). Diese bekommt einen Array übergeben und definiert den Startpunkt l (Stelle des erstes Elements: 0) und Endpunkt r (Stelle des letzten Elements). Dann übergibt startMergeSort() das eingegebene Array, sowie l und r an die mergeSort() Funktion.*
+*Schreiben Sie zunächst die Funktion __startMergeSort(array)__. Diese bekommt einen Array übergeben und definiert den Startpunkt __l__ (Stelle des erstes Elements: 0) und Endpunkt __r__ (Stelle des letzten Elements). Dann übergibt startMergeSort() das eingegebene Array, sowie __l__ und __r__ an die __mergeSort()__ Funktion.*
 
-Der Start- und Endpunkt wird beim Aufruf von mergeSort() immer mit dem Array übergeben, um die jeweilige Teilliste zu definieren, auf die der Algorithmus (rekursiv) angewandt werden soll.
+Der Start- und Endpunkt wird beim Aufruf von mergeSort() immer mit dem Array übergeben, um die jeweilige Teilliste zu definieren, auf die der Algorithmus (**rekursiv**) angewandt werden soll.
 </p>
 </details>
 
@@ -1082,7 +1091,7 @@ Der Start- und Endpunkt wird beim Aufruf von mergeSort() immer mit dem Array üb
 <summary class="button">**Schritt 2:**</summary>
 
 <p class="panel-content">
-*Schreiben Sie als nächstes die Funktion mergeSort(), die einen Array, sowie den Startpunkt l und Endpunkt r des zu sortierenden Abschnitts übergeben bekommt. Wenn l und r einen Abstand größer eins haben, soll die Mitte m des betrachteten Arrayabschnitts bestimmt und dann mergeSort() rekursiv auf jeweils die Hälften des Abschnitts angewandt werden. Danach sollen die beiden Hälften mit l, m und r an die Funktion merge() übergeben werden.*
+*Schreiben Sie als nächstes die Funktion __mergeSort()__, die einen Array, sowie den Startpunkt __l__ und Endpunkt __r__ des zu sortierenden Abschnitts übergeben bekommt. Wenn __l__ kleiner als __r__ ist, soll die Mitte __m__ des betrachteten Arrayabschnitts bestimmt und dann mergeSort() rekursiv auf jeweils die Hälften des Abschnitts angewandt werden. Danach sollen die beiden Hälften mit __l__, __m__ und __r__ an die Funktion __merge()__ übergeben werden.*
 </p>
 </details>
 
@@ -1090,9 +1099,11 @@ Der Start- und Endpunkt wird beim Aufruf von mergeSort() immer mit dem Array üb
 <summary class="button">**Schritt 3:**</summary>
 
 <p class="panel-content" >
-*Schreiben Sie nun die Funktion merge(), die einen Array, sowie einen Startpunkt l, einen Endpunkt r und einen Trennpunkt m übergeben bekommt. Die Abschnitte von l bis m und m bis r können jeweils als sortiert angenommen werden. merge() soll jetzt den Abschnitt l bis r sortieren.*
+*Schreiben Sie nun die Funktion __merge()__, die einen Array, sowie einen Startpunkt __l__, einen Endpunkt __r__ und einen Mittelpunkt __m__ übergeben bekommt. Die Abschnitte __[l,m]__ und __(m,r]__ können jeweils als sortiert angenommen werden. __merge()__ soll jetzt den Abschnitt __l__ bis __r__ sortieren.*
 
 Hinweis: Es bietet sich an, Temp-Arrays zum Zwischenspeichern zu erstellen und deren Inhalte am Ende in das ursprüngliche Array zu kopieren.
+
+Haben Sie alle Schritte erfolgreich implementiert, sollte mit der Eingabe "[3,7,1,9,2]" nun die sortierte Liste "[1,2,3,7,9]" ausgegeben werden. Probieren Sie Listen verschiedener Längen und mit unterschiedlichen Zahlen aus, um Ihren Code zu testen.
 </p>
 </details>
 
