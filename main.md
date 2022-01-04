@@ -1015,11 +1015,13 @@ Schauen wir uns den Algorithmus einmal Schritt für Schritt an folgendem Beispie
 
 Sei dies eine Reihe zu sortierender Elemente, die Zahlen die zugehörigen Schlüssel, nach denen aufsteigend sortiert werden soll:
 
-Der erste Schritt des Algorithmus ist die Zerlegung der zu sortierenden Liste in zwei Teile, sofern die Liste mehr als zwei Elemente besitzt. Dann wird der Algorithmus rekursiv auf den beiden Teillisten aufgerufen. So erhalten wir zunächst eine Zerlegung der ursprünglichen Liste in unsortierte Teillisten der Länge zwei.
+Der erste Schritt des Algorithmus ist die Zerlegung der zu sortierenden Liste in zwei Teile, sofern die Liste mehr als zwei Elemente besitzt. Dann wird der Algorithmus rekursiv auf den beiden Teillisten aufgerufen. So erhalten wir zunächst eine Zerlegung der ursprünglichen Liste in sortierte Teillisten der Länge eins.
 
 ![MergeSort Step1](docs/MergeSort_Step1.svg)
 
-Diese zweielementigen Listen werden nun durch Vergleichen der Schlüssel der beiden Elemente sortiert. Dann werden je zwei sortierte Teillisten zu einer größeren, sortierten Liste zusammengefügt, die dann wieder mit weiteren Teillisten der gleichen Größe sortiert zusammengesetzt wird usw., bis man am Ende die ursprüngliche Liste in sortierter Form erhält.
+Nach der Zerlegung folgt das Zusammenfügen der Teillisten. Dabei geht man in der umgekehrten Reihenfolge vor wie beim Zerlegen, d.h. die zuletzt zerlegte Teilliste wird als erstes wieder zusammengefügt.
+
+Zunächst werden also die einelementigen Listen durch vergleichen der Schlüssel zu einer größeren, sortierten Liste zusammengefügt, die dann wieder mit weiteren Teillisten sortiert zusammengefügt wird usw. Am Ende erhält man dadurch die ursprüngliche Liste in sortierter Form.
 
 ![MergeSort Step2](docs/MergeSort_Step2.svg)
 
@@ -1133,6 +1135,13 @@ Nun werden die Elemente links des Pivot-Elements der Reihe nach durchsucht, wenn
 
 <img src="docs/QuickSort_Step3.svg" alt="QuickSort Step3" width="100%" style="margin-bottom:12px;">
 <img src="docs/QuickSort_Step4.svg" alt="QuickSort Step4" width="100%" style="margin-bottom:12px;">
+
+Anschließend wird nach weiteren Elementen gesucht die kleiner bzw. größer sind als das Pivot-Element und getauscht werden müssen. In diesem Fall ist das nicht mehr nötig.
+
+Der erste Durchlauf ist damit abgeschlossen. Das Pivot-Element befindet sich jetzt an seiner entgültigen Stelle und muss im weiteren Verlauf nicht weiter betrachtet werden.
+
+Dieses Prozedere wird nun solange wiederholt, bis jedes Element einmal das Pivot-Element war.
+
 <img src="docs/QuickSort_Step5.svg" alt="QuickSort Step5" width="100%" style="padding-left:14.5%;margin-bottom:12px;">
 <img src="docs/QuickSort_Step6.svg" alt="QuickSort Step6" width="100%" style="padding-left:14.5%;margin-bottom:12px;">
 <img src="docs/QuickSort_Step7.svg" alt="QuickSort Step7" width="100%" style="padding-left:14.5%;margin-bottom:12px;">
@@ -1141,6 +1150,9 @@ Nun werden die Elemente links des Pivot-Elements der Reihe nach durchsucht, wenn
 <img src="docs/QuickSort_Step10.svg" alt="QuickSort Step10" width="100%" style="padding-left:14.5%;margin-bottom:12px;">
 <img src="docs/QuickSort_Step11.svg" alt="QuickSort Step11" width="100%" style="padding-left:14.5%;margin-bottom:12px;">
 <img src="docs/QuickSort_Step12-14.svg" alt="QuickSort Step12-14" width="100%" style="padding-left:14.5%;margin-bottom:12px;">
+
+Zum Abschluss werden alle einzelnen Elemente wieder zu einer vollständigen Liste zusammengefügt, welche jetzt sortiert ist.
+
 <img src="docs/QuickSort_Step15.svg" alt="QuickSort Step15" width="100%" style="margin-bottom:12px;">
 
 ### Implementierung
