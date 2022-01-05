@@ -763,9 +763,7 @@ Für die Eingabe "[3,4,1,7,2]" sollte die Ausgabe so aussehen:
 <p class="panel-content" >
 *Jetzt soll das Programm so erweitert werden, dass in jedem Durchlauf das dafür ermittelte größte Element mit dem Element an der aktuell betrachteten Position verglichen wird. Ist das Element an der aktuellen Position kleiner als das größte Element, sollen die beiden Elemente getauscht werden.*
 
-Die Eingabe "[3,4,1,7,2]" sollte nun richtig sortiert als "[1,2,3,4,7]" ausgegeben werden.
-
-Probieren Sie Listen verschiedener Längen und mit unterschiedlichen Zahlen aus, um Ihren Code zu testen.
+Die Eingabe "[3,4,1,7,2]" sollte nun richtig sortiert als "[1,2,3,4,7]" ausgegeben werden.Probieren Sie Listen verschiedener Längen und mit unterschiedlichen Zahlen aus, um Ihren Code zu testen.
 </p>
 </details>
 
@@ -1017,11 +1015,13 @@ Schauen wir uns den Algorithmus einmal Schritt für Schritt an folgendem Beispie
 
 Sei dies eine Reihe zu sortierender Elemente, die Zahlen die zugehörigen Schlüssel, nach denen aufsteigend sortiert werden soll:
 
-Der erste Schritt des Algorithmus ist die Zerlegung der zu sortierenden Liste in zwei Teile, sofern die Liste mehr als zwei Elemente besitzt. Dann wird der Algorithmus rekursiv auf den beiden Teillisten aufgerufen. So erhalten wir zunächst eine Zerlegung der ursprünglichen Liste in unsortierte Teillisten der Länge zwei.
+Der erste Schritt des Algorithmus ist die Zerlegung der zu sortierenden Liste in zwei Teile, sofern die Liste mehr als zwei Elemente besitzt. Dann wird der Algorithmus rekursiv auf den beiden Teillisten aufgerufen. So erhalten wir zunächst eine Zerlegung der ursprünglichen Liste in sortierte Teillisten der Länge eins.
 
 ![MergeSort Step1](docs/MergeSort_Step1.svg)
 
-Diese zweielementigen Listen werden nun durch Vergleichen der Schlüssel der beiden Elemente sortiert. Dann werden je zwei sortierte Teillisten zu einer größeren, sortierten Liste zusammengefügt, die dann wieder mit weiteren Teillisten der gleichen Größe sortiert zusammengesetzt wird usw., bis man am Ende die ursprüngliche Liste in sortierter Form erhält.
+Nach der Zerlegung folgt das Zusammenfügen der Teillisten. Dabei geht man in der umgekehrten Reihenfolge vor wie beim Zerlegen, d.h. die zuletzt zerlegte Teilliste wird als erstes wieder zusammengefügt.
+
+Zunächst werden also die einelementigen Listen durch vergleichen der Schlüssel zu einer größeren, sortierten Liste zusammengefügt, die dann wieder mit weiteren Teillisten sortiert zusammengefügt wird usw. Am Ende erhält man dadurch die ursprüngliche Liste in sortierter Form.
 
 ![MergeSort Step2](docs/MergeSort_Step2.svg)
 
@@ -1051,19 +1051,27 @@ Falls Sie Hilfe beim Einstieg in Python brauchen, finden Sie diese z.B. [hier](h
 
 <!-- data-readOnly="false" -->
 ``` python
-def mergeSort(array):
+def startMergeSort(array):
   #your code goes here ...
   return array
+
+def mergeSort(array, left, right):
+  #your code goes here ...
+  return None
+
+def merge(array, startLeft, endLeft, endRight):
+  #your code goes here ...
+  return None
 ```
 <!-- data-readOnly="true" style="display:block"-->
 ``` python -main.py
-from MergeSort import mergeSort
+from MergeSort import startMergeSort
 
 if __name__ == "__main__":
     #only important code should be visible
     print "Bitte geben Sie eine unsortierte Liste ein (in eckigen Klammern, getrennt durch Kommata, Bsp: [3,1,7]):"
     array = input()
-    sorted = mergeSort(array)
+    sorted = startMergeSort(array)
     print "Sortierte Liste: ", sorted
 ```
 @LIA.eval(`["MergeSort.py", "main.py"]`, `python -m compileall .`, `python main.pyc`)
@@ -1072,9 +1080,9 @@ if __name__ == "__main__":
 <summary class="button">**Schritt 1:**</summary>
 
 <p class="panel-content">
-*Schreiben Sie zunächst die Funktion startMergeSort(array). Diese bekommt einen Array übergeben und definiert den Startpunkt l (Stelle des erstes Elements: 0) und Endpunkt r (Stelle des letzten Elements). Dann übergibt startMergeSort() das eingegebene Array, sowie l und r an die mergeSort() Funktion.*
+*Schreiben Sie zunächst die Funktion __startMergeSort(array)__. Diese bekommt einen Array übergeben und definiert den Startpunkt __l__ (Stelle des erstes Elements: 0) und Endpunkt __r__ (Stelle des letzten Elements). Dann übergibt startMergeSort() das eingegebene Array, sowie __l__ und __r__ an die __mergeSort()__ Funktion.*
 
-Der Start- und Endpunkt wird beim Aufruf von mergeSort() immer mit dem Array übergeben, um die jeweilige Teilliste zu definieren, auf die der Algorithmus (rekursiv) angewandt werden soll.
+Der Start- und Endpunkt wird beim Aufruf von mergeSort() immer mit dem Array übergeben, um die jeweilige Teilliste zu definieren, auf die der Algorithmus (**rekursiv**) angewandt werden soll.
 </p>
 </details>
 
@@ -1082,7 +1090,7 @@ Der Start- und Endpunkt wird beim Aufruf von mergeSort() immer mit dem Array üb
 <summary class="button">**Schritt 2:**</summary>
 
 <p class="panel-content">
-*Schreiben Sie als nächstes die Funktion mergeSort(), die einen Array, sowie den Startpunkt l und Endpunkt r des zu sortierenden Abschnitts übergeben bekommt. Wenn l und r einen Abstand größer eins haben, soll die Mitte m des betrachteten Arrayabschnitts bestimmt und dann mergeSort() rekursiv auf jeweils die Hälften des Abschnitts angewandt werden. Danach sollen die beiden Hälften mit l, m und r an die Funktion merge() übergeben werden.*
+*Schreiben Sie als nächstes die Funktion __mergeSort()__, die einen Array, sowie den Startpunkt __l__ und Endpunkt __r__ des zu sortierenden Abschnitts übergeben bekommt. Wenn __l__ kleiner als __r__ ist, soll die Mitte __m__ des betrachteten Arrayabschnitts bestimmt und dann mergeSort() rekursiv auf jeweils die Hälften des Abschnitts angewandt werden. Danach sollen die beiden Hälften mit __l__, __m__ und __r__ an die Funktion __merge()__ übergeben werden.*
 </p>
 </details>
 
@@ -1090,9 +1098,11 @@ Der Start- und Endpunkt wird beim Aufruf von mergeSort() immer mit dem Array üb
 <summary class="button">**Schritt 3:**</summary>
 
 <p class="panel-content" >
-*Schreiben Sie nun die Funktion merge(), die einen Array, sowie einen Startpunkt l, einen Endpunkt r und einen Trennpunkt m übergeben bekommt. Die Abschnitte von l bis m und m bis r können jeweils als sortiert angenommen werden. merge() soll jetzt den Abschnitt l bis r sortieren.*
+*Schreiben Sie nun die Funktion __merge()__, die einen Array, sowie einen Startpunkt __l__, einen Endpunkt __r__ und einen Mittelpunkt __m__ übergeben bekommt. Die Abschnitte __[l,m]__ und __(m,r]__ können jeweils als sortiert angenommen werden. __merge()__ soll jetzt den Abschnitt __l__ bis __r__ sortieren.*
 
 Hinweis: Es bietet sich an, Temp-Arrays zum Zwischenspeichern zu erstellen und deren Inhalte am Ende in das ursprüngliche Array zu kopieren.
+
+Haben Sie alle Schritte erfolgreich implementiert, sollte mit der Eingabe "[3,7,1,9,2]" nun die sortierte Liste "[1,2,3,7,9]" ausgegeben werden. Probieren Sie Listen verschiedener Längen und mit unterschiedlichen Zahlen aus, um Ihren Code zu testen.
 </p>
 </details>
 
@@ -1107,7 +1117,7 @@ Hinweis: Es bietet sich an, Temp-Arrays zum Zwischenspeichern zu erstellen und d
 
 ### Grundlegende Idee
 
-QuickSort basiert (ebenso wie MergeSort) auf einer rekursiven Aufteilung, aber hier werden Mischvorgänge vermieden (speicherintensiv!). Die Teillisten werden in zwei Hälften geteilt bezüglich eines Pivot-Elements, wobei in einer Hälfte alle Elemente größer als das PivotElement sind und in der anderen Hälfte alle kleiner. Das Pivot Element ist ein beliebiges Element der Liste, z.B. das linke, mittlere oder rechte Element. Dieses Vorgehen wird dann rekursiv auf beide Hälften angewandt.
+QuickSort basiert (ebenso wie MergeSort) auf einer rekursiven Aufteilung, aber hier werden Mischvorgänge vermieden (speicherintensiv!). Die Teillisten werden in zwei Hälften geteilt bezüglich eines Pivot-Elements, wobei in einer Hälfte alle Elemente größer als das Pivot Element sind und in der anderen Hälfte alle kleiner. Das Pivot Element ist ein beliebiges Element der Liste, z.B. das linke, mittlere oder rechte Element. Dieses Vorgehen wird dann rekursiv auf beide Hälften angewandt.
 
 ### Beispiel
 
@@ -1125,6 +1135,13 @@ Nun werden die Elemente links des Pivot-Elements der Reihe nach durchsucht, wenn
 
 <img src="docs/QuickSort_Step3.svg" alt="QuickSort Step3" width="100%" style="margin-bottom:12px;">
 <img src="docs/QuickSort_Step4.svg" alt="QuickSort Step4" width="100%" style="margin-bottom:12px;">
+
+Anschließend wird nach weiteren Elementen gesucht die kleiner bzw. größer sind als das Pivot-Element und getauscht werden müssen. In diesem Fall ist das nicht mehr nötig.
+
+Der erste Durchlauf ist damit abgeschlossen. Das Pivot-Element befindet sich jetzt an seiner entgültigen Stelle und muss im weiteren Verlauf nicht weiter betrachtet werden.
+
+Dieses Prozedere wird nun solange wiederholt, bis jedes Element einmal das Pivot-Element war.
+
 <img src="docs/QuickSort_Step5.svg" alt="QuickSort Step5" width="100%" style="padding-left:14.5%;margin-bottom:12px;">
 <img src="docs/QuickSort_Step6.svg" alt="QuickSort Step6" width="100%" style="padding-left:14.5%;margin-bottom:12px;">
 <img src="docs/QuickSort_Step7.svg" alt="QuickSort Step7" width="100%" style="padding-left:14.5%;margin-bottom:12px;">
@@ -1133,6 +1150,9 @@ Nun werden die Elemente links des Pivot-Elements der Reihe nach durchsucht, wenn
 <img src="docs/QuickSort_Step10.svg" alt="QuickSort Step10" width="100%" style="padding-left:14.5%;margin-bottom:12px;">
 <img src="docs/QuickSort_Step11.svg" alt="QuickSort Step11" width="100%" style="padding-left:14.5%;margin-bottom:12px;">
 <img src="docs/QuickSort_Step12-14.svg" alt="QuickSort Step12-14" width="100%" style="padding-left:14.5%;margin-bottom:12px;">
+
+Zum Abschluss werden alle einzelnen Elemente wieder zu einer vollständigen Liste zusammengefügt, welche jetzt sortiert ist.
+
 <img src="docs/QuickSort_Step15.svg" alt="QuickSort Step15" width="100%" style="margin-bottom:12px;">
 
 ### Implementierung
@@ -1161,19 +1181,27 @@ Falls Sie Hilfe beim Einstieg in Python brauchen, finden Sie diese z.B. [hier](h
 
 <!-- data-readOnly="false" -->
 ``` python
-def quickSort(array):
+def startQuickSort(array):
   #your code goes here ...
-  return array
+return array
+
+def quickSort(array, u, o):
+  #your code goes here ...
+  return None
+
+def split(array, u, hiogh, p):
+  #your code goes here ...
+  return None
 ```
 <!-- data-readOnly="true" style="display:block"-->
 ``` python -main.py
-from QuickSort import quickSort
+from QuickSort import startQuickSort
 
 if __name__ == "__main__":
     #only important code should be visible
     print "Bitte geben Sie eine unsortierte Liste ein (in eckigen Klammern, getrennt durch Kommata, Bsp: [3,1,7]):"
     array = input()
-    sorted = quickSort(array)
+    sorted = startQuickSort(array)
     print "Sortierte Liste: ", sorted
 ```
 @LIA.eval(`["QuickSort.py", "main.py"]`, `python -m compileall .`, `python main.pyc`)
@@ -1182,7 +1210,7 @@ if __name__ == "__main__":
 <summary class="button">**Schritt 1:**</summary>
 
 <p class="panel-content">
-*Schreiben Sie zunächst die Funktion starQuickSort(array). Diese bekommt einen Array übergeben und definiert den Startpunkt u (Stelle des erstes Elements: 0) und Endpunkt o (Stelle des letzten Elements). Dann übergibt startQuickSort() das eingegebene Array, sowie u und o an die QuickSort() Funktion (die in den nächsten Schritten geschrieben wird).*
+*Schreiben Sie zunächst die Funktion __starQuickSort()__. Diese bekommt einen Array übergeben und definiert den Startpunkt __u__ (Stelle des erstes Elements: 0) und Endpunkt __o__ (Stelle des letzten Elements). Dann übergibt startQuickSort() das eingegebene Array, sowie u und o an die __QuickSort()__ Funktion (die in den nächsten Schritten geschrieben wird).*
 
 Der Start- und Endpunkt wird beim Aufruf von quickSort() immer mit dem Array übergeben, um die jeweilige Teilliste zu definieren, auf die der Algorithmus (rekursiv) angewandt werden soll.
 </p>
@@ -1192,14 +1220,16 @@ Der Start- und Endpunkt wird beim Aufruf von quickSort() immer mit dem Array üb
 <summary class="button">**Schritt 2:**</summary>
 
 <p class="panel-content">
-*Schreiben Sie nun die Hilfsfunktion split(), die einen Int-Array, sowie einen Startpunkt u, einen Endpunkt o und einen Trennpunkt p übergeben bekommt. Der Abschnitte von u bis p soll nach einem Element mit Schlüssel größer als der des Pivot-Elements durchsucht werden, der Abschnitt p bis o nach einem kleineren Schlüssel. Wurde auf beiden Seiten ein Element gefunden, sollen die beiden Elemente getauscht werden. Wurde nur auf einer Seite ein Element gefunden, soll dieses mit dem Pivot Element getauscht werden, wurde auf keiner Seite eines gefunden wird nichts getauscht. split() soll den Index (Integer) des auf der linken Seite gefundenen Elements (falls keines gefunden wurde den des Pivot-Elements) zurückgeben.*
+*Schreiben Sie nun die Hilfsfunktion __split()__, die einen Int-Array, sowie einen Startpunkt u, einen Endpunkt o und ein Pivotelement p übergeben bekommt. Der Abschnitte von u bis p soll nach einem Element mit Schlüssel __größer__ als der des Pivot-Elements durchsucht werden, der Abschnitt p bis o nach einem __kleineren__ Schlüssel. Wurde auf beiden Seiten ein Element gefunden, sollen die beiden Elemente __getauscht__ werden. Wurde nur auf einer Seite ein Element gefunden, soll dieses mit dem Pivot Element getauscht werden. Wurde auf keiner Seite eines gefunden wird nichts getauscht. split() soll den Index (Integer) des auf der linken Seite gefundenen Elements (falls keines gefunden wurde den des Pivot-Elements) zurückgeben.*
 </p>
 </details>
 
 <details class="panel">
 <summary class="button">**Schritt 3:**</summary>
 
-<p class="panel-content" >
-*Schreiben Sie als nächstes die Funktion quickSort(), die einen Array, den Startpunkt u und den Endpunkt o des zu sortierenden Abschnitts, sowie den Index p des Pivot-Elements übergeben bekommt. quickSort() soll zunächst den Index p des Pivot-Elements bestimmen (Mitte zwischen u und o) und dann das zu sortierende Array, u, o und p an split() übergeben. Zuletzt soll quickSort() rekursiv auf die beiden Teillisten (links und rechts des Pivot-Elements) angewandt werden.*
+<p class="panel-content">
+*Schreiben Sie als nächstes die Funktion __quickSort()__, die einen Array, den Startpunkt u und den Endpunkt o des zu sortierenden Abschnitts übergeben bekommt. quickSort() soll zunächst den Index __p__ des Pivot-Elements bestimmen (Hier: Mitte zwischen u und o) und dann das zu sortierende Array, u, o und p an __split()__ übergeben. Zuletzt soll quickSort() __rekursiv__ auf die beiden Teillisten (links und rechts des Pivot-Elements) angewandt werden.*
+
+Haben Sie alle Schritte erfolgreich implementiert, sollte mit der Eingabe "[3,7,1,9,2]" nun die sortierte Liste "[1,2,3,7,9]" ausgegeben werden. Probieren Sie Listen verschiedener Längen und mit unterschiedlichen Zahlen aus, um Ihren Code zu testen.
 </p>
 </details>

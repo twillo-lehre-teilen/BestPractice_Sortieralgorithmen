@@ -53,10 +53,10 @@ border: none;
 font-size: inherit;
 background-color: #FAFAFC;
 color: #0A1F40;
-width: 100%;
+width: 97%;
 padding: 10px;
 text-align: left;
-overflow: hidden;
+overflow: auto;
 border: none;
 }
 .button:focus, .button:hover{
