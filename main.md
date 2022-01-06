@@ -1006,7 +1006,7 @@ Die Eingabe "[3,7,1,9,2]" sollte nun richtig sortiert als "[1,2,3,7,9]" ausgegeb
 
 ### Grundlegende Idee
 
-MergeSort ist ein Divide-and-Conquer Algorithmus zum vergleichsbasierten Sortieren. Das heißt, das Problem wird rekursiv in mehrere Teilprobleme gleichen Typs zerlegt, die dann gelöst und wieder zusammengesetzt werden. Bei MergeSort bedeutet das hier konkret, dass die zu sortierende Folge zuerst in zwei Teile geteilt wird. Anschließend werden beide Teile voneinander getrennt sortiert indem MergeSort selbst auf beide Hälften angewandt wird (Rekursion). Folgen mit mehr als einem Element werden also zunächst wieder geteilt. Das eigentliche Sortieren findet erst auf der "untersten Ebene" statt, also wenn es nur noch ein einziges zu sortierendes Element gibt. Danach werden die sortierten Teilfolgen wieder zusammengesetzt, logischerweise beginnend bei Folgen der Länge eins (denn die sind ja bereits automatisch sortiert). Dies wird "Ebene für Ebene" fortgeführt, bis man alle Teilfolgen wieder vereint hat und die ursprüngliche Liste jetzt in sortierter Form erhält.
+MergeSort ist ein Divide-and-Conquer Algorithmus zum vergleichsbasierten Sortieren. Das heißt, das Problem wird [rekursiv](https://perlgeek.de/de/artikel/rekursion) in mehrere Teilprobleme gleichen Typs zerlegt, die dann gelöst und wieder zusammengesetzt werden. Bei MergeSort bedeutet das hier konkret, dass die zu sortierende Folge zuerst in zwei Teile geteilt wird. Anschließend werden beide Teile voneinander getrennt sortiert indem MergeSort selbst auf beide Hälften angewandt wird (Rekursion). Folgen mit mehr als einem Element werden also zunächst wieder geteilt. Das eigentliche Sortieren findet erst auf der "untersten Ebene" statt, also wenn es nur noch ein einziges zu sortierendes Element gibt. Danach werden die sortierten Teilfolgen wieder zusammengesetzt, logischerweise beginnend bei Folgen der Länge eins (denn die sind ja bereits automatisch sortiert). Dies wird "Ebene für Ebene" fortgeführt, bis man alle Teilfolgen wieder vereint hat und die ursprüngliche Liste jetzt in sortierter Form erhält.
 
 ### Beispiel
 
@@ -1014,7 +1014,7 @@ Schauen wir uns den Algorithmus einmal Schritt für Schritt an folgendem Beispie
 
 Sei dies eine Reihe zu sortierender Elemente, die Zahlen die zugehörigen Schlüssel, nach denen aufsteigend sortiert werden soll:
 
-Der erste Schritt des Algorithmus ist die Zerlegung der zu sortierenden Liste in zwei Teile, sofern die Liste mehr als ein Element besitzt. Dann wird der Algorithmus rekursiv auf den beiden Teillisten aufgerufen. So erhalten wir zunächst eine Zerlegung der ursprünglichen Liste in sortierte Teillisten der Länge eins.
+Der erste Schritt des Algorithmus ist die Zerlegung der zu sortierenden Liste in zwei Teile, sofern die Liste mehr als ein Element besitzt. Dann wird der Algorithmus [rekursiv](https://perlgeek.de/de/artikel/rekursion) auf den beiden Teillisten aufgerufen. So erhalten wir zunächst eine Zerlegung der ursprünglichen Liste in sortierte Teillisten der Länge eins.
 
 ![MergeSort Step1](docs/MergeSort_Step1.svg)
 
@@ -1081,7 +1081,7 @@ if __name__ == "__main__":
 <p class="panel-content">
 *Schreiben Sie zunächst die Funktion __startMergeSort(array)__. Diese bekommt einen Array übergeben und definiert den Startpunkt __l__ (Stelle des erstes Elements: 0) und Endpunkt __r__ (Stelle des letzten Elements). Dann übergibt startMergeSort() das eingegebene Array, sowie __l__ und __r__ an die __mergeSort()__ Funktion.*
 
-Der Start- und Endpunkt wird beim Aufruf von mergeSort() immer mit dem Array übergeben, um die jeweilige Teilliste zu definieren, auf die der Algorithmus (**rekursiv**) angewandt werden soll.
+Der Start- und Endpunkt wird beim Aufruf von mergeSort() immer mit dem Array übergeben, um die jeweilige Teilliste zu definieren, auf die der Algorithmus (**[rekursiv](https://perlgeek.de/de/artikel/rekursion)**) angewandt werden soll.
 </p>
 </details>
 
@@ -1116,7 +1116,7 @@ Haben Sie alle Schritte erfolgreich implementiert, sollte mit der Eingabe "[3,7,
 
 ### Grundlegende Idee
 
-QuickSort basiert (ebenso wie MergeSort) auf einer rekursiven Aufteilung, aber hier werden Mischvorgänge vermieden (speicherintensiv!). Die Teillisten werden in zwei Hälften geteilt bezüglich eines Pivot-Elements, wobei in einer Hälfte alle Elemente größer als das Pivot Element sind und in der anderen Hälfte alle kleiner. Das Pivot Element ist ein beliebiges Element der Liste, z.B. das linke, mittlere oder rechte Element. Dieses Vorgehen wird dann rekursiv auf beide Hälften angewandt.
+QuickSort basiert (ebenso wie MergeSort) auf einer [rekursiven](https://perlgeek.de/de/artikel/rekursion) Aufteilung, aber hier werden Mischvorgänge vermieden (speicherintensiv!). Die Teillisten werden in zwei Hälften geteilt bezüglich eines Pivot-Elements, wobei in einer Hälfte alle Elemente größer als das Pivot Element sind und in der anderen Hälfte alle kleiner. Das Pivot Element ist ein beliebiges Element der Liste, z.B. das linke, mittlere oder rechte Element. Dieses Vorgehen wird dann rekursiv auf beide Hälften angewandt.
 
 ### Beispiel
 
@@ -1221,7 +1221,7 @@ if __name__ == "__main__":
 <p class="panel-content">
 *Schreiben Sie zunächst die Funktion __starQuickSort()__. Diese bekommt einen Array übergeben und definiert den Startpunkt __u__ (Stelle des erstes Elements: 0) und Endpunkt __o__ (Stelle des letzten Elements). Dann übergibt startQuickSort() das eingegebene Array, sowie u und o an die __QuickSort()__ Funktion (die in den nächsten Schritten geschrieben wird).*
 
-Der Start- und Endpunkt wird beim Aufruf von quickSort() immer mit dem Array übergeben, um die jeweilige Teilliste zu definieren, auf die der Algorithmus (rekursiv) angewandt werden soll.
+Der Start- und Endpunkt wird beim Aufruf von quickSort() immer mit dem Array übergeben, um die jeweilige Teilliste zu definieren, auf die der Algorithmus ([rekursiv](https://perlgeek.de/de/artikel/rekursion)) angewandt werden soll.
 </p>
 </details>
 
