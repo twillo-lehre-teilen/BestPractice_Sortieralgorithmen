@@ -1141,16 +1141,19 @@ Als nächstes wird je Teilliste ein neues Element als Pivot-Element ausgewählt.
 
 <img src="docs/QuickSort_Step5.svg" alt="QuickSort Step5" width="100%" style="padding-left:14.5%;margin-bottom:12px;">
 
+<!-- style="padding-left:14.5%" -->
 Jetzt wird wieder nach einem kleineren *(links)* und einem größeren *(rechts)* Element gesucht, welche dann markiert und entsprechend getauscht werden.
 
 <img src="docs/QuickSort_Step6.svg" alt="QuickSort Step6" width="100%" style="padding-left:14.5%;margin-bottom:12px;">
 <img src="docs/QuickSort_Step7.svg" alt="QuickSort Step7" width="100%" style="padding-left:14.5%;margin-bottom:12px;">
 
+<!-- style="padding-left:14.5%" -->
 Anschließend wird wieder nach weiteren Elementen gesucht die kleiner bzw. größer sind als das Pivot-Element und getauscht werden müssen. In diesem Fall muss noch ein weiteres mal getauscht werden.
 
 <img src="docs/QuickSort_Step8.svg" alt="QuickSort Step8" width="100%" style="padding-left:14.5%;margin-bottom:12px;">
 <img src="docs/QuickSort_Step9.svg" alt="QuickSort Step9" width="100%" style="padding-left:14.5%;margin-bottom:12px;">
 
+<!-- style="padding-left:14.5%" -->
 Das Element mit dem Schlüssel 5 befindet sich nun auch an seinem entgültigen Platz. Für die beiden daraus entstanden Teillisten wird nun jeweils ein neues Pivot-Element ausgewählt und das gleiche Prozedere wird wiederholt. Dies wird solange getan, bis jedes Element einmal das Pivot-Element war.
 
 <img src="docs/QuickSort_Step10.svg" alt="QuickSort Step10" width="100%" style="padding-left:14.5%;margin-bottom:12px;">
