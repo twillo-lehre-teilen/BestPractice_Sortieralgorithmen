@@ -3,7 +3,7 @@ author:   Stina Schäfer, Lennart Rosseburg für twillo
 
 email:    support.twillo@tib.eu
 
-version:  0.0.1
+version:  1.0.0
 
 language: de
 
@@ -13,12 +13,11 @@ comment:  Eine Selbstlerneinheit mit interaktiven Programmieraufgaben für die g
           Diese Seite ist lizenziert unter der [Lizenz CC-BY-SA (3.0)](https://creativecommons.org/licenses/by-sa/3.0/legalcode).
 
 link:     https://cdn.jsdelivr.net/gh/TorroRosso46/Sortieralgorithmen/custom.css
-          ./custom.css
 
 import:   https://github.com/LiaTemplates/Pyodide/blob/0.1.4/README.md
           https://github.com/LiaScript/CodeRunner/blob/master/README.md
 
-mode:     Presentation
+mode:     Textbook
 
 @eval:  @LIA.eval(`["main.py"]`, `python -m compileall .`, `python main.pyc`)
 -->
@@ -29,7 +28,7 @@ Pyodide:
 -->
 
 # Sortieralgorithmen
-Dieser Kurs basiert auf dem Kapitel "Sortieren" aus dem Kurs "Algorithmen und Datenstrukturen" von Wikiversity, zu finden unter diesem [Link](https://de.wikiversity.org/wiki/Kurs:Algorithmen_und_Datenstrukturen/Vorlesung/Sortieren). Das Kapitel "Grundlagen" enthält außerdem Teile aus "Kurs: Diskrete Mathematik (Osnabrück 2020)/Vorlesung 7" von Wikiversity, zu finden hier: [https://de.wikiversity.org/wiki/Kurs:Diskrete_Mathematik_(Osnabrück_2020)/Vorlesung_7](https://de.wikiversity.org/wiki/Kurs:Diskrete_Mathematik_(Osnabr%C3%BCck_2020%29/Vorlesung_7). Der Kurs ist lizensiert unter der [Lizenz CC-BY-SA (3.0)](https://creativecommons.org/licenses/by-sa/3.0/legalcode).
+Dieser Kurs basiert auf dem Kapitel "Sortieren" aus dem Kurs "Algorithmen und Datenstrukturen" von Wikiversity, zu finden unter diesem [Link](https://de.wikiversity.org/wiki/Kurs:Algorithmen_und_Datenstrukturen/Vorlesung/Sortieren). Das Kapitel "Grundlagen" enthält außerdem Teile aus "Kurs: Diskrete Mathematik (Osnabrück 2020)/Vorlesung 7" von Wikiversity, zu finden hier: <a href="https://de.wikiversity.org/wiki/Kurs:Diskrete_Mathematik_(Osnabrück_2020)/Vorlesung_7">https://de.wikiversity.org/wiki/Kurs:Diskrete_Mathematik_(Osnabr%C3%BCck_2020%29/Vorlesung_7</a>. Der Kurs ist lizensiert unter der [Lizenz CC-BY-SA (3.0)](https://creativecommons.org/licenses/by-sa/3.0/legalcode).
 
 Diese Selbstlerneinheit konzentriert sich auf die Funktionsweise grundlegender Sortieralgorithmen und enthält interaktive Programmiereinheiten um das Gelernte durch eigene Anwendung zu verinnerlichen.
 
@@ -477,7 +476,7 @@ Links von der $2$ stehen nun keine weiteren Elemente mehr zum Vergleichen, also 
 
 ![InsertionSort Step5](docs/InsertionSort_Step5.svg)
 
-$4$ ist kleiner als der Schlüssel des Elements links daneben ($5$), also werden die Elemente getauscht. Der Schlüssel, der dann links neben der $4$ steht ist $2$, $2<4$, es muss also nicht weiter getauscht werden::
+$4$ ist kleiner als der Schlüssel des Elements links daneben ($5$), also werden die Elemente getauscht. Der Schlüssel, der dann links neben der $4$ steht ist $2$, $2<4$, es muss also nicht weiter getauscht werden:
 
 ![InsertionSort Step6](docs/InsertionSort_Step6.svg)
 
@@ -611,7 +610,7 @@ Die Eingabe "3,7,1" sollte nun richtig sortiert als "1,3,7" ausgegeben werden. P
 
 ### Grundlegende Idee
 
-Die Idee dieses Suchalgorithmus ist, den jeweils größten Wert im Array zu suchen und diesen an die letzte Stelle zu tauschen. Anschließend fährt man mit der um 1 kleineren Liste fort.
+Die Idee dieses Suchalgorithmus ist, den jeweils größten Wert im Array zu suchen und diesen an die letzte Stelle zu tauschen. Anschließend fährt man mit der um eins kleineren Liste fort. Es ist natürlich auch möglich die Werte in absteigender Reihenfolge zu sortieren oder jeweils nach dem kleinsten Wert im Array zu suchen und diesen dann an die erste Stelle zu tauschen.
 
 ### Beispiel
 
@@ -635,13 +634,13 @@ Das letzte Element ist jetzt fertig sortiert, also betrachten wir nur noch die L
 
 ![SelectionSort Step4](docs/SelectionSort_Step4.svg)
 
-Als nächstes gehen wir die verkleinerte Liste durch und suchen wieder nach dem größten Schlüssel. Das ist diesmal die 6.
-
 ![SelectionSort Step5](docs/SelectionSort_Step5.svg)
 
-Das Element mit dem Schlüssel 6 steht bereits an der richtigen Stelle, nämlich an der letzten Stelle der Liste. Deshalb muss nichts getauscht werden und wir können die noch zu sortierende Liste wieder verkleinern.
+Als nächstes gehen wir die verkleinerte Liste durch und suchen wieder nach dem größten Schlüssel. Das ist diesmal die 6.
 
 ![SelectionSort Step6](docs/SelectionSort_Step6.svg)
+
+Das Element mit dem Schlüssel 6 steht bereits an der richtigen Stelle, nämlich an der letzten Stelle der Liste. Deshalb muss nichts getauscht werden und wir können die noch zu sortierende Liste wieder verkleinern.
 
 ![SelectionSort Step7](docs/SelectionSort_Step7.svg)
 
@@ -779,7 +778,7 @@ Die Eingabe "[3,4,1,7,2]" sollte nun richtig sortiert als "[1,2,3,4,7]" ausgegeb
 
 ### Grundlegende Idee
 
-Das Grundprinzip ist, die zu sortierende Liste immer wieder zu durchlaufen und dabei benachbarte Elemente, die nicht die gewünschte Sortierreihenfolge haben, zu vertauschen. Das bedeutet bei aufsteigender Sortierung, dass Elemente die größer sind als ihre Nachfolger, diese "überholen". Die Liste wird so oft durchlaufen, bis in einem Durchgang nichts mehr getauscht wurde.
+Das Grundprinzip ist, die zu sortierende Liste immer wieder zu durchlaufen und dabei benachbarte Elemente, die nicht die gewünschte Sortierreihenfolge haben, zu vertauschen. Das bedeutet bei aufsteigender Sortierung, dass Elemente die größer sind als ihre Nachfolger, diese "überholen". Die Liste wird so oft durchlaufen, bis in einem Durchgang nichts mehr getauscht wurde. Wie bei SelectionSort kann auch hier absteigend sortiert werden.
 
 ### Beispiel
 
@@ -1007,7 +1006,7 @@ Die Eingabe "[3,7,1,9,2]" sollte nun richtig sortiert als "[1,2,3,7,9]" ausgegeb
 
 ### Grundlegende Idee
 
-MergeSort ist ein Divide-and-Conquer Algorithmus zum vergleichsbasierten Sortieren. Das heißt, das Problem wird in rekursiv in mehrere Teilprobleme gleichen Typs zerlegt, die dann gelöst und wieder zusammengesetzt werden. Bei MergeSort bedeutet das hier konkret, dass die zu sortierende Folge zuerst in zwei Teile geteilt wird. Anschließend werden beide Teile voneinander getrennt sortiert indem MergeSort selbst auf beide Hälften angewandt wird (Rekursion). Folgen mit mehr als zwei Elementen werden also zunächst wieder geteilt, das eigentliche Sortieren findet erst auf der "untersten Ebene" statt, also wenn es nur noch zwei zu sortierende Elemente gibt. Danach werden die sortierten Teilfolgen wieder zusammengesetzt, logischerweise beginnend bei Folgen der Länge zwei (denn die sind ja als erstes sortiert) und dann immer weiter aufsteigend, bis man alle Teilfolgen wieder vereint hat und die ursprüngliche Liste jetzt in sortierter Form erhält.
+MergeSort ist ein Divide-and-Conquer Algorithmus zum vergleichsbasierten Sortieren. Das heißt, das Problem wird rekursiv in mehrere Teilprobleme gleichen Typs zerlegt, die dann gelöst und wieder zusammengesetzt werden. Bei MergeSort bedeutet das hier konkret, dass die zu sortierende Folge zuerst in zwei Teile geteilt wird. Anschließend werden beide Teile voneinander getrennt sortiert indem MergeSort selbst auf beide Hälften angewandt wird (Rekursion). Folgen mit mehr als einem Element werden also zunächst wieder geteilt. Das eigentliche Sortieren findet erst auf der "untersten Ebene" statt, also wenn es nur noch ein einziges zu sortierendes Element gibt. Danach werden die sortierten Teilfolgen wieder zusammengesetzt, logischerweise beginnend bei Folgen der Länge eins (denn die sind ja bereits automatisch sortiert). Dies wird "Ebene für Ebene" fortgeführt, bis man alle Teilfolgen wieder vereint hat und die ursprüngliche Liste jetzt in sortierter Form erhält.
 
 ### Beispiel
 
@@ -1015,13 +1014,13 @@ Schauen wir uns den Algorithmus einmal Schritt für Schritt an folgendem Beispie
 
 Sei dies eine Reihe zu sortierender Elemente, die Zahlen die zugehörigen Schlüssel, nach denen aufsteigend sortiert werden soll:
 
-Der erste Schritt des Algorithmus ist die Zerlegung der zu sortierenden Liste in zwei Teile, sofern die Liste mehr als zwei Elemente besitzt. Dann wird der Algorithmus rekursiv auf den beiden Teillisten aufgerufen. So erhalten wir zunächst eine Zerlegung der ursprünglichen Liste in sortierte Teillisten der Länge eins.
+Der erste Schritt des Algorithmus ist die Zerlegung der zu sortierenden Liste in zwei Teile, sofern die Liste mehr als ein Element besitzt. Dann wird der Algorithmus rekursiv auf den beiden Teillisten aufgerufen. So erhalten wir zunächst eine Zerlegung der ursprünglichen Liste in sortierte Teillisten der Länge eins.
 
 ![MergeSort Step1](docs/MergeSort_Step1.svg)
 
 Nach der Zerlegung folgt das Zusammenfügen der Teillisten. Dabei geht man in der umgekehrten Reihenfolge vor wie beim Zerlegen, d.h. die zuletzt zerlegte Teilliste wird als erstes wieder zusammengefügt.
 
-Zunächst werden also die einelementigen Listen durch vergleichen der Schlüssel zu einer größeren, sortierten Liste zusammengefügt, die dann wieder mit weiteren Teillisten sortiert zusammengefügt wird usw. Am Ende erhält man dadurch die ursprüngliche Liste in sortierter Form.
+Zunächst werden also die einelementigen Listen durch vergleichen der Schlüssel zu einer größeren, sortierten Liste zusammengefügt. Durch das rekursive Aufrufen des Algorithmus auf die jeweligen Teillisten findet dieses zusammenfügen parallel in allen "Verzweigungen" statt. Die jeweils daraus entstehende Liste wird dann weiter mit der nächsten Teilliste sortiert zusammengefügt. Dies wird solange fortgeführt, bis man am Ende dadurch die ursprüngliche Liste in sortierter Form erhält.
 
 ![MergeSort Step2](docs/MergeSort_Step2.svg)
 
@@ -1090,7 +1089,7 @@ Der Start- und Endpunkt wird beim Aufruf von mergeSort() immer mit dem Array üb
 <summary class="button">**Schritt 2:**</summary>
 
 <p class="panel-content">
-*Schreiben Sie als nächstes die Funktion __mergeSort()__, die einen Array, sowie den Startpunkt __l__ und Endpunkt __r__ des zu sortierenden Abschnitts übergeben bekommt. Wenn __l__ kleiner als __r__ ist, soll die Mitte __m__ des betrachteten Arrayabschnitts bestimmt und dann mergeSort() rekursiv auf jeweils die Hälften des Abschnitts angewandt werden. Danach sollen die beiden Hälften mit __l__, __m__ und __r__ an die Funktion __merge()__ übergeben werden.*
+*Schreiben Sie als nächstes die Funktion __mergeSort()__, die einen Array, sowie den Startpunkt __l__ und Endpunkt __r__ des zu sortierenden Abschnitts übergeben bekommt. Wenn __l__ kleiner als __r__ ist, soll die Mitte __m__ des betrachteten Arrayabschnitts bestimmt und dann mergeSort() __rekursiv__ auf jeweils die Hälften des Abschnitts angewandt werden. Danach sollen die beiden Hälften mit __l__, __m__ und __r__ an die Funktion __merge()__ übergeben werden.*
 </p>
 </details>
 
@@ -1131,27 +1130,37 @@ Wir wählen das Element in der Mitte als Pivot-Element aus, also in diesem Fall 
 
 <img src="docs/QuickSort_Step2.svg" alt="QuickSort Step2" width="100%" style="margin-bottom:12px;">
 
-Nun werden die Elemente links des Pivot-Elements der Reihe nach durchsucht, wenn ein Element mit größerem Schlüssel als der des Pivot-Elements gefunden wird, wird dieses markiert (in unserem Beispiel orange). Auf der rechten Seite des Pivot-Elements wird das gleiche gemacht, nur das hier solange gesucht wird bis ein Element mit kleinerem Schlüssel gefunden wurde. Wurde kein Element gefunden, wird das Pivot-Element markiert. Die beiden markierten Elemente werden getauscht.
+Nun werden die Elemente links des Pivot-Elements der Reihe nach durchsucht, wenn ein Element mit größerem Schlüssel als der des Pivot-Elements gefunden wird, wird dieses markiert (in unserem Beispiel orange). Auf der rechten Seite des Pivot-Elements wird das gleiche gemacht, nur das hier solange gesucht wird bis ein Element mit kleinerem Schlüssel gefunden wurde. Hierbei ist zu beachten, dass stets nur nach dem ersten Element gesucht wird, welches kleiner bzw. größer als das Pivot-Element ist. Wurde kein Element gefunden, wird das Pivot-Element markiert. Die beiden markierten Elemente werden getauscht.
 
 <img src="docs/QuickSort_Step3.svg" alt="QuickSort Step3" width="100%" style="margin-bottom:12px;">
 <img src="docs/QuickSort_Step4.svg" alt="QuickSort Step4" width="100%" style="margin-bottom:12px;">
 
-Anschließend wird nach weiteren Elementen gesucht die kleiner bzw. größer sind als das Pivot-Element und getauscht werden müssen. In diesem Fall ist das nicht mehr nötig.
+Anschließend wird nach weiteren Elementen gesucht die kleiner bzw. größer sind als das Pivot-Element und getauscht werden müssen. In diesem Fall ist das nicht mehr nötig.Der erste Durchlauf ist damit abgeschlossen. Das Pivot-Element befindet sich jetzt an seiner entgültigen Stelle und muss im weiteren Verlauf nicht weiter betrachtet werden.
 
-Der erste Durchlauf ist damit abgeschlossen. Das Pivot-Element befindet sich jetzt an seiner entgültigen Stelle und muss im weiteren Verlauf nicht weiter betrachtet werden.
-
-Dieses Prozedere wird nun solange wiederholt, bis jedes Element einmal das Pivot-Element war.
+Als nächstes wird je Teilliste ein neues Element als Pivot-Element ausgewählt. Da das zuvorige Pivot-Element den Schlüssel 1 hatte und somit am Rande der Liste steht, gibt es in diesem Fall nur eine Teilliste. Für diese wird das Element mit dem Schlüssel 5 als Pivot-Element ausgewählt.
 
 <img src="docs/QuickSort_Step5.svg" alt="QuickSort Step5" width="100%" style="padding-left:14.5%;margin-bottom:12px;">
+
+<!-- style="padding-left:14.5%" -->
+Jetzt wird wieder nach einem kleineren *(links)* und einem größeren *(rechts)* Element gesucht, welche dann markiert und entsprechend getauscht werden.
+
 <img src="docs/QuickSort_Step6.svg" alt="QuickSort Step6" width="100%" style="padding-left:14.5%;margin-bottom:12px;">
 <img src="docs/QuickSort_Step7.svg" alt="QuickSort Step7" width="100%" style="padding-left:14.5%;margin-bottom:12px;">
+
+<!-- style="padding-left:14.5%" -->
+Anschließend wird wieder nach weiteren Elementen gesucht die kleiner bzw. größer sind als das Pivot-Element und getauscht werden müssen. In diesem Fall muss noch ein weiteres mal getauscht werden.
+
 <img src="docs/QuickSort_Step8.svg" alt="QuickSort Step8" width="100%" style="padding-left:14.5%;margin-bottom:12px;">
 <img src="docs/QuickSort_Step9.svg" alt="QuickSort Step9" width="100%" style="padding-left:14.5%;margin-bottom:12px;">
+
+<!-- style="padding-left:14.5%" -->
+Das Element mit dem Schlüssel 5 befindet sich nun auch an seinem entgültigen Platz. Für die beiden daraus entstanden Teillisten wird nun jeweils ein neues Pivot-Element ausgewählt und das gleiche Prozedere wird wiederholt. Dies wird solange getan, bis jedes Element einmal das Pivot-Element war.
+
 <img src="docs/QuickSort_Step10.svg" alt="QuickSort Step10" width="100%" style="padding-left:14.5%;margin-bottom:12px;">
 <img src="docs/QuickSort_Step11.svg" alt="QuickSort Step11" width="100%" style="padding-left:14.5%;margin-bottom:12px;">
 <img src="docs/QuickSort_Step12-14.svg" alt="QuickSort Step12-14" width="100%" style="padding-left:14.5%;margin-bottom:12px;">
 
-Zum Abschluss werden alle einzelnen Elemente wieder zu einer vollständigen Liste zusammengefügt, welche jetzt sortiert ist.
+Da jetzt alle Elemente schon an Ihrer entgültigen Position stehen, müssen sie zum Abschluss nur noch wieder zu einer vollständigen Liste zusammengefügt werden.
 
 <img src="docs/QuickSort_Step15.svg" alt="QuickSort Step15" width="100%" style="margin-bottom:12px;">
 
