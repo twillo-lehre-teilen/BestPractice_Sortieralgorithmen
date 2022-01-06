@@ -476,7 +476,7 @@ Links von der $2$ stehen nun keine weiteren Elemente mehr zum Vergleichen, also 
 
 ![InsertionSort Step5](docs/InsertionSort_Step5.svg)
 
-$4$ ist kleiner als der Schlüssel des Elements links daneben ($5$), also werden die Elemente getauscht. Der Schlüssel, der dann links neben der $4$ steht ist $2$, $2<4$, es muss also nicht weiter getauscht werden::
+$4$ ist kleiner als der Schlüssel des Elements links daneben ($5$), also werden die Elemente getauscht. Der Schlüssel, der dann links neben der $4$ steht ist $2$, $2<4$, es muss also nicht weiter getauscht werden:
 
 ![InsertionSort Step6](docs/InsertionSort_Step6.svg)
 
@@ -1006,7 +1006,7 @@ Die Eingabe "[3,7,1,9,2]" sollte nun richtig sortiert als "[1,2,3,7,9]" ausgegeb
 
 ### Grundlegende Idee
 
-MergeSort ist ein Divide-and-Conquer Algorithmus zum vergleichsbasierten Sortieren. Das heißt, das Problem wird in rekursiv in mehrere Teilprobleme gleichen Typs zerlegt, die dann gelöst und wieder zusammengesetzt werden. Bei MergeSort bedeutet das hier konkret, dass die zu sortierende Folge zuerst in zwei Teile geteilt wird. Anschließend werden beide Teile voneinander getrennt sortiert indem MergeSort selbst auf beide Hälften angewandt wird (Rekursion). Folgen mit mehr als zwei Elementen werden also zunächst wieder geteilt, das eigentliche Sortieren findet erst auf der "untersten Ebene" statt, also wenn es nur noch zwei zu sortierende Elemente gibt. Danach werden die sortierten Teilfolgen wieder zusammengesetzt, logischerweise beginnend bei Folgen der Länge zwei (denn die sind ja als erstes sortiert) und dann immer weiter aufsteigend, bis man alle Teilfolgen wieder vereint hat und die ursprüngliche Liste jetzt in sortierter Form erhält.
+MergeSort ist ein Divide-and-Conquer Algorithmus zum vergleichsbasierten Sortieren. Das heißt, das Problem wird rekursiv in mehrere Teilprobleme gleichen Typs zerlegt, die dann gelöst und wieder zusammengesetzt werden. Bei MergeSort bedeutet das hier konkret, dass die zu sortierende Folge zuerst in zwei Teile geteilt wird. Anschließend werden beide Teile voneinander getrennt sortiert indem MergeSort selbst auf beide Hälften angewandt wird (Rekursion). Folgen mit mehr als zwei Elementen werden also zunächst wieder geteilt, das eigentliche Sortieren findet erst auf der "untersten Ebene" statt, also wenn es nur noch zwei zu sortierende Elemente gibt. Danach werden die sortierten Teilfolgen wieder zusammengesetzt, logischerweise beginnend bei Folgen der Länge zwei (denn die sind ja als erstes sortiert) und dann immer weiter aufsteigend, bis man alle Teilfolgen wieder vereint hat und die ursprüngliche Liste jetzt in sortierter Form erhält.
 
 ### Beispiel
 
@@ -1014,13 +1014,13 @@ Schauen wir uns den Algorithmus einmal Schritt für Schritt an folgendem Beispie
 
 Sei dies eine Reihe zu sortierender Elemente, die Zahlen die zugehörigen Schlüssel, nach denen aufsteigend sortiert werden soll:
 
-Der erste Schritt des Algorithmus ist die Zerlegung der zu sortierenden Liste in zwei Teile, sofern die Liste mehr als zwei Elemente besitzt. Dann wird der Algorithmus rekursiv auf den beiden Teillisten aufgerufen. So erhalten wir zunächst eine Zerlegung der ursprünglichen Liste in sortierte Teillisten der Länge eins.
+Der erste Schritt des Algorithmus ist die Zerlegung der zu sortierenden Liste in zwei Teile, sofern die Liste mehr als ein Element besitzt. Dann wird der Algorithmus rekursiv auf den beiden Teillisten aufgerufen. So erhalten wir zunächst eine Zerlegung der ursprünglichen Liste in sortierte Teillisten der Länge eins.
 
 ![MergeSort Step1](docs/MergeSort_Step1.svg)
 
 Nach der Zerlegung folgt das Zusammenfügen der Teillisten. Dabei geht man in der umgekehrten Reihenfolge vor wie beim Zerlegen, d.h. die zuletzt zerlegte Teilliste wird als erstes wieder zusammengefügt.
 
-Zunächst werden also die einelementigen Listen durch vergleichen der Schlüssel zu einer größeren, sortierten Liste zusammengefügt, die dann wieder mit weiteren Teillisten sortiert zusammengefügt wird usw. Am Ende erhält man dadurch die ursprüngliche Liste in sortierter Form.
+Zunächst werden also die einelementigen Listen durch vergleichen der Schlüssel zu einer größeren, sortierten Liste zusammengefügt. Durch das rekursive Aufrufen des Algorithmus auf die jeweligen Teillisten findet dieses zusammenfügen parallel in allen "Verzweigungen" statt. Die jeweils daraus entstehende Liste wird dann weiter mit der nächsten Teilliste sortiert zusammengefügt. Dies wird solange fortgeführt, bis man am Ende dadurch die ursprüngliche Liste in sortierter Form erhält.
 
 ![MergeSort Step2](docs/MergeSort_Step2.svg)
 
