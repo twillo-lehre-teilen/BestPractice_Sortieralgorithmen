@@ -32,12 +32,10 @@ Dieser Kurs basiert auf dem Kapitel "Sortieren" aus dem Kurs "Algorithmen und Da
 
 Diese Selbstlerneinheit konzentriert sich auf die Funktionsweise grundlegender Sortieralgorithmen und enthält interaktive Programmiereinheiten um das Gelernte durch eigene Anwendung zu verinnerlichen.
 
-<!--  style = "background-color: #A6D492; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
-<div>
-  **Ziel des Kurses:**
-
-  Am Ende dieser Selbstlerneinheit sollten Sie die vorgestellten Sortieralgorithmen unterscheiden, in den Kontext von Sortierungsproblemen in der Informatik einordnen und selbst anwenden können.
-</div>
+<!--  style="background-color:#A6D492;" -->
+> **Ziel des Kurses:**
+>
+> Am Ende dieser Selbstlerneinheit sollten Sie die vorgestellten Sortieralgorithmen unterscheiden, in den Kontext von Sortierungsproblemen in der Informatik einordnen und selbst anwenden können.
 
 ## Grundlagen
 
@@ -45,48 +43,40 @@ Diese Lektion gibt eine grundlegende Einführung in das Thema Sortieren und Sort
 
 #### Ordnungen und Schlüssel
 
-<!--  style = "background-color: #A6D492; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
-<div>
-  **Ziel dieses Kapitels:**
-
-  Dieses Kapitel soll Sie in die Lage versetzen Sortieren als Problem in der Informatik beschreiben und einordnen zu können. Sie sollten verstanden haben was eine Ordnung und was Schlüssel sind und welche Rolle sie beim Sortieren spielen.
-</div>
+<!--  style="background-color:#A6D492;" -->
+> **Ziel dieses Kapitels:**
+>
+> Dieses Kapitel soll Sie in die Lage versetzen Sortieren als Problem in der Informatik beschreiben und einordnen zu können. Sie sollten verstanden haben was eine Ordnung und was Schlüssel sind und welche Rolle sie beim Sortieren spielen.
 
 Um die Elemente einer Menge zu sortieren, müssen wir diese miteinander vergleichen können. Dies erreichen wir, indem wir eine Ordnung auf den zu sortierenden Elementen definieren. Ein einfaches und häufig genutztes Beispiel für eine Ordnung ist das übliche $\leq$ auf den natürlichen Zahlen.
 
-<!--  style = "background-color: #F0F2F6; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
-<div>
-**Ordnung**
-
-Eine Relation $\leq$ auf einer Menge $I$ heißt Ordnungsrelation oder Ordnung, wenn folgende drei Bedingungen erfüllt sind:
-
-- Reflexivität: $x \leq x$ $\forall x \in I$
-- Transitivität: $x \leq y \land y \leq z \to x \leq z$ $ \forall x,y,z \in I$
-- Antisymmetrie: $x \leq y \land y \leq x \to x = y$ $ \forall x,y \in I $
-</div>
+<!--  style="background-color:#F0F2F6;" -->
+> **Ordnung**
+>
+> Eine Relation $\leq$ auf einer Menge $I$ heißt Ordnungsrelation oder Ordnung, wenn folgende drei Bedingungen erfüllt sind:
+>
+> - Reflexivität: $x \leq x$ $\forall x \in I$
+> - Transitivität: $x \leq y \land y \leq z \to x \leq z$ $ \forall x,y,z \in I$
+> - Antisymmetrie: $x \leq y \land y \leq x \to x = y$ $ \forall x,y \in I $
 
 Weitere nützliche Begriffe im Zusammenhang mit Ordnungen sind:
 
-<!--  style = "background-color: #F0F2F6; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
-<div>
-**Strikter Anteil einer Ordnungsrelation $\leq$**
+<!--  style="background-color:#F0F2F6;" -->
+> **Strikter Anteil einer Ordnungsrelation $\leq$**
+>
+> $x < y := x \leq y \land x \neq y$
 
-$x < y := x \leq y \land x \neq y$
-</div>
+<!--  style="background-color:#F0F2F6;" -->
+> **Totale Ordnung**
+>
+> Eine Ordnungsrelation $\leq$ auf einer Menge $I$ heißt totale Ordnung (oder lineare Ordnung), wenn zu je zwei Elementen $x,y \in I$ die Beziehung $x\leq y$ oder $y\leq x$ gilt.
+>
+> Man sagt auch, dass bei einer linearen Ordnung je zwei Elemente vergleichbar sind.
 
-<!--  style = "background-color: #F0F2F6; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
-<div>
-**Totale Ordnung**
-
-
-Eine Ordnungsrelation $\leq$ auf einer Menge $I$ heißt totale Ordnung (oder lineare Ordnung), wenn zu je zwei Elementen $x,y \in I$ die Beziehung $x\leq y$ oder $y\leq x$ gilt.
-
-Man sagt auch, dass bei einer linearen Ordnung je zwei Elemente vergleichbar sind.
-</div>
-
-**Schlüssel**
-
-Da die zu sortierenden Elemente alles mögliche und damit oft schwer zu vergleichen sein können, verwendet man Schlüssel. Jedes Element hat einen festen Schlüssel (häufig ganze Zahlen) und die Ordnung wird dann auf den Schlüsseln definiert. Ein Beispiel hierfür sind Chipnummern für Haustiere, die ohne diese Nummern wohl schwer zu sortieren wären. Ein anderes Beispiel wäre die Mitgliederliste eines Schachvereins, die ihre Mitglieder nach Nachnamen sortiert auflistet. Der Schlüssel ist hierbei jeweils der Nachname der Person, die Ordnung die alphabetische Ordnung.
+<!--  style="background-color:#F0F2F6;" -->
+> **Schlüssel**
+>
+> Da die zu sortierenden Elemente alles mögliche und damit oft schwer zu vergleichen sein können, verwendet man Schlüssel. Jedes Element hat einen festen Schlüssel (häufig ganze Zahlen) und die Ordnung wird dann auf den Schlüsseln definiert. Ein Beispiel hierfür sind Chipnummern für Haustiere, die ohne diese Nummern wohl schwer zu sortieren wären. Ein anderes Beispiel wäre die Mitgliederliste eines Schachvereins, die ihre Mitglieder nach Nachnamen sortiert auflistet. Der Schlüssel ist hierbei jeweils der Nachname der Person, die Ordnung die alphabetische Ordnung.
 
 #### Sortieralgorithmen - Problembeschreibung
 
@@ -96,17 +86,16 @@ Die Sortierung erfolgt anhand eines Schlüssels, z.B. ganzen Zahlen. Jedes zu so
 
 #### Quiz
 
-<!--  style = "background-color: lightblue; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
-<div>
-**Bedienungsanleitung des Quiz:**
+<!-- style="background-color:lightblue;" -->
+> **Bedienungsanleitung des Quiz:**
+>
+> Damit beim Quiz Ihr Punktestand berechnet werden kann, müssen folgende Schritte absolviert werden:
+>
+> 1. Führen Sie den Code-Block mit der Beschriftung <b>"Ausführen zur Punkteberechnung"</b> aus. Dafür müssen Sie den kleinen Button links unterhalb des Code-Blocks anklicken.
+> 2. Um das Quiz zu starten klicken Sie auf den Button <b>"Quiz starten!"</b>.
+> 3. Beantworten Sie nun alle Fragen im Quiz.
+> 4. Um das Quiz zu beenden klicken Sie auf den Button <b>"Quiz beenden!"</b>. Ihr Endpunktestand wird Ihnen unterhalb des Code-Blocks mitgeteilt.
 
-Damit beim Quiz Ihr Punktestand berechnet werden kann, müssen folgende Schritte absolviert werden:
-
-1. Führen Sie den Code-Block mit der Beschriftung <b>"Ausführen zur Punkteberechnung"</b> aus. Dafür müssen Sie den kleinen Button links unterhalb des Code-Blocks anklicken.
-2. Um das Quiz zu starten klicken Sie auf den Button <b>"Quiz starten!"</b>.
-3. Beantworten Sie nun alle Fragen im Quiz.
-4. Um das Quiz zu beenden klicken Sie auf den Button <b>"Quiz beenden!"</b>. Ihr Endpunktestand wird Ihnen unterhalb des Code-Blocks mitgeteilt.
-</div>
 
 <lia-keep>
 <button type="button" id="start" class="quiz">Quiz starten!</button>
@@ -245,16 +234,14 @@ send.register("q9", function(e){
 </div>
 </lia-keep>
 
-<!--  style = "background-color: #A6D492; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
-<div>
-<b>Punktevergabe:</b>
-<br>
-
-- Für jede richtige Antwort gibt es einen Punkt.
-- Für jede falsche Antwort (<b>pro Versuch</b>) wird ein Punkt abgezogen.
-
-Es können <b>maximal 9 Punkte</b> erzielt werden. Dies ist nur möglich, wenn jede Frage mit dem <b>1. Versuch</b> richtig beantwortet wird!
-</div>
+<!--  style="background-color: #A6D492;" -->
+> <b>Punktevergabe:</b>
+> <br>
+>
+> - Für jede richtige Antwort gibt es einen Punkt.
+> - Für jede falsche Antwort (<b>pro Versuch</b>) wird ein Punkt abgezogen.
+>
+> Es können <b>maximal 9 Punkte</b> erzielt werden. Dies ist nur möglich, wenn jede Frage mit dem <b>1. Versuch</b> richtig beantwortet wird!
 
 **Schreiben Sie die richtige Antwort in die vorgegebenen Textfelder. Achten Sie dabei auf Gross- und Kleinschreibung.**
 
@@ -443,12 +430,10 @@ Es können <b>maximal 9 Punkte</b> erzielt werden. Dies ist nur möglich, wenn j
 
 ## InsertionSort
 
-<!--  style = "background-color: #A6D492; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
-<div>
-  **Ziel dieses Kapitels:**
-
-  Nach diesem Kapitel sollten Sie die Vorgehensweise von InsertionSort verstanden haben, sowie die einzelnen Schritte benennen und anwenden können. Außerdem sollten Sie in der Lage sein den Algorithmus schrittweise zu implementieren.
-</div>
+<!--  style="background-color:#A6D492;" -->
+> **Ziel dieses Kapitels:**
+>
+> Nach diesem Kapitel sollten Sie die Vorgehensweise von InsertionSort verstanden haben, sowie die einzelnen Schritte benennen und anwenden können. Außerdem sollten Sie in der Lage sein den Algorithmus schrittweise zu implementieren.
 
 #### Grundlegende Idee
 
@@ -524,23 +509,19 @@ In diesem Kapitel werden Sie den Algorithmus selber schrittweise in Python imple
 
 Falls Sie Hilfe beim Einstieg in Python brauchen, finden Sie diese z.B. [hier](https://learnxinyminutes.com/docs/de-de/python-de/), falls es ganz schnell gehen muss oder [hier](https://www.python-lernen.de/), falls es etwas ausführlicher sein soll.
 
-<!--  style = "background-color: #A6D492; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
-<div>
-  **Ziel dieses Kapitels:**
-
-  Nach diesem Kapitel sollten Sie in der Lage sein, einen Algorithmus für InsertionSort selbstständig zu implementieren.
-</div>
+<!--  style="background-color:#A6D492;" -->
+> **Ziel dieses Kapitels:**
+>
+>Nach diesem Kapitel sollten Sie in der Lage sein, einen Algorithmus für InsertionSort selbstständig zu implementieren.
 
 ##### Code
 
-<!--  style = "background-color: lightblue; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
-<div>
-**Bedienungsanleitung des Code-Blocks:**
-
-- Zum ausführen des Codes müssen Sie den Button links unterhalb des Code-Blocks anklicken. Dadurch wird der gesamte Inhalt kompiliert und ausgeführt. Falls Sie anschließend Änderungen an Ihrem Code vornehmen, müssen Sie darauf achten den Button erneut anzuklicken, damit diese gespeichert und neu kompiliert werden.
-
-- Mithilfe der Pfeiltasten rechts unterhalb des Blocks können Sie zwischen Ihren Speicherständen vor und zurück wechseln, um ggf. Änderungen rückgängig zu machen oder ältere Zustände wiederherzustellen.
-</div>
+<!-- style="background-color:lightblue;" -->
+> **Bedienungsanleitung des Code-Blocks:**
+>
+> - Zum ausführen des Codes müssen Sie den Button links unterhalb des Code-Blocks anklicken. Dadurch wird der gesamte Inhalt kompiliert und ausgeführt. Falls Sie anschließend Änderungen an Ihrem Code vornehmen, müssen Sie darauf achten den Button erneut anzuklicken, damit diese gespeichert und neu kompiliert werden.
+>
+>- Mithilfe der Pfeiltasten rechts unterhalb des Blocks können Sie zwischen Ihren Speicherständen vor und zurück wechseln, um ggf. Änderungen rückgängig zu machen oder ältere Zustände wiederherzustellen.
 
 <!-- data-readOnly="false" -->
 ``` python
@@ -560,7 +541,6 @@ if __name__ == "__main__":
     print "Sortierte Liste: ", sorted
 ```
 @LIA.eval(`["InsertionSort.py", "main.py"]`, `python -m compileall .`, `python main.pyc`)
-
 
 <details class="panel">
 <summary class="button">**Schritt 1:**</summary>
@@ -601,12 +581,10 @@ Die Eingabe "3,7,1" sollte nun richtig sortiert als "1,3,7" ausgegeben werden. P
 
 ## SelectionSort
 
-<!--  style = "background-color: #A6D492; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
-<div>
-  **Ziel dieses Kapitels:**
-
-  Nach diesem Kapitel sollten Sie die Vorgehensweise von SelectionSort verstanden haben, sowie die einzelnen Schritte benennen und anwenden können. Außerdem sollten Sie in der Lage sein den Algorithmus schrittweise zu implementieren.
-</div>
+<!--  style="background-color:#A6D492;" -->
+> **Ziel dieses Kapitels:**
+>
+>Nach diesem Kapitel sollten Sie die Vorgehensweise von SelectionSort verstanden haben, sowie die einzelnen Schritte benennen und anwenden können. Außerdem sollten Sie in der Lage sein den Algorithmus schrittweise zu implementieren.
 
 ### Grundlegende Idee
 
@@ -682,24 +660,19 @@ In diesem Kapitel werden Sie den Algorithmus selber schrittweise in Python imple
 
 Falls Sie Hilfe beim Einstieg in Python brauchen, finden Sie diese z.B. [hier](https://learnxinyminutes.com/docs/de-de/python-de/), falls es ganz schnell gehen muss oder [hier](https://www.python-lernen.de/), falls es etwas ausführlicher sein soll.
 
-<!--  style = "background-color: #A6D492; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
-<div>
-  **Ziel dieses Kapitels:**
-
-  Nach diesem Kapitel sollten Sie in der Lage sein, einen Algorithmus für SelectionSort selbstständig zu implementieren.
-</div>
-
+<!--  style="background-color:#A6D492;" -->
+> **Ziel dieses Kapitels:**
+>
+> Nach diesem Kapitel sollten Sie in der Lage sein, einen Algorithmus für SelectionSort selbstständig zu implementieren.
 
 #### Code
 
-<!--  style = "background-color: lightblue; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
-<div>
-**Bedienungsanleitung des Code-Blocks:**
-
-- Zum ausführen des Codes müssen Sie den Button links unterhalb des Code-Blocks anklicken. Dadurch wird der gesamte Inhalt kompiliert und ausgeführt. Falls Sie anschließend Änderungen an Ihrem Code vornehmen, müssen Sie darauf achten den Button erneut anzuklicken, damit diese gespeichert und neu kompiliert werden.
-
-- Mithilfe der Pfeiltasten rechts unterhalb des Blocks können Sie zwischen Ihren Speicherständen vor und zurück wechseln, um ggf. Änderungen rückgängig zu machen oder ältere Zustände wiederherzustellen.
-</div>
+<!-- style="background-color:lightblue;" -->
+> **Bedienungsanleitung des Code-Blocks:**
+>
+> - Zum ausführen des Codes müssen Sie den Button links unterhalb des Code-Blocks anklicken. Dadurch wird der gesamte Inhalt kompiliert und ausgeführt. Falls Sie anschließend Änderungen an Ihrem Code vornehmen, müssen Sie darauf achten den Button erneut anzuklicken, damit diese gespeichert und neu kompiliert werden.
+>
+> - Mithilfe der Pfeiltasten rechts unterhalb des Blocks können Sie zwischen Ihren Speicherständen vor und zurück wechseln, um ggf. Änderungen rückgängig zu machen oder ältere Zustände wiederherzustellen.
 
 <!-- data-readOnly="false" -->
 ``` python
@@ -769,12 +742,10 @@ Die Eingabe "[3,4,1,7,2]" sollte nun richtig sortiert als "[1,2,3,4,7]" ausgegeb
 
 ## BubbleSort
 
-<!--  style = "background-color: #A6D492; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
-<div>
-  **Ziel dieses Kapitels:**
-
-  Nach diesem Kapitel sollten Sie die Vorgehensweise von BubbleSort verstanden haben, sowie die einzelnen Schritte benennen und anwenden können. Außerdem sollten Sie in der Lage sein den Algorithmus schrittweise zu implementieren.
-</div>
+<!--  style="background-color:#A6D492;" -->
+> **Ziel dieses Kapitels:**
+>
+> Nach diesem Kapitel sollten Sie die Vorgehensweise von BubbleSort verstanden haben, sowie die einzelnen Schritte benennen und anwenden können. Außerdem sollten Sie in der Lage sein den Algorithmus schrittweise zu implementieren.
 
 ### Grundlegende Idee
 
@@ -910,23 +881,19 @@ In diesem Kapitel werden Sie den Algorithmus selber schrittweise in Python imple
 
 Falls Sie Hilfe beim Einstieg in Python brauchen, finden Sie diese z.B. [hier](https://learnxinyminutes.com/docs/de-de/python-de/), falls es ganz schnell gehen muss oder [hier](https://www.python-lernen.de/), falls es etwas ausführlicher sein soll.
 
-<!--  style = "background-color: #A6D492; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
-<div>
-  **Ziel dieses Kapitels:**
-
-  Nach diesem Kapitel sollten Sie in der Lage sein, einen Algorithmus für BubbleSort selbstständig zu implementieren.
-</div>
+<!--  style="background-color:#A6D492;" -->
+> **Ziel dieses Kapitels:**
+>
+> Nach diesem Kapitel sollten Sie in der Lage sein, einen Algorithmus für BubbleSort selbstständig zu implementieren.
 
 #### Code
 
-<!--  style = "background-color: lightblue; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
-<div>
-**Bedienungsanleitung des Code-Blocks:**
-
-- Zum ausführen des Codes müssen Sie den Button links unterhalb des Code-Blocks anklicken. Dadurch wird der gesamte Inhalt kompiliert und ausgeführt. Falls Sie anschließend Änderungen an Ihrem Code vornehmen, müssen Sie darauf achten den Button erneut anzuklicken, damit diese gespeichert und neu kompiliert werden.
-
-- Mithilfe der Pfeiltasten rechts unterhalb des Blocks können Sie zwischen Ihren Speicherständen vor und zurück wechseln, um ggf. Änderungen rückgängig zu machen oder ältere Zustände wiederherzustellen.
-</div>
+<!-- style="background-color:lightblue;" -->
+> **Bedienungsanleitung des Code-Blocks:**
+>
+> - Zum ausführen des Codes müssen Sie den Button links unterhalb des Code-Blocks anklicken. Dadurch wird der gesamte Inhalt kompiliert und ausgeführt. Falls Sie anschließend Änderungen an Ihrem Code vornehmen, müssen Sie darauf achten den Button erneut anzuklicken, damit diese gespeichert und neu kompiliert werden.
+>
+> - Mithilfe der Pfeiltasten rechts unterhalb des Blocks können Sie zwischen Ihren Speicherständen vor und zurück wechseln, um ggf. Änderungen rückgängig zu machen oder ältere Zustände wiederherzustellen.
 
 <!-- data-readOnly="false" -->
 ``` python
@@ -997,12 +964,10 @@ Die Eingabe "[3,7,1,9,2]" sollte nun richtig sortiert als "[1,2,3,7,9]" ausgegeb
 
 ## MergeSort
 
-<!--  style = "background-color: #A6D492; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
-<div>
-  **Ziel dieses Kapitels:**
-
-  Nach diesem Kapitel sollten Sie die Vorgehensweise von MergeSort verstanden haben, sowie die einzelnen Schritte benennen und anwenden können. Außerdem sollten Sie in der Lage sein den Algorithmus schrittweise zu implementieren.
-</div>
+<!--  style="background-color:#A6D492;" -->
+> **Ziel dieses Kapitels:**
+>
+> Nach diesem Kapitel sollten Sie die Vorgehensweise von MergeSort verstanden haben, sowie die einzelnen Schritte benennen und anwenden können. Außerdem sollten Sie in der Lage sein den Algorithmus schrittweise zu implementieren.
 
 ### Grundlegende Idee
 
@@ -1030,23 +995,19 @@ In diesem Kapitel werden Sie den Algorithmus selber schrittweise in Python imple
 
 Falls Sie Hilfe beim Einstieg in Python brauchen, finden Sie diese z.B. [hier](https://learnxinyminutes.com/docs/de-de/python-de/), falls es ganz schnell gehen muss oder [hier](https://www.python-lernen.de/), falls es etwas ausführlicher sein soll.
 
-<!--  style = "background-color: #A6D492; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
-<div>
-  **Ziel dieses Kapitels:**
-
-  Nach diesem Kapitel sollten Sie in der Lage sein, einen Algorithmus für MergeSort selbstständig zu implementieren.
-</div>
+<!--  style="background-color:#A6D492;" -->
+> **Ziel dieses Kapitels:**
+>
+> Nach diesem Kapitel sollten Sie in der Lage sein, einen Algorithmus für MergeSort selbstständig zu implementieren.
 
 #### Code
 
-<!--  style = "background-color: lightblue; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
-<div>
-**Bedienungsanleitung des Code-Blocks:**
-
-- Zum ausführen des Codes müssen Sie den Button links unterhalb des Code-Blocks anklicken. Dadurch wird der gesamte Inhalt kompiliert und ausgeführt. Falls Sie anschließend Änderungen an Ihrem Code vornehmen, müssen Sie darauf achten den Button erneut anzuklicken, damit diese gespeichert und neu kompiliert werden.
-
-- Mithilfe der Pfeiltasten rechts unterhalb des Blocks können Sie zwischen Ihren Speicherständen vor und zurück wechseln, um ggf. Änderungen rückgängig zu machen oder ältere Zustände wiederherzustellen.
-</div>
+<!-- style="background-color:lightblue;" -->
+> **Bedienungsanleitung des Code-Blocks:**
+>
+> - Zum ausführen des Codes müssen Sie den Button links unterhalb des Code-Blocks anklicken. Dadurch wird der gesamte Inhalt kompiliert und ausgeführt. Falls Sie anschließend Änderungen an Ihrem Code vornehmen, müssen Sie darauf achten den Button erneut anzuklicken, damit diese gespeichert und neu kompiliert werden.
+>
+> - Mithilfe der Pfeiltasten rechts unterhalb des Blocks können Sie zwischen Ihren Speicherständen vor und zurück wechseln, um ggf. Änderungen rückgängig zu machen oder ältere Zustände wiederherzustellen.
 
 <!-- data-readOnly="false" -->
 ``` python
@@ -1107,12 +1068,10 @@ Haben Sie alle Schritte erfolgreich implementiert, sollte mit der Eingabe "[3,7,
 
 ## QuickSort
 
-<!--  style = "background-color: #A6D492; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
-<div>
-  **Ziel dieses Kapitels:**
-
-  Nach diesem Kapitel sollten Sie die Vorgehensweise von QuickSort verstanden haben, sowie die einzelnen Schritte benennen und anwenden können. Außerdem sollten Sie in der Lage sein den Algorithmus schrittweise zu implementieren.
-</div>
+<!--  style="background-color:#A6D492;" -->
+> **Ziel dieses Kapitels:**
+>
+> Nach diesem Kapitel sollten Sie die Vorgehensweise von QuickSort verstanden haben, sowie die einzelnen Schritte benennen und anwenden können. Außerdem sollten Sie in der Lage sein den Algorithmus schrittweise zu implementieren.
 
 ### Grundlegende Idee
 
@@ -1170,23 +1129,19 @@ In diesem Kapitel werden Sie den Algorithmus selber schrittweise in Python imple
 
 Falls Sie Hilfe beim Einstieg in Python brauchen, finden Sie diese z.B. [hier](https://learnxinyminutes.com/docs/de-de/python-de/), falls es ganz schnell gehen muss oder [hier](https://www.python-lernen.de/), falls es etwas ausführlicher sein soll.
 
-<!--  style = "background-color: #A6D492; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
-<div>
-  **Ziel dieses Kapitels:**
-
-  Nach diesem Kapitel sollten Sie in der Lage sein, einen Algorithmus für QuickSort selbstständig zu implementieren.
-</div>
+<!--  style="background-color:#A6D492;" -->
+> **Ziel dieses Kapitels:**
+>
+> Nach diesem Kapitel sollten Sie in der Lage sein, einen Algorithmus für QuickSort selbstständig zu implementieren.
 
 #### Code
 
-<!--  style = "background-color: lightblue; color:black; padding: 10px 10px 5px 10px; margin-bottom: 10px" -->
-<div>
-**Bedienungsanleitung des Code-Blocks:**
-
-- Zum ausführen des Codes müssen Sie den Button links unterhalb des Code-Blocks anklicken. Dadurch wird der gesamte Inhalt kompiliert und ausgeführt. Falls Sie anschließend Änderungen an Ihrem Code vornehmen, müssen Sie darauf achten den Button erneut anzuklicken, damit diese gespeichert und neu kompiliert werden.
-
-- Mithilfe der Pfeiltasten rechts unterhalb des Blocks können Sie zwischen Ihren Speicherständen vor und zurück wechseln, um ggf. Änderungen rückgängig zu machen oder ältere Zustände wiederherzustellen.
-</div>
+<!-- style="background-color:lightblue;" -->
+> **Bedienungsanleitung des Code-Blocks:**
+>
+> - Zum ausführen des Codes müssen Sie den Button links unterhalb des Code-Blocks anklicken. Dadurch wird der gesamte Inhalt kompiliert und ausgeführt. Falls Sie anschließend Änderungen an Ihrem Code vornehmen, müssen Sie darauf achten den Button erneut anzuklicken, damit diese gespeichert und neu kompiliert werden.
+>
+> - Mithilfe der Pfeiltasten rechts unterhalb des Blocks können Sie zwischen Ihren Speicherständen vor und zurück wechseln, um ggf. Änderungen rückgängig zu machen oder ältere Zustände wiederherzustellen.
 
 <!-- data-readOnly="false" -->
 ``` python
