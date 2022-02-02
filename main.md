@@ -5,6 +5,8 @@ email:    support.twillo@tib.eu
 
 version:  1.0.0
 
+repository: https://github.com/twillo-lehre-teilen/BestPractice_Sortieralgorithmen/tree/master
+
 language: de
 
 narrator: Stina Schäfer, Lennart Rosseburg
