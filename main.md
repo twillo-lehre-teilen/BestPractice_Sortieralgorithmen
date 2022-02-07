@@ -11,7 +11,7 @@ version:  1.0.0
 
 date:     07/02/2022
 
-logo:     ./docs/twillo_logo.svg
+logo:     https://github.com/twillo-lehre-teilen/BestPractice_Sortieralgorithmen/blob/master/docs/twillo_logo.svg
 
 comment:  Eine Selbstlerneinheit mit interaktiven Programmieraufgaben für die gängigsten Sortieralgorithmen.
           Diese Seite ist lizenziert unter der [Lizenz CC-BY-SA (3.0)](https://creativecommons.org/licenses/by-sa/3.0/legalcode).
