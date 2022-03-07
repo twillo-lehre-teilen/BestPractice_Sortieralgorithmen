@@ -5,7 +5,11 @@ email:    support.twillo@tib.eu
 
 repository: https://github.com/twillo-lehre-teilen/BestPractice_Sortieralgorithmen/tree/master
 
+comment:  Eine Selbstlerneinheit mit interaktiven Programmieraufgaben für die gängigsten Sortieralgorithmen. Diese Seite ist lizenziert unter der [Lizenz CC-BY-SA (3.0)](https://creativecommons.org/licenses/by-sa/3.0/legalcode).
+
 language: de
+
+mode:     Textbook
 
 version:  1.0.0
 
@@ -13,15 +17,10 @@ date:     07/02/2022
 
 logo:     https://github.com/twillo-lehre-teilen/BestPractice_Sortieralgorithmen/blob/master/docs/twillo_logo.svg
 
-comment:  Eine Selbstlerneinheit mit interaktiven Programmieraufgaben für die gängigsten Sortieralgorithmen.
-          Diese Seite ist lizenziert unter der [Lizenz CC-BY-SA (3.0)](https://creativecommons.org/licenses/by-sa/3.0/legalcode).
-
 link:     https://cdn.jsdelivr.net/gh/TorroRosso46/Sortieralgorithmen/custom.css
 
 import:   https://github.com/LiaTemplates/Pyodide/blob/0.1.4/README.md
           https://github.com/LiaScript/CodeRunner/blob/master/README.md
-
-mode:     Textbook
 
 @eval:  @LIA.eval(`["main.py"]`, `python -m compileall .`, `python main.pyc`)
 -->
@@ -32,12 +31,21 @@ Pyodide:
 -->
 
 # Sortieralgorithmen
-Dieser Kurs basiert auf dem Kapitel "Sortieren" aus dem Kurs "Algorithmen und Datenstrukturen" von Wikiversity, zu finden unter diesem [Link](https://de.wikiversity.org/wiki/Kurs:Algorithmen_und_Datenstrukturen/Vorlesung/Sortieren). Das Kapitel "Grundlagen" enthält außerdem Teile aus "Kurs: Diskrete Mathematik (Osnabrück 2020)/Vorlesung 7" von Wikiversity, zu finden hier: [https://de.wikiversity.org/wiki/Kurs:Diskrete_Mathematik_(Osnabrück_2020)/Vorlesung_7](https://de.wikiversity.org/wiki/Kurs:Diskrete_Mathematik_(Osnabr%C3%BCck_2020%29/Vorlesung_7). Der Kurs ist lizensiert unter der [Lizenz CC-BY-SA (3.0)](https://creativecommons.org/licenses/by-sa/3.0/legalcode).
+
+> # Lizenzhinweis
+>
+> Der Kurs "Sortieralgorithmen", von Stina Schäfer & Lennart Rosseburg für twillo, ist lizenziert unter der [Lizenz CC-BY-SA (3.0)](https://creativecommons.org/licenses/by-sa/3.0/legalcode).
+>
+> #### Unter Nutzung von
+>
+> - Dem [Kapitel "Sortieren"](https://de.wikiversity.org/wiki/Kurs:Algorithmen_und_Datenstrukturen/Vorlesung/Sortieren) aus dem [Kurs "Algorithmen und Datenstrukturen"](https://de.wikiversity.org/wiki/Kurs:Algorithmen_und_Datenstrukturen), von Wikiversity unter der Beteiligung folgender [Autor:innen](https://de.wikiversity.org/w/index.php?title=Kurs:Algorithmen_und_Datenstrukturen/Vorlesung/Sortieren_Grundlagen&action=history), unter der [Lizenz CC-BY-SA (3.0)](https://creativecommons.org/licenses/by-sa/3.0/legalcode).
+>
+> - Dem ["Kurs: Diskrete Mathematik (Osnabrück 2020)/Vorlesung 7"](https://de.wikiversity.org/wiki/Kurs:Diskrete_Mathematik_%28Osnabr%C3%BCck_2020%29/Vorlesung_7), von Wikiversity unter der Beteiligung folgender [Autor:innen](https://de.wikiversity.org/w/index.php?title=Kurs:Diskrete_Mathematik_%28Osnabr%C3%BCck_2020%29/Vorlesung_7&action=history), unter der [Lizenz CC-BY-SA (3.0)](https://creativecommons.org/licenses/by-sa/3.0/legalcode).
 
 Diese Selbstlerneinheit konzentriert sich auf die Funktionsweise grundlegender Sortieralgorithmen und enthält interaktive Programmiereinheiten um das Gelernte durch eigene Anwendung zu verinnerlichen.
 
 <!--  style="background-color:#A6D492;" -->
-> **Ziel des Kurses:**
+> #### Ziel des Kurses:
 >
 > Am Ende dieser Selbstlerneinheit sollten Sie die vorgestellten Sortieralgorithmen unterscheiden, in den Kontext von Sortierungsproblemen in der Informatik einordnen und selbst anwenden können.
 
