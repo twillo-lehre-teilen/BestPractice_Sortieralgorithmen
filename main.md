@@ -34,7 +34,7 @@ Pyodide:
 
 > # Lizenzhinweis
 >
-> Der Kurs "Sortieralgorithmen", von Stina Schäfer & Lennart Rosseburg für twillo, ist lizenziert unter der [Lizenz CC-BY-SA (3.0)](https://creativecommons.org/licenses/by-sa/3.0/legalcode).
+> Der Kurs *Sortieralgorithmen*, von Stina Schäfer & Lennart Rosseburg für twillo, ist lizenziert unter der [Lizenz CC-BY-SA (3.0)](https://creativecommons.org/licenses/by-sa/3.0/legalcode).
 >
 > #### Unter Nutzung von
 >
@@ -56,14 +56,14 @@ Diese Lektion gibt eine grundlegende Einführung in das Thema Sortieren und Sort
 #### Ordnungen und Schlüssel
 
 <!--  style="background-color:#A6D492;" -->
-> **Ziel dieses Kapitels:**
+> # Ziel dieses Kapitels
 >
 > Dieses Kapitel soll Sie in die Lage versetzen Sortieren als Problem in der Informatik beschreiben und einordnen zu können. Sie sollten verstanden haben was eine Ordnung und was Schlüssel sind und welche Rolle sie beim Sortieren spielen.
 
 Um die Elemente einer Menge zu sortieren, müssen wir diese miteinander vergleichen können. Dies erreichen wir, indem wir eine Ordnung auf den zu sortierenden Elementen definieren. Ein einfaches und häufig genutztes Beispiel für eine Ordnung ist das übliche $\leq$ auf den natürlichen Zahlen.
 
 <!--  style="background-color:#F0F2F6;" -->
-> **Ordnung**
+> # Ordnung
 >
 > Eine Relation $\leq$ auf einer Menge $I$ heißt Ordnungsrelation oder Ordnung, wenn folgende drei Bedingungen erfüllt sind:
 >
@@ -74,19 +74,19 @@ Um die Elemente einer Menge zu sortieren, müssen wir diese miteinander vergleic
 Weitere nützliche Begriffe im Zusammenhang mit Ordnungen sind:
 
 <!--  style="background-color:#F0F2F6;" -->
-> **Strikter Anteil einer Ordnungsrelation $\leq$**
+> # Strikter Anteil einer Ordnungsrelation $\leq$
 >
 > $x < y := x \leq y \land x \neq y$
 
 <!--  style="background-color:#F0F2F6;" -->
-> **Totale Ordnung**
+> # Totale Ordnung
 >
 > Eine Ordnungsrelation $\leq$ auf einer Menge $I$ heißt totale Ordnung (oder lineare Ordnung), wenn zu je zwei Elementen $x,y \in I$ die Beziehung $x\leq y$ oder $y\leq x$ gilt.
 >
 > Man sagt auch, dass bei einer linearen Ordnung je zwei Elemente vergleichbar sind.
 
 <!--  style="background-color:#F0F2F6;" -->
-> **Schlüssel**
+> # Schlüssel
 >
 > Da die zu sortierenden Elemente alles mögliche und damit oft schwer zu vergleichen sein können, verwendet man Schlüssel. Jedes Element hat einen festen Schlüssel (häufig ganze Zahlen) und die Ordnung wird dann auf den Schlüsseln definiert. Ein Beispiel hierfür sind Chipnummern für Haustiere, die ohne diese Nummern wohl schwer zu sortieren wären. Ein anderes Beispiel wäre die Mitgliederliste eines Schachvereins, die ihre Mitglieder nach Nachnamen sortiert auflistet. Der Schlüssel ist hierbei jeweils der Nachname der Person, die Ordnung die alphabetische Ordnung.
 
@@ -99,7 +99,7 @@ Die Sortierung erfolgt anhand eines Schlüssels, z.B. ganzen Zahlen. Jedes zu so
 #### Quiz
 
 <!-- style="background-color:lightblue;" -->
-> **Bedienungsanleitung des Quiz:**
+> # Bedienungsanleitung des Quiz:
 >
 > Damit beim Quiz Ihr Punktestand berechnet werden kann, müssen folgende Schritte absolviert werden:
 >
@@ -247,8 +247,7 @@ send.register("q9", function(e){
 </lia-keep>
 
 <!--  style="background-color: #A6D492;" -->
-> <b>Punktevergabe:</b>
-> <br>
+> # Punktevergabe:
 >
 > - Für jede richtige Antwort gibt es einen Punkt.
 > - Für jede falsche Antwort (<b>pro Versuch</b>) wird ein Punkt abgezogen.
@@ -443,7 +442,7 @@ send.register("q9", function(e){
 ## InsertionSort
 
 <!--  style="background-color:#A6D492;" -->
-> **Ziel dieses Kapitels:**
+> ## Ziel dieses Kapitels:
 >
 > Nach diesem Kapitel sollten Sie die Vorgehensweise von InsertionSort verstanden haben, sowie die einzelnen Schritte benennen und anwenden können. Außerdem sollten Sie in der Lage sein den Algorithmus schrittweise zu implementieren.
 
@@ -522,18 +521,18 @@ In diesem Kapitel werden Sie den Algorithmus selber schrittweise in Python imple
 Falls Sie Hilfe beim Einstieg in Python brauchen, finden Sie diese z.B. [hier](https://learnxinyminutes.com/docs/de-de/python-de/), falls es ganz schnell gehen muss oder [hier](https://www.python-lernen.de/), falls es etwas ausführlicher sein soll.
 
 <!--  style="background-color:#A6D492;" -->
-> **Ziel dieses Kapitels:**
+> # Ziel dieses Kapitels:
 >
->Nach diesem Kapitel sollten Sie in der Lage sein, einen Algorithmus für InsertionSort selbstständig zu implementieren.
+> Nach diesem Kapitel sollten Sie in der Lage sein, einen Algorithmus für InsertionSort selbstständig zu implementieren.
 
 ##### Code
 
 <!-- style="background-color:lightblue;" -->
-> **Bedienungsanleitung des Code-Blocks:**
+> # Bedienungsanleitung des Code-Blocks:
 >
 > - Zum ausführen des Codes müssen Sie den Button links unterhalb des Code-Blocks anklicken. Dadurch wird der gesamte Inhalt kompiliert und ausgeführt. Falls Sie anschließend Änderungen an Ihrem Code vornehmen, müssen Sie darauf achten den Button erneut anzuklicken, damit diese gespeichert und neu kompiliert werden.
 >
->- Mithilfe der Pfeiltasten rechts unterhalb des Blocks können Sie zwischen Ihren Speicherständen vor und zurück wechseln, um ggf. Änderungen rückgängig zu machen oder ältere Zustände wiederherzustellen.
+> - Mithilfe der Pfeiltasten rechts unterhalb des Blocks können Sie zwischen Ihren Speicherständen vor und zurück wechseln, um ggf. Änderungen rückgängig zu machen oder ältere Zustände wiederherzustellen.
 
 <!-- data-readOnly="false" -->
 ``` python
@@ -594,9 +593,9 @@ Die Eingabe "3,7,1" sollte nun richtig sortiert als "1,3,7" ausgegeben werden. P
 ## SelectionSort
 
 <!--  style="background-color:#A6D492;" -->
-> **Ziel dieses Kapitels:**
+> ## Ziel dieses Kapitels:
 >
->Nach diesem Kapitel sollten Sie die Vorgehensweise von SelectionSort verstanden haben, sowie die einzelnen Schritte benennen und anwenden können. Außerdem sollten Sie in der Lage sein den Algorithmus schrittweise zu implementieren.
+> Nach diesem Kapitel sollten Sie die Vorgehensweise von SelectionSort verstanden haben, sowie die einzelnen Schritte benennen und anwenden können. Außerdem sollten Sie in der Lage sein den Algorithmus schrittweise zu implementieren.
 
 ### Grundlegende Idee
 
@@ -673,14 +672,14 @@ In diesem Kapitel werden Sie den Algorithmus selber schrittweise in Python imple
 Falls Sie Hilfe beim Einstieg in Python brauchen, finden Sie diese z.B. [hier](https://learnxinyminutes.com/docs/de-de/python-de/), falls es ganz schnell gehen muss oder [hier](https://www.python-lernen.de/), falls es etwas ausführlicher sein soll.
 
 <!--  style="background-color:#A6D492;" -->
-> **Ziel dieses Kapitels:**
+> # Ziel dieses Kapitels:
 >
 > Nach diesem Kapitel sollten Sie in der Lage sein, einen Algorithmus für SelectionSort selbstständig zu implementieren.
 
 #### Code
 
 <!-- style="background-color:lightblue;" -->
-> **Bedienungsanleitung des Code-Blocks:**
+> # Bedienungsanleitung des Code-Blocks:
 >
 > - Zum ausführen des Codes müssen Sie den Button links unterhalb des Code-Blocks anklicken. Dadurch wird der gesamte Inhalt kompiliert und ausgeführt. Falls Sie anschließend Änderungen an Ihrem Code vornehmen, müssen Sie darauf achten den Button erneut anzuklicken, damit diese gespeichert und neu kompiliert werden.
 >
@@ -755,7 +754,7 @@ Die Eingabe "[3,4,1,7,2]" sollte nun richtig sortiert als "[1,2,3,4,7]" ausgegeb
 ## BubbleSort
 
 <!--  style="background-color:#A6D492;" -->
-> **Ziel dieses Kapitels:**
+> ## Ziel dieses Kapitels:
 >
 > Nach diesem Kapitel sollten Sie die Vorgehensweise von BubbleSort verstanden haben, sowie die einzelnen Schritte benennen und anwenden können. Außerdem sollten Sie in der Lage sein den Algorithmus schrittweise zu implementieren.
 
@@ -894,14 +893,14 @@ In diesem Kapitel werden Sie den Algorithmus selber schrittweise in Python imple
 Falls Sie Hilfe beim Einstieg in Python brauchen, finden Sie diese z.B. [hier](https://learnxinyminutes.com/docs/de-de/python-de/), falls es ganz schnell gehen muss oder [hier](https://www.python-lernen.de/), falls es etwas ausführlicher sein soll.
 
 <!--  style="background-color:#A6D492;" -->
-> **Ziel dieses Kapitels:**
+> # Ziel dieses Kapitels:
 >
 > Nach diesem Kapitel sollten Sie in der Lage sein, einen Algorithmus für BubbleSort selbstständig zu implementieren.
 
 #### Code
 
 <!-- style="background-color:lightblue;" -->
-> **Bedienungsanleitung des Code-Blocks:**
+> # Bedienungsanleitung des Code-Blocks:
 >
 > - Zum ausführen des Codes müssen Sie den Button links unterhalb des Code-Blocks anklicken. Dadurch wird der gesamte Inhalt kompiliert und ausgeführt. Falls Sie anschließend Änderungen an Ihrem Code vornehmen, müssen Sie darauf achten den Button erneut anzuklicken, damit diese gespeichert und neu kompiliert werden.
 >
@@ -977,7 +976,7 @@ Die Eingabe "[3,7,1,9,2]" sollte nun richtig sortiert als "[1,2,3,7,9]" ausgegeb
 ## MergeSort
 
 <!--  style="background-color:#A6D492;" -->
-> **Ziel dieses Kapitels:**
+> ## Ziel dieses Kapitels:
 >
 > Nach diesem Kapitel sollten Sie die Vorgehensweise von MergeSort verstanden haben, sowie die einzelnen Schritte benennen und anwenden können. Außerdem sollten Sie in der Lage sein den Algorithmus schrittweise zu implementieren.
 
@@ -1008,14 +1007,14 @@ In diesem Kapitel werden Sie den Algorithmus selber schrittweise in Python imple
 Falls Sie Hilfe beim Einstieg in Python brauchen, finden Sie diese z.B. [hier](https://learnxinyminutes.com/docs/de-de/python-de/), falls es ganz schnell gehen muss oder [hier](https://www.python-lernen.de/), falls es etwas ausführlicher sein soll.
 
 <!--  style="background-color:#A6D492;" -->
-> **Ziel dieses Kapitels:**
+> # Ziel dieses Kapitels:
 >
 > Nach diesem Kapitel sollten Sie in der Lage sein, einen Algorithmus für MergeSort selbstständig zu implementieren.
 
 #### Code
 
 <!-- style="background-color:lightblue;" -->
-> **Bedienungsanleitung des Code-Blocks:**
+> # Bedienungsanleitung des Code-Blocks:
 >
 > - Zum ausführen des Codes müssen Sie den Button links unterhalb des Code-Blocks anklicken. Dadurch wird der gesamte Inhalt kompiliert und ausgeführt. Falls Sie anschließend Änderungen an Ihrem Code vornehmen, müssen Sie darauf achten den Button erneut anzuklicken, damit diese gespeichert und neu kompiliert werden.
 >
@@ -1081,7 +1080,7 @@ Haben Sie alle Schritte erfolgreich implementiert, sollte mit der Eingabe "[3,7,
 ## QuickSort
 
 <!--  style="background-color:#A6D492;" -->
-> **Ziel dieses Kapitels:**
+> ## Ziel dieses Kapitels:
 >
 > Nach diesem Kapitel sollten Sie die Vorgehensweise von QuickSort verstanden haben, sowie die einzelnen Schritte benennen und anwenden können. Außerdem sollten Sie in der Lage sein den Algorithmus schrittweise zu implementieren.
 
@@ -1142,14 +1141,14 @@ In diesem Kapitel werden Sie den Algorithmus selber schrittweise in Python imple
 Falls Sie Hilfe beim Einstieg in Python brauchen, finden Sie diese z.B. [hier](https://learnxinyminutes.com/docs/de-de/python-de/), falls es ganz schnell gehen muss oder [hier](https://www.python-lernen.de/), falls es etwas ausführlicher sein soll.
 
 <!--  style="background-color:#A6D492;" -->
-> **Ziel dieses Kapitels:**
+> # Ziel dieses Kapitels:
 >
 > Nach diesem Kapitel sollten Sie in der Lage sein, einen Algorithmus für QuickSort selbstständig zu implementieren.
 
 #### Code
 
 <!-- style="background-color:lightblue;" -->
-> **Bedienungsanleitung des Code-Blocks:**
+> # Bedienungsanleitung des Code-Blocks:
 >
 > - Zum ausführen des Codes müssen Sie den Button links unterhalb des Code-Blocks anklicken. Dadurch wird der gesamte Inhalt kompiliert und ausgeführt. Falls Sie anschließend Änderungen an Ihrem Code vornehmen, müssen Sie darauf achten den Button erneut anzuklicken, damit diese gespeichert und neu kompiliert werden.
 >
