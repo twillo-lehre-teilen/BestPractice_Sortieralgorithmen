@@ -17,7 +17,7 @@ date:     07/02/2022
 
 logo:     https://github.com/twillo-lehre-teilen/BestPractice_Sortieralgorithmen/blob/master/docs/twillo_logo.svg
 
-link:     https://cdn.jsdelivr.net/gh/TorroRosso46/Sortieralgorithmen/custom.css
+link:     https://cdn.jsdelivr.net/gh/twillo-lehre-teilen/BestPractice_Sortieralgorithmen/custom.css
 
 import:   https://github.com/LiaTemplates/Pyodide/blob/0.1.4/README.md
           https://github.com/LiaScript/CodeRunner/blob/master/README.md
