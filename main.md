@@ -15,7 +15,9 @@ version:  1.0.0
 
 date:     07/02/2022
 
-logo:     https://github.com/twillo-lehre-teilen/BestPractice_Sortieralgorithmen/blob/master/docs/twillo_logo.svg
+logo:     https://liascript.github.io/img/bg-showcase-1.jpg
+
+icon:     https://github.com/twillo-lehre-teilen/BestPractice_Sortieralgorithmen/blob/master/docs/twillo_logo.svg
 
 link:     https://cdn.jsdelivr.net/gh/twillo-lehre-teilen/BestPractice_Sortieralgorithmen/custom.css
 
